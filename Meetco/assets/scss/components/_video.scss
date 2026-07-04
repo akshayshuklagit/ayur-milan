@@ -1,0 +1,113 @@
+.xb-video {
+    .btn-video {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        top: 50%;
+        left: 50%;
+        padding: 55px;
+        transform: translate(-50%, -50%);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        @include border-radius(100%);
+        background: var(--color-white);
+        svg path {
+            
+            fill: var(--color-primary);
+        }
+        @include respond(lg) {
+            height: 120px;
+            width: 120px;
+            padding: 40px;
+        }
+        @include respond(md) {
+            height: 100px;
+            width: 100px;
+            padding: 35px;
+        }
+        @include respond(xs) {
+            height: 50px;
+            width: 50px;
+            padding: 18px;
+        }
+        @include respond(sm) {
+            height: 80px;
+            width: 80px;
+            padding: 28px;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            content: '';
+            z-index: -2;
+            border-radius: inherit;
+            background: var(--color-white);
+        }
+        &::before {
+            display: block;
+            animation: pulse-border 1500ms ease-out infinite;
+            @include respond(xs) {
+                animation: pulse-border-small 1500ms ease-out infinite;
+            }
+        }
+        &::after {
+            animation: pulse-border-big 1500ms ease-out infinite;
+            @include respond(xs) {
+                animation: pulse-border 1500ms ease-out infinite;
+            }
+        }
+    }
+}
+
+.xb-video-wrap {
+    .enent-info {
+        .info {
+            position: absolute;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: -0.02em;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-primary);
+            @include respond(xs) {
+                line-height: 16px;
+                font-size: 12px;
+                
+            }
+            &--1 {
+                left: 357px;
+                @include respond(laptop) {
+                    left: 150px;
+                }
+                @include respond(lg) {
+                    left: 80px;
+                }
+                @include respond(xs) {
+                    left: 20px;
+                }
+            }
+            &--2 {
+                right: 460px;
+                @include respond(laptop) {
+                    right: 290px;
+                }
+                @include respond(lg) {
+                    right: 200px;
+                }
+                @include respond(md) {
+                    right: 110px;
+                }
+                @include respond(xs) {
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,197 @@
+.xb-faq {
+    padding: 0 23px;
+}
+.accordion_box {
+    .block {
+        margin-bottom: 20px;
+        @include border-radius(10px);
+        background: var(--color-white);
+        .acc-btn {
+            font-size: 22px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            padding: 27px 30px;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: var(--color-heading);
+            @include respond(xs) {
+                padding: 27px 20px;
+            }
+            @include respond(xs) {
+                font-size: 18px;
+                padding: 27px 52px 27px 20px;
+            }
+            .arrow {
+                position: absolute;
+                top: 22px;
+                right: 60px;
+                @include transition(.3s);
+                &::before {
+                    top: 5px;
+                    left: 11px;
+                    font-size: 22px;
+                    content: "\f067";
+                    font-weight: 400;
+                    position: absolute;
+                    color: var(--color-heading);
+                    font-family: "Font Awesome 5 Pro";
+                    @include transition(0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+                }
+            }
+        }
+        .acc_body {
+            display: none;
+            position: relative;
+            padding: 0 30px 30px;
+            &.current {
+                display: block;
+            }
+        }
+        .content {
+            padding-left: 65px;
+            padding-right: 161px;
+            padding-bottom: 20px;
+            background: #f2f2f2;
+            @include border-radius(7px);
+            padding: 15px 115px 15px 20px; 
+            @include respond(xs) {
+                padding: 15px 20px 15px 20px;
+            }
+        }
+    }
+}
+.accordion_box .block.active-block .acc-btn .arrow {
+    &::before {
+        content: "\f068";
+        color: var(--color-heading);
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+} 
+.xb-faq-item {
+    margin-top: 24px;
+    padding: 28px 26px 22px;
+    @include border-radius(12px);
+    background: var(--color-white);
+    .xb-icon {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        color: #25272c;
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+        border-bottom: 2px dashed #b5bbc4;
+    }
+    .xb-content {
+        color: #49505b;
+        font-size: 18px;
+        line-height: 32px;
+        padding-right: 50px;
+        @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+            padding-right: 0;
+        }
+        @include respond(lg) {
+            padding-right: 70px;
+        }
+        @media only screen and (max-width: 1023px) {
+            padding-right: 55px;
+        }
+        @include respond(md) {
+            padding-right: 0;
+        }
+    }
+}
+
+.xb-faq-content {
+    margin-left: 89px;
+    margin-right: 58px;
+    padding: 0;
+    @include respond(lg) {
+        margin-right: 0;
+        margin-left: 42px;
+    }
+    @include respond(md) {
+        margin-left: 0;
+    }
+    .accordion_box {
+        .block {
+            margin-bottom: 0;
+            border-radius: 0;
+            z-index: 1;
+            position: relative;
+            background: transparent;
+            border-bottom: 1px solid #cbcad3;
+            &:first-child {
+                border-top: 1px solid #cbcad3;
+            }
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                background: #fff;
+                @include border-radius(10px);
+            }
+            &::before {
+                top: 5px;
+                z-index: -2;
+                background: #55cfff;
+            }
+            .acc-btn {
+                gap: 15px;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                display: flex;
+                align-items: center;
+                padding: 28px 28px;
+                color: var(--color-heading);
+                text-transform: capitalize;
+                @include respond(xs) {
+                    font-size: 18px;
+                }
+            }
+            .arrow {
+                top: 25px;
+                right: 60px;
+                &::before {
+                    content: '\f107';
+                    font-size: 20px;
+                }
+            }
+            .acc_body {
+                padding: 0;
+                .content {
+                    background: none;
+                    margin-top: -5px;
+                    padding: 0px 35px 20px 76px;
+                }
+            }
+            &.active-block {
+                border: none;
+                margin-bottom: 5px;
+                @include border-radius(10px);
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
+                .acc-btn .arrow {
+                    &::before {
+                     content: '\f107';
+                    }
+                }
+            }
+        }    
+    }
+}

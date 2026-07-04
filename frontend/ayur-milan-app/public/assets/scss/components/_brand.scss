@@ -1,0 +1,177 @@
+.xb-brand-wrap {
+    margin-left: 186px;
+    margin-right: 164px;
+    padding-bottom: 414px;
+    position: relative;
+    @include respond(laptop) {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    @include respond(lg) {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    @include respond(md) {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    @include respond(xs) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &::before, 
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -186px;
+        height: 100%;
+        width: 413px;
+        z-index: 1;
+        filter: blur(50px);
+        background: #f2f2f2;
+        @include respond(lg) {
+            width: 265px;
+        }
+        @include respond(xs) {
+            width: 230px;
+        }
+        @include respond(sm) {
+            width: 265px;
+        }
+    }
+    &::after {
+        left: auto;
+        right: -164px;
+    }
+}
+.xb-brand-logo a {
+    z-index: 1;
+    width: 248px;
+    height: 78px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include respond(md) {
+        width: 148px;
+    }
+    img {
+        @include respond(md) {
+            width: 50%;
+        }
+    }
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        svg {
+            @include respond(md) {
+                width: 148px;
+            }
+        }
+    }
+}
+.xb-brand-item {
+    display: inline-flex;
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @include respond(md) {
+            margin-bottom: 10px;
+        }
+    }
+}
+.dc-brand-item {
+    display: inline-flex;
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+}
+.dc-brand-logo a {
+    @include center;
+    padding: 15px;
+    min-height: 88px;
+    min-width: 300px;
+    margin-right: 10px;
+    background: #fff2fe;
+    border: 3px solid #fff;
+    @include border-radius(20px);
+    @include respond(lg) {
+        min-width: 250px;
+        min-height: 78px;
+    }
+    @include respond(xs) {
+        min-width: 120px;
+        min-height: 65px;
+    }
+    img {
+        @include respond(lg) {
+            max-width: 50%;
+        }
+    }
+}
+.xb-brand-wrapper {
+    padding-bottom: 125px;
+    @include respond(md) {
+        padding-bottom: 108px;
+        
+    }
+    @include respond(xs) {
+        padding-bottom: 110px;
+        
+    }
+}
+.fa-brand-item {
+    position: relative;
+    text-align: center;
+    @include transition(.3s);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    .logo img {
+        @include transition(.3s);
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        left: -1px;
+        bottom: -1px;
+        height: 2px;
+        width: 2px;
+        @include transition(.3s);
+        background: var(--color-white);
+    }
+    &::before {
+        top: -1px;
+        bottom: auto;
+        left: auto;
+        right: -1px;
+    }
+    &:hover {
+        background: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        .logo img {
+            filter: brightness(0);
+        }
+        &::after,
+        &::before {
+            background: var(--color-primary);
+        }
+    }
+}
+.fa-brand-sub-title {
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    
+    margin-top: -10px;
+    color: var(--color-primary);
+}
+.fa-brand-inner {
+    margin-left: 15px;
+    @include respond(xs) {
+        margin-left: 0;
+    }
+}

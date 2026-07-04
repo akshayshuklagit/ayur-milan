@@ -1,0 +1,139 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    ul {
+        @include d-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            position: relative;
+            a {
+                z-index: 3;
+                font-weight: 700;
+                font-size: 15px;
+                position: relative;
+                padding: 32px 0;
+                letter-spacing: 0.02em;
+                text-decoration: none;
+                display: inline-block;
+                @include transition(.3s);
+                text-transform: uppercase;
+                color: var(--color-heading);
+                font-family: var(--font-body);
+            }
+            &.menu-item-has-children {
+                & > a {
+                    span::after {
+                        content: '\f107';
+                        font-weight: 600;
+                        color: #131053;
+                        margin: 1px 0 0 3px;
+                        font-family: "Font Awesome 6 Pro";
+                    }
+                }
+                &:hover > .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
+            }
+            &:hover > a,
+            &.active > a {
+                color: #00b8ff;
+                & > span::after {
+                    color: #00b8ff;
+                }
+            }
+            .submenu {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                position: absolute;
+                min-width: 240px;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                z-index: 3;
+                top: 100%;
+                padding: 20px 0; 
+                text-align: left;
+                visibility: hidden;
+                background: #fff;
+                @include transition(.3s);
+                @include border-radius(3px);
+                transform: translateY(10px);
+                box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.10);
+                li {
+                    padding: 0 6px;
+                    margin-right: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 13px;
+                    }
+                    a {
+                        padding: 0 18px;
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 600;
+                        letter-spacing: 0;
+                        position: relative;
+                        text-transform: uppercase;
+                        @include border-radius(5px);
+                        color: var(--color-heading);
+                        @include transition(.3s);
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            top: 45%;
+                            height: 2px;
+                            width: 10px;
+                            opacity: 0;
+                            text-decoration: left;
+                            @include transition(0.3s);
+                            background: var(--color-secondary);
+                            @include transform(translateY(50%));
+                        }
+                    }
+                    ul {
+                        left: 100%;
+                        top: 0px;
+                    }
+                    &:hover > a,
+                    &.active > a {
+                        color: var(--color-secondary);
+                        transform: translateX(15px);
+                        &::after {
+                            opacity: 1;
+                        }
+                        span::after {
+                            color: var(--color-secondary) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-menu ul li.menu-last ul.submenu {
+	right: 0;
+	left: auto;
+}
+.main-menu ul li.menu-last ul.submenu ul {
+    right: auto;
+    left: -100%;
+}
+.main-menu ul li ul.submenu .menu-item-has-children > a span::after {
+	position: absolute;
+    top: 0px;
+    right: 15px;
+    content: "\f0d7";
+    font-size: 16px;
+    font-family: 'Font Awesome 6 Pro';
+    @include transition(.3s);
+    transform: rotate(-90deg);
+    color: var(--color-heading);
+}
+

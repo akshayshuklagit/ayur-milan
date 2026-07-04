@@ -1,0 +1,108 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String // Hashed password
+  createdAt DateTime @default(now())
+}
+
+model Coupon {
+  id           String   @id @default(uuid())
+  code         String   @unique
+  discountType String // "PERCENT" or "FIXED"
+  value        Float // Percentage (e.g. 10 for 10%) or Fixed value (e.g. 100 for ₹100)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+model Registration {
+  id                String   @id @default(uuid())
+  participantType   String // "UG Scholars & Interns", "PG Scholars / Ph.D / Practitioner", "Other Indian Delegates"
+  name              String
+  email             String
+  phone             String
+  gender            String // "Male", "Female"
+  university        String
+  city              String
+  whatsapp          String?
+  state             String?
+  designation       String?
+  couponCode        String?
+  coordinatorName   String?
+  accommodationType String // "Triple Sharing", "Double Sharing", "Single Room", "None"
+  registrationFee   Float
+  accommodationFee  Float
+  discount          Float    @default(0)
+  payableAmount     Float
+  paymentStatus     String   @default("PENDING") // "PENDING", "PAID", "FAILED"
+  paymentReference  String? // Transaction ID / UTR / Reference Number
+  verified          Boolean  @default(false) // Verified by admin
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model PaymentConfig {
+  id           String   @id @default("default")
+  upiId        String   @default("agniveshevents@upi")
+  qrCodeUrl    String?
+  qrCodeBase64 String?  // Optional custom base64 image data
+  updatedAt    DateTime @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model AbstractSubmission {
+  id               String   @id @default(uuid())
+  name             String
+  email            String
+  phone            String
+  designation      String
+  institution      String
+  presentationType String // "Poster" or "Oral"
+  category         String // Kaya Chikitsa, Panchakarma, etc.
+  title            String
+  abstractText     String
+  createdAt        DateTime @default(now())
+}
+
+model ExhibitorSubmission {
+  id                String   @id @default(uuid())
+  companyName       String
+  contactName       String
+  email             String
+  phone             String
+  category          String // Prime Sponsor, Co-Sponsor, etc.
+  country           String
+  state             String
+  city              String
+  street            String
+  zip               String
+  productCategories String // Comma-separated list or JSON stringified array
+  createdAt         DateTime @default(now())
+}
+
+model ExhibitorLogo {
+  id         String   @id @default(uuid())
+  name       String
+  logoUrl    String?
+  logoBase64 String?  @default("")
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+}
+
+

@@ -1,0 +1,158 @@
+.offer-wrap {
+    z-index: 1;
+    padding: 40px;
+    margin-top: -85px;
+    position: relative;
+    @include border-radius(10px);
+    background: var(--color-secondary);
+    @include respond(lg) {
+        align-items: start;
+    }
+    @include respond(md) {
+        gap: 30px;
+    }
+    @include respond(xs) {
+        padding: 40px 20px;
+        justify-content: center;
+        
+    }
+}
+.offer-item {
+    .countdown {
+        gap: 10px;
+        .single {
+            text-align: center;
+            min-height: 90px;
+            min-width: 111px;
+            @include center;
+            flex-direction: column;
+            @include border-radius(10px);
+            background: var(--color-white);
+            h1 {
+                font-weight: 700;
+                font-size: 40px;
+                letter-spacing: -0.03em;
+                @include respond(xs) {
+                    font-size: 30px;
+                }
+            }
+            p {
+                font-size: 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .title {
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--color-white);
+        font-family: var(--font-heading);
+    }
+    .xb-inner {
+        gap: 20px;
+    }
+    .xb-vanue {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--color-white);
+        @include respond(xs) {
+            font-size: 20px;
+        }
+    }
+}
+.offer-shape {
+    z-index: -1;
+    position: absolute;
+    &--1 {
+        top: 0;
+        right: 28%;
+    }
+    &--2 {
+        bottom: 0;
+        left: 27%;
+    }
+}
+.offer-wrapper {
+    margin-top: -115px;
+    padding: 42px 50px 50px;
+    background-image: url(../img/bg/offer-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond(lg) {
+        align-items: end;
+        padding: 42px 30px 50px;
+    }
+    @media only screen and (max-width: 1023px) {
+        padding: 42px 20px 50px;
+    }
+    @include respond(md) {
+        padding: 42px 50px 50px;
+    }
+    @include respond(md) {
+        padding: 42px 20px 50px;
+    }
+    .countdown {
+        margin-top: 5px;
+        .single {
+            @include respond(sm) {
+                min-height: 100px;
+                min-width: 105px;
+            }
+            h1 {
+                font-family: var(--font-heading);
+                @include respond(sm) {
+                   font-size: 33px;
+                }
+            }
+            p {
+                @include respond(sm) {
+                   font-size: 16px;
+                }
+            }
+        }
+    }
+    .offer-item {
+        .sec-title--two {
+            @include respond(xs) {
+                text-align: center;
+            }
+        }
+        .xb-inner {
+            gap: 15px;
+            padding: 11px 20px;
+            @include border-radius(5px);
+            border: 3px solid #edf6ff;
+            background: var(--color-white);
+            &:not(:last-child) {
+                margin-bottom: 9px;
+            }
+            @include respond(xs) {
+                padding: 11px 10px;
+            }
+            .xb-vanue {
+                font-size: 26px;
+                font-weight: 500;
+                flex-basis: 0;
+                flex-grow: 1;
+                color: var(--color-heading);
+                @include respond(lg) {
+                    font-size: 22px;
+                }
+                @media only screen and (max-width: 1023px) {
+                    font-size: 20px;
+                }
+                @include respond(md) {
+                    font-size: 26px;
+                }
+                @include respond(xs) {
+                    font-size: 16px;
+                }
+                @include respond(sm) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+} 

@@ -1,0 +1,571 @@
+.xb-team-item {
+    .xb-item {
+        &--avatar {
+            position: relative;
+            text-align: center;
+            img {
+                @include transition(.3s);
+            }
+        }
+        &--logo {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        &--holder {
+            position: relative;
+            overflow: hidden;
+            @include border-radius(10px);
+            background: var(--color-white);
+        }
+        &--name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 15px;
+            line-height: 30px;
+            margin-bottom: 2px;
+            letter-spacing: -0.02em;
+            color: var(--color-white);
+            font-family: var(--font-body);
+            a {
+                color: currentColor;
+            }
+        }
+        &--desig {
+            color: var(--color-white);
+        }
+    }
+    &:hover {
+        .xb-item {
+            &--avatar img {
+                @include transform(scale(1.03));
+            }
+        }
+    }
+}
+.dc-team-item {
+    @include respond(xs) {
+        display: flex;
+        justify-content: center;
+    }
+    @include respond(sm) {
+        justify-content: start;
+    }
+    .xb-item {
+        &--avatar {
+            overflow: hidden;
+            display: inline-block;
+            @include border-radius(10px);
+            filter: grayscale(100%);
+            @include transition(.3s);
+            transform: scale(0.9);
+        }
+        &--author {
+            margin: 60px -36px 0;
+            @include respond(xs) {
+                margin: 15px 0 0;
+            }
+            @include respond(sm) {
+                margin: 50px 0 0 -32px;
+                
+            }
+        }
+        &--name {
+            font-size: 28px;
+            font-weight: 400;
+            opacity: 0;
+            text-transform: uppercase;
+            color: var(--color-white);
+            transform: translateY(20px);
+            @include transition(.3s);
+            a {
+                color: currentColor;
+            }
+        }
+        &--desig {
+            opacity: 0;
+            color: var(--color-white);
+            transform: translateY(20px);
+            @include transition(.3s);
+        }
+    }
+}
+.dc-team-slider {
+    margin-right: -313px;
+    padding-top: 40px;
+    @include respond(xs) {
+        margin-right: 0;
+        padding-bottom: 100px;
+    }
+    .swiper-slide-next {
+        margin-left: 46px;
+        @include respond(laptop) {
+            margin-left: 50px;
+        }
+        @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+            margin-left: 45px;
+        }
+        @include respond(lg) {
+            margin-left: 54px;
+        }
+        @include respond(xs) {
+            margin-left: 0;
+        }
+    }
+    .swiper-slide-prev {
+        margin-right: 40px !important;
+        @include respond(laptop) {
+            margin-right: 35px !important;
+        }
+        @include respond(xs) {
+           margin-right: 0 !important;
+        }
+        @include respond(sm) {
+           margin-right: 52px !important;
+        }
+    }
+    .swiper-slide-active {
+        .xb-item {
+            &--avatar {
+                filter: grayscale(0);
+                transform: scale(1.32);
+                @include respond(laptop) {
+                    transform: scale(1.2);
+                }
+                @include respond(xs) {
+                    transform: scale(1);
+                }
+                @include respond(sm) {
+                    transform: scale(1.2);
+                }
+            }
+            &--name {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            &--desig {
+                opacity: 1;
+                transition-delay: 0.2s;
+                transform: translateY(0);
+            }
+        }
+    }
+    .team-shape {
+        position: absolute;
+        z-index: 1;
+        right: 15px;
+        top: 20px;
+        width: 315px;
+        height: 298px;
+        background: #0e052c;
+        filter: blur(8.300000190734863px);
+        @include respond(xs) {
+            display: none;
+        }
+    }
+}
+.dc-team-wrapper {
+    overflow: hidden;
+    .swiper-pagination {
+        left: auto;
+        right: 70px;
+        bottom: 10px;
+        z-index: 1;
+        @include respond(xs) {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        .swiper-pagination-bullet {
+            opacity: 1;
+            margin: 0 5px;
+            background: #9b96ac;
+            &.swiper-pagination-bullet-active {
+                transform: scale(1.7);
+                background: #ff6b00;
+            }
+        }
+    }
+    .team-slide-btn {
+        .swiper-button-next,
+        .swiper-button-prev {
+            right: 0;
+            left: auto;
+            top: auto;
+            bottom: 0;
+            font-size: 20px;
+            font-weight: 400;
+            height: 46px;
+            width: 46px;
+            z-index: 2;
+            background: #0e052c;
+            border: 1px solid #fff;
+            @include border-radius(100px);
+            color: var(--color-white);
+            &:after {
+                display: none;
+            }
+            @include respond(xs) {
+                right: 15%;
+            }
+            @include respond(sm) {
+                right: 24%;
+            }
+        }
+        .swiper-button-prev {
+            right: 16.8%;
+            @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                right: 19%;
+            }
+            @include respond(lg) {
+                right: 22%;
+            }
+            @media only screen and (max-width: 1023px) {
+                right: 24%;
+            }
+            @include respond(md) {
+                right: 32%;
+            }
+            @include respond(xs) {
+                right: 73%;
+            }
+            @include respond(sm) {
+                right: 67%;
+            }
+        }
+    }
+}
+.dec-team-top {
+    gap: 30px;
+}
+
+// fa-Team - start
+.fa-team-item {
+    position: relative;
+    @include transition(.3s);
+    .xb-item {
+        &--holder {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            @include transition(.3s);
+        }
+        &--title {
+            font-size: 22px;
+            margin: 39px 0 3px;
+            text-transform: uppercase;
+            color: var(--color-black);
+            a {
+                color: currentColor;
+            }
+        }
+        &--desig {
+            color: var(--color-black);
+        }
+        &--avatar {
+            @include transition(.3s);
+        }
+    }
+    &:hover {
+        background: var(--color-primary);
+        .xb-item {
+            &--avatar {
+                opacity: 0;
+            }
+            &--holder {
+                opacity: 1;
+            }
+        }
+    }
+}
+.fa-team-slider {
+    margin-left: -415px;
+    @include respond(lg) {
+        margin-left: -300px;
+    }
+    @include respond(md) {
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+    @include respond(xs) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @include respond(sm) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+// fa-Team - End
+  
+
+//team-details page style
+.spekar-wrap {
+    display: flex;
+    margin: 0 100px 0 30px;
+    @include border-radius(20px);
+    background: var(--color-white);
+    @include respond(lg) {
+        margin: 0;
+    }
+    @include respond(md) {
+        overflow: hidden; 
+    }
+    @include respond(xs) {
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: center;
+    }
+    .xb-item {
+        &--img {
+            position: relative;
+            @include respond(lg) {
+                max-width: 60%;
+                bottom: -46px;
+            }
+            @media only screen and (max-width: 1023px) {
+                bottom: -74px;
+            }
+            @include respond(md) {
+                left: -30px;
+                bottom: -219px;
+            }
+            @include respond(xs) {
+                bottom: 0;          
+                left: 0;
+                max-width: 80%;
+            }
+        }
+        &--bran-logo {
+            position: absolute;
+            top: 33px;
+            left: 33px;
+            max-width: 15.5%;
+            @include respond(md) {
+                left: 63px;
+            }
+            @include respond(xs) {
+                left: 0;
+                top: 20px;
+            }
+        }
+    } 
+}
+.speakes-info {
+    z-index: 1;
+    position: relative;
+    margin-bottom: -70px;
+    margin-top: 60px;
+    background: #260f8f;
+    padding: 52px 60px 60px;
+    @include border-radius(10px);
+    @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+        margin-left: -30px;
+        padding: 52px 20px 60px;
+    }
+    @include respond(lg) {
+        margin-left: -30px;
+        padding: 52px 30px 60px;
+    }
+    @media only screen and (max-width: 1023px) {
+        margin-left: -60px;
+    }
+    @include respond(md) {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    @include respond(xs) {
+        margin-left: 0;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -5px;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background: #00b8ff;
+        @include border-radius(7px);
+    }
+    .xb-item {
+        &--name {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 55px;
+            text-transform: uppercase;
+            color: var(--color-white);
+            @include respond(md) {
+                font-size: 23px;
+            }
+            @include respond(xs) {
+                font-size: 22px;
+            }
+        }
+        &--info-list li {
+            font-weight: 500;
+            color: var(--color-white);
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            span {
+                font-weight: 600;
+                letter-spacing: -0.03em;
+            }
+        }
+    }
+    .xb-social_media {
+        margin-top: 70px;
+        span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 13px;
+            letter-spacing: -0.03em;
+            color: var(--color-white);
+        }
+        li {
+            &:nth-child(1) {
+                margin-right: 0 !important;
+            }
+            a {
+                color: var(--color-white);
+                border-radius: (5px) !important;
+                background: #260f8f !important;
+            }
+        }
+    }
+}
+.team-details-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    @include respond(md) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.skeaker-info-table {
+    li {
+        gap: 102px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #cbcad3;
+        @include respond(xs) {
+            gap: 40px;
+        }
+        &:first-child {
+            border-top: 1px solid #cbcad3;
+        }
+        span {
+            font-weight: 500;
+            font-size: 20px;
+            padding: 35px 0;
+            width: 20.3%;
+            letter-spacing: -0.05em;
+            text-transform: capitalize;
+            color: var(--color-heading);
+            border-right: 1px solid #cbcad3;
+            @include respond(xs) {
+                padding-right: 100px;
+            }
+        }
+    }
+}
+.team-sub-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--color-heading);
+}
+.team-content {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--color-heading);
+    @include respond(md) {
+        font-size: 24px;
+    }
+}
+.speaker-experensce-content {
+    display: flex;
+    border-top: 1px solid #cbcad3;
+    @include respond(xs) {
+        flex-wrap: wrap;
+    }
+    .xb-item {
+        &--exprence {
+            margin-top: 20px;
+            li {
+                font-size: 16px;
+                letter-spacing: 0em;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &--left_site {
+            width: 50%;
+            padding-top: 27px;
+            border-right: 1px solid #cbcad3;
+            @include respond(xs) {
+                width: 100%;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #cbcad3;
+                border-right: none;
+            }
+        }
+        &--right_site {
+            width: 50%;
+            padding-top: 27px;
+            padding-left: 66px;
+            @include respond(xs) {
+                width: 100%;
+                padding-left: 0;
+                padding-top: 0;
+                margin-top: 30px;
+            }
+        }
+        &--skill-wrap {
+            margin-top: 40px;
+        }
+        &--skill {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+                
+            }
+        }
+        &--progress-content {
+            margin-bottom: 22px;
+        }
+        &--progress {
+            height: 4px;
+            width: 100%;
+            position: relative;
+            display: block;
+            background: rgba(38, 15, 143, 0.1);
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 1px;
+                height: 2px;
+                width: 90%;
+                background: #260f8f;
+            }
+            &.progress-2 {
+                &::before {
+                    width: 40%;
+                    background: #ff6500;
+                }
+            }
+            &.progress-3 {
+                &::before {
+                    width: 80%;
+                    background: #00b8ff;
+                }
+            }
+        }
+    }
+}

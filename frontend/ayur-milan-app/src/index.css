@@ -1,0 +1,1783 @@
+/* Custom theme override with user's radial gradient and abstract texture */
+body.design-conference,
+.design-conference,
+body {
+  background: 
+    linear-gradient(rgba(26, 2, 16, 0.93), rgba(26, 2, 16, 0.95)), 
+    url('/assets/img/bg/abstract_edu_bg.png'),
+    radial-gradient(
+      circle at 20% 70%,
+      #82114f 0%,
+      #a50766 25%,
+      #a32197 45%,
+      #cb3fc6 65%,
+      #af4537 82%,
+      #d78633 100%
+    ) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: #ffffff !important;
+  --color-body: transparent !important;
+  --color-heading: #ffffff !important;
+}
+
+/* Make default sections transparent to show the gradient background */
+.design-conference section,
+.design-conference div,
+.design-conference main {
+  background-color: transparent;
+}
+
+/* Ensure sections with dark-bg are transparent so the gradient shines through */
+.design-conference .dark-bg {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Revert the blue-to-cyan gradient class and make it semi-transparent glass highlight */
+.design-conference .gardiant-bg {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Glassmorphism for cards, forms, and elements */
+.design-conference .xb-ticket-item,
+.design-conference .contact-form-wrap.main-contact-form,
+.design-conference .xb-faq-item,
+.design-conference .xb-funfact-item,
+.design-conference .dc-team-item,
+.design-conference .xb-team-item,
+.design-conference .xb-schedule-content,
+.design-conference .xb-schedule-nav-wrap {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease !important;
+}
+
+/* Interactive Hover States - lifting cards and glowing gold borders */
+.design-conference .xb-ticket-item:hover,
+.design-conference .contact-form-wrap.main-contact-form:hover,
+.design-conference .xb-faq-item:hover,
+.design-conference .xb-funfact-item:hover,
+.design-conference .dc-team-item:hover,
+.design-conference .xb-team-item:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(255, 224, 75, 0.6) !important;
+  box-shadow: 0 12px 40px rgba(255, 224, 75, 0.25) !important;
+}
+
+/* Form input styling */
+.design-conference .xb-contact-input-form .xb-input-field input,
+.design-conference .xb-contact-input-form .xb-input-field textarea {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(5px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.design-conference .xb-contact-input-form .xb-input-field input:focus,
+.design-conference .xb-contact-input-form .xb-input-field textarea:focus {
+  border-color: #ffe04b !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(255, 224, 75, 0.3) !important;
+}
+
+/* Table overrides to look clean and glassmorphic */
+.design-conference .table {
+  color: #ffffff !important;
+}
+
+.design-conference .table th,
+.design-conference .table td {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.design-conference .xb-schedule-content thead th {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffe04b !important;
+}
+
+/* Breadcrumb overlay adjustments */
+.design-conference .breadcrumb::before {
+  background: rgba(130, 17, 79, 0.3) !important;
+}
+
+/* Footer style to match the gradient */
+.design-conference .footer-style-two {
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mobile menu panel styling to match theme */
+.design-conference .xb-header-menu {
+  background: radial-gradient(
+    circle at 20% 70%,
+    #5e0a39 0%,
+    #700346 50%,
+    #4a073f 100%
+  ) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 0 0 12px !important;
+}
+
+.design-conference .xb-header-menu .xb-menu-primary > li > a {
+  color: #ffffff !important;
+}
+
+.design-conference .xb-header-menu .xb-menu-primary > li > a:hover {
+  color: #ffe04b !important;
+}
+
+/* Override headers and typography */
+.design-conference h1,
+.design-conference h2,
+.design-conference h3,
+.design-conference h4,
+.design-conference h5,
+.design-conference h6,
+.design-conference p,
+.design-conference span,
+.design-conference li,
+.design-conference a {
+  color: #ffffff !important;
+}
+
+/* Custom Select and Input Mobile Fixes (Prevents iOS zoom and styles dropdowns) */
+.design-conference select,
+.design-conference input,
+.design-conference textarea {
+  font-size: 16px !important;
+}
+
+.design-conference select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23FFE04B' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 20px !important;
+  padding-right: 40px !important;
+}
+
+/* Style option backgrounds to match form theme */
+.design-conference select option {
+  background-color: #300827 !important;
+  color: #ffffff !important;
+}
+
+/* Keep yellow accent color for primary items */
+.design-conference .sub-title,
+.design-conference .dollar,
+.design-conference .xb-item--dollar,
+.design-conference .xb-widget-title {
+  color: #ffe04b !important;
+}
+
+/* nav-link active/hover - pink so visible on white bg */
+.design-conference .nav-link.active,
+.design-conference .nav-link:hover {
+  color: #82114f !important;
+}
+
+/* Active tab override */
+.design-conference .xb-schedule-nav .nav-link.active {
+  background-color: #ffe04b !important;
+  color: #82114f !important;
+}
+
+/* Navigation items override */
+.design-conference .main-menu ul li.active a,
+.design-conference .main-menu ul li a:hover {
+  color: #82114f !important;
+}
+
+/* --- VISUAL UPGRADES: HELPER & SHAPE CLASSES --- */
+
+/* Gentle Floating Animation */
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.floating-shape-slow {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatUpDown 9s ease-in-out infinite;
+}
+
+/* Visual timeline components */
+.timeline-wrapper {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 70px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffe04b;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px #ffe04b;
+  z-index: 2;
+}
+
+.timeline-time {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffe04b !important;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.timeline-title {
+  color: #ffffff !important;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Staggered visual grid items */
+.stagger-zoom-img {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stagger-zoom-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.stagger-zoom-img:hover {
+  transform: scale(1.03);
+  border-color: #ffe04b;
+  box-shadow: 0 10px 25px rgba(255, 224, 75, 0.3);
+}
+
+.stagger-zoom-img:hover img {
+  transform: scale(1.1);
+}
+
+/* Circular Icon Wrapper */
+.circle-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe04b;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.circle-icon-wrap:hover {
+  background: #ffe04b;
+  color: #82114f;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffe04b;
+}
+
+/* Visual Progress Bar */
+.progress-bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffe04b, #d78633);
+  border-radius: 4px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Pure CSS Marquee */
+.css-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  display: flex;
+  white-space: nowrap;
+}
+
+.css-marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: cssMarqueeAnim 25s linear infinite;
+  color: #ffe04b !important;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@keyframes cssMarqueeAnim {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Countdown: replaced with inline styles in Countdown.jsx */
+
+/* Location and Date Boxes in Offer Section */
+.design-conference .offer-wrapper .offer-item .xb-inner {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+  padding: 16px 24px !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+.design-conference .offer-wrapper .offer-item .xb-inner:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(255, 224, 75, 0.5) !important;
+  box-shadow: 0 8px 25px rgba(255, 224, 75, 0.15) !important;
+}
+
+.design-conference .offer-wrapper .offer-item .xb-inner .xb-vanue {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+.design-conference .offer-wrapper .offer-item .xb-location {
+  background: rgba(255, 224, 75, 0.1) !important;
+  border: 1px solid rgba(255, 224, 75, 0.3) !important;
+  border-radius: 50% !important;
+  width: 45px !important;
+  height: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.design-conference .offer-wrapper .offer-item .xb-location img {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(1637%)
+    hue-rotate(345deg) brightness(101%) contrast(101%) !important; /* Forces gold color matching #ffe04b */
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* ── Header: floating pill style ── */
+
+/* Position header with top margin */
+.header-style--two.header-transparent {
+  top: 18px !important;
+  left: 0;
+  right: 0;
+  padding: 0 24px !important;
+}
+
+/* White pill with border radius */
+.header-style--two .header__wrap {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 50px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+  margin: 0 auto !important;
+  padding: 0 36px !important;
+  max-width: 1200px !important;
+}
+
+/* Sticky state: keep white pill */
+.header-style--two.stricky-fixed .header__wrap {
+  border-radius: 50px !important;
+  background: #ffffff !important;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Desktop nav links — dark */
+.header-style--two .main-menu > ul > li > a {
+  color: #1a1a1a !important;
+}
+
+.header-style--two .main-menu > ul > li > a span {
+  color: #1a1a1a !important;
+}
+
+.header-style--two .main-menu > ul > li > a span::after {
+  color: #1a1a1a !important;
+}
+
+/* Hover / active */
+.header-style--two .main-menu > ul > li:hover > a,
+.header-style--two .main-menu > ul > li.active > a {
+  color: #82114f !important;
+}
+
+.header-style--two .main-menu > ul > li:hover > a span,
+.header-style--two .main-menu > ul > li.active > a span {
+  color: #82114f !important;
+}
+
+.header-style--two .main-menu > ul > li:hover > a span::after,
+.header-style--two .main-menu > ul > li.active > a span::after {
+  color: #82114f !important;
+}
+
+/* Submenu */
+.header-style--two .main-menu ul .submenu {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.header-style--two .main-menu ul .submenu li a {
+  color: #1a1a1a !important;
+}
+
+.header-style--two .main-menu ul .submenu li:hover > a,
+.header-style--two .main-menu ul .submenu li.active > a {
+  color: #82114f !important;
+}
+
+/* Mobile hamburger */
+.header-style--two .xb-nav-mobile {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: 1.5px solid #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+/* Logo sizing */
+.xb-header-logo img {
+  height: auto !important;
+  max-height: 52px !important;
+  width: auto !important;
+  max-width: 150px !important;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .header-style--two.header-transparent {
+    padding: 0 16px !important;
+  }
+  .header-style--two .header__wrap {
+    border-radius: 40px !important;
+    padding: 10px 24px !important;
+  }
+  .xb-header-logo img {
+    max-height: 42px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-style--two.header-transparent {
+    top: 10px !important;
+    padding: 0 12px !important;
+  }
+  .header-style--two .header__wrap {
+    border-radius: 30px !important;
+    padding: 10px 18px !important;
+  }
+  .xb-header-logo img {
+    max-height: 36px !important;
+    max-width: 120px !important;
+  }
+}
+
+/* ── Button hover fixes: prevent white bg making text invisible ── */
+
+/* design-btn: slide-in fill changes from white to brand dark */
+.design-btn::before {
+  background: #5a0a35 !important;
+}
+
+.design-btn:hover {
+  color: #ffffff !important;
+}
+
+.design-btn:hover img {
+  filter: brightness(100) invert(1) !important;
+}
+
+/* thm-btn: default border button hover color fix */
+.thm-btn:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #FFE04B !important;
+}
+
+/* details-btn: yellow fill on hover keeps white text */
+.details-btn:hover {
+  color: #ffffff !important;
+}
+
+/* --- Abstract Page Custom Polishments --- */
+
+.abstract-page-body {
+  background: 
+    linear-gradient(rgba(26, 2, 16, 0.93), rgba(26, 2, 16, 0.95)), 
+    url('/assets/img/bg/abstract_edu_bg.png'),
+    radial-gradient(
+      circle at 20% 70%,
+      #82114f 0%,
+      #a50766 25%,
+      #a32197 45%,
+      #cb3fc6 65%,
+      #af4537 82%,
+      #d78633 100%
+    ) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.abstract-section {
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+/* Section overlays to blend backgrounds with our color palette */
+.abstract-bg-overlay-1 {
+  background: linear-gradient(
+    to bottom,
+    rgba(130, 17, 79, 0.9) 0%,
+    rgba(26, 2, 16, 0.95) 100%
+  ) !important;
+}
+
+.abstract-bg-overlay-2 {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 2, 16, 0.95) 0%,
+    rgba(165, 7, 102, 0.9) 50%,
+    rgba(26, 2, 16, 0.95) 100%
+  ) !important;
+}
+
+.abstract-bg-overlay-3 {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(165, 7, 102, 0.88) 0%,
+    rgba(130, 17, 79, 0.93) 60%,
+    rgba(26, 2, 16, 0.98) 100%
+  ) !important;
+}
+
+.abstract-bg-overlay-4 {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 2, 16, 0.95) 0%,
+    rgba(130, 17, 79, 0.9) 100%
+  ) !important;
+}
+
+/* Workflow step card custom polish */
+.abstract-step-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 20px !important;
+  padding: 40px 25px !important;
+  height: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  overflow: hidden;
+}
+
+.abstract-step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #FFE04B, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.abstract-step-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(255, 224, 75, 0.4) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 40px rgba(255, 224, 75, 0.15) !important;
+}
+
+.abstract-step-card:hover::before {
+  opacity: 1;
+}
+
+.abstract-step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE04B, #d78633);
+  color: #82114F !important;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 0 15px rgba(255, 224, 75, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.abstract-step-card:hover .abstract-step-number {
+  transform: scale(1.1) rotate(360deg);
+  box-shadow: 0 0 25px rgba(255, 224, 75, 0.7);
+}
+
+/* Polished tracks styling */
+.abstract-track-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 24px 30px;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-left: 5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.abstract-track-item:hover {
+  background: rgba(255, 224, 75, 0.05) !important;
+  border-left-color: #FFE04B !important;
+  border-color: rgba(255, 224, 75, 0.35) !important;
+  transform: translateX(10px) scale(1.01) !important;
+  box-shadow: 0 15px 35px rgba(255, 224, 75, 0.12) !important;
+}
+
+/* Polished Form specific styles */
+.abstract-form-card {
+  background: rgba(26, 2, 16, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 2px solid rgba(255, 224, 75, 0.3) !important;
+  border-radius: 24px !important;
+  padding: 40px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s ease;
+}
+
+.abstract-form-card:hover {
+  border-color: rgba(255, 224, 75, 0.6) !important;
+  box-shadow: 0 25px 60px rgba(255, 224, 75, 0.15) !important;
+}
+
+/* Icon input layout */
+.abstract-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.abstract-input-wrap i {
+  position: absolute;
+  left: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.abstract-input-wrap input,
+.abstract-input-wrap select,
+.abstract-input-wrap textarea {
+  padding-left: 46px !important;
+  width: 100%;
+}
+
+.abstract-input-wrap input:focus ~ i,
+.abstract-input-wrap select:focus ~ i,
+.abstract-input-wrap textarea:focus ~ i {
+  color: #FFE04B;
+  transform: scale(1.1);
+}
+
+/* Custom styled selects */
+.abstract-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23FFE04B' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 20px !important;
+  cursor: pointer;
+}
+
+.abstract-select option {
+  background-color: #1a0210 !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+}
+
+/* Word count indicator styling */
+.word-count-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.word-count-badge.limit-ok {
+  color: #c4ff7a;
+  border-color: rgba(196, 255, 122, 0.3);
+  background: rgba(196, 255, 122, 0.05);
+}
+
+.word-count-badge.limit-warn {
+  color: #FFE04B;
+  border-color: rgba(255, 224, 75, 0.3);
+  background: rgba(255, 224, 75, 0.05);
+}
+
+.word-count-badge.limit-error {
+  color: #ff7e7e;
+  border-color: rgba(255, 126, 126, 0.3);
+  background: rgba(255, 126, 126, 0.05);
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* Premium success view card styling */
+.abstract-success-card {
+  border: 2px dashed #FFE04B !important;
+  background: rgba(26, 2, 16, 0.8) !important;
+  backdrop-filter: blur(25px) !important;
+  border-radius: 24px !important;
+  padding: 60px 40px !important;
+  box-shadow: 0 25px 60px rgba(255, 224, 75, 0.2) !important;
+  animation: fadeInUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.abstract-success-checkmark {
+  font-size: 80px;
+  color: #FFE04B;
+  text-shadow: 0 0 30px rgba(255, 224, 75, 0.6);
+  animation: scaleBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes scaleBounce {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.abstract-summary-table {
+  width: 100%;
+  margin: 25px 0;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.abstract-summary-table td {
+  padding: 12px 18px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  text-align: left;
+  font-size: 14px;
+}
+
+.abstract-summary-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.abstract-summary-table td.label-cell {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-weight: 500;
+  width: 35%;
+}
+
+.abstract-summary-table td.value-cell {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Arched Temple Card Styling */
+.temple-grid-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 4px solid #FFE04B !important;
+  border-radius: 20px 20px 16px 16px !important;
+  padding: 30px 24px !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glowing arch */
+.temple-grid-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 224, 75, 0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.temple-grid-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(255, 224, 75, 0.4) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 20px 40px rgba(255, 224, 75, 0.12) !important;
+}
+
+.temple-grid-card:hover::after {
+  opacity: 1;
+}
+
+.temple-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 224, 75, 0.1);
+  border: 1px solid rgba(255, 224, 75, 0.3);
+  color: #FFE04B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.4s ease;
+}
+
+.temple-grid-card:hover .temple-icon-box {
+  background: #FFE04B;
+  color: #82114F;
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 15px rgba(255, 224, 75, 0.5);
+}
+
+.temple-dist-badge {
+  background: rgba(255, 224, 75, 0.12);
+  color: #FFE04B;
+  border: 1px solid rgba(255, 224, 75, 0.25);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Footer: center logo + newsletter on all screens ── */
+.xb-newsletter {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.xb-newsletter .xb-item--title {
+  text-align: center !important;
+}
+
+/* ── Exhibitor form: mobile fixes ── */
+@media (max-width: 991px) {
+  /* Stack form panel full width on tablet/mobile */
+  #stall-enquiry .row.g-0 {
+    flex-direction: column !important;
+  }
+
+  #stall-enquiry .col-lg-8 > div {
+    padding: 32px 24px !important;
+  }
+
+  /* Tighten phone prefix on small screens */
+  #stall-enquiry .col-md-6 > div[style*="display: flex"] {
+    flex-wrap: nowrap !important;
+  }
+}
+
+@media (max-width: 575px) {
+  #stall-enquiry .col-lg-8 > div {
+    padding: 24px 16px !important;
+  }
+
+  /* Stack side-by-side rows to single column */
+  #stall-enquiry .col-md-6,
+  #stall-enquiry .col-md-4 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Product category checkboxes: single column on mobile */
+  #stall-enquiry div[style*="grid-template-columns: repeat(auto-fill"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Submit button full width on mobile */
+  #stall-enquiry div[style*="justify-content: flex-end"] {
+    justify-content: stretch !important;
+  }
+
+  #stall-enquiry div[style*="justify-content: flex-end"] button {
+    width: 100% !important;
+  }
+}
+
+/* ── Brochure Flipbook ── */
+.brochure-flipbook .stf__parent {
+  margin: 0 auto;
+}
+
+/* Page shadow depth */
+.brochure-flipbook .stf__item {
+  box-shadow: inset -4px 0 12px rgba(0,0,0,0.25);
+}
+
+/* Thumbnail strip scrollbar */
+.brochure-flipbook-thumbs::-webkit-scrollbar {
+  height: 4px;
+}
+.brochure-flipbook-thumbs::-webkit-scrollbar-track {
+  background: transparent;
+}
+.brochure-flipbook-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(255,224,75,0.3);
+  border-radius: 2px;
+}
+
+/* Fullscreen mode */
+:fullscreen .brochure-flipbook,
+:-webkit-full-screen .brochure-flipbook {
+  background: #0d0010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile: prevent horizontal overflow from book */
+@media (max-width: 767px) {
+  .brochure-flipbook {
+    touch-action: pan-y;
+  }
+}
+
+/* ── Floating Buttons animations ── */
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0px); box-shadow: 0 8px 28px rgba(130,17,79,0.55), 0 0 0 0 rgba(255,224,75,0.35); }
+  50%       { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(130,17,79,0.65), 0 0 0 8px rgba(255,224,75,0.08); }
+}
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Mobile: tuck buttons in a bit */
+@media (max-width: 575px) {
+  /* Register pill — smaller on mobile */
+  a[style*="Register Now"] {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+    right: 16px !important;
+    bottom: 88px !important;
+  }
+}
+
+/* ── Speakers Slider & Grid premium overrides ── */
+.design-conference .dc-team-slider {
+  padding-bottom: 50px !important;
+}
+
+.design-conference .dc-team-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 30px 20px !important;
+  min-height: 380px !important;
+}
+
+.design-conference .dc-team-item .xb-item--inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.design-conference .dc-team-item .xb-item--avatar {
+  width: 180px !important;
+  height: 180px !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  border: 2px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  transform: scale(0.95) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  display: block !important;
+  margin: 0 auto 20px !important;
+}
+
+.design-conference .dc-team-item .xb-item--avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  transition: transform 0.4s ease !important;
+}
+
+/* Active Swiper Slide Center zoom effect */
+.design-conference .dc-team-slider .swiper-slide-active .dc-team-item .xb-item--avatar {
+  transform: scale(1.1) !important;
+  border-color: #FFE04B !important;
+  box-shadow: 0 12px 30px rgba(255, 224, 75, 0.35) !important;
+  filter: grayscale(0) !important;
+}
+
+/* Make sure active state is full color and non-active slides are grayscale */
+.design-conference .dc-team-slider .swiper-slide:not(.swiper-slide-active) .dc-team-item .xb-item--avatar {
+  filter: grayscale(100%) opacity(0.7) !important;
+}
+
+/* Override hardcoded Swiper slide margins from main.css */
+.design-conference .dc-team-slider .swiper-slide {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.design-conference .dc-team-item .xb-item--author {
+  margin: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.design-conference .dc-team-item .xb-item--name {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin: 10px 0 5px 0 !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.design-conference .dc-team-item .xb-item--desig {
+  font-size: 13px !important;
+  color: #FFE04B !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Speakers Grid (Speakers.jsx) Premium overrides */
+.design-conference .xb-team-item {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.design-conference .xb-team-item .xb-item--avatar {
+  width: 100% !important;
+  height: 320px !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  position: relative !important;
+}
+
+.design-conference .xb-team-item .xb-item--avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  transition: transform 0.5s ease !important;
+}
+
+.design-conference .xb-team-item:hover .xb-item--avatar img {
+  transform: scale(1.08) !important;
+}
+
+/* ── Light Mode Override System ── */
+body.light-mode {
+  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)), url('/assets/img/bg/footer-bg.jpg') !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  color: #1a0210 !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode .title,
+body.light-mode .color-heading {
+  color: #1a0210 !important;
+}
+
+body.light-mode p,
+body.light-mode span,
+body.light-mode li,
+body.light-mode a,
+body.light-mode strong,
+body.light-mode label,
+body.light-mode small,
+body.light-mode em,
+body.light-mode .xb-content,
+body.light-mode .xb-vanue {
+  color: #333333 !important;
+}
+
+/* Sub-titles under light-mode */
+body.light-mode .sub-title {
+  color: #82114F !important;
+}
+
+/* Glassmorphism cards in light-mode */
+body.light-mode .xb-ticket-item,
+body.light-mode .contact-form-wrap.main-contact-form,
+body.light-mode .xb-faq-item,
+body.light-mode .xb-funfact-item,
+body.light-mode .dc-team-item,
+body.light-mode .xb-team-item,
+body.light-mode .xb-schedule-content,
+body.light-mode .xb-schedule-nav-wrap {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(130, 17, 79, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(130, 17, 79, 0.06) !important;
+  color: #1a0210 !important;
+}
+
+body.light-mode .xb-ticket-item:hover,
+body.light-mode .contact-form-wrap.main-contact-form:hover,
+body.light-mode .xb-faq-item:hover,
+body.light-mode .xb-funfact-item:hover,
+body.light-mode .dc-team-item:hover,
+body.light-mode .xb-team-item:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(130, 17, 79, 0.3) !important;
+  box-shadow: 0 12px 40px rgba(130, 17, 79, 0.12) !important;
+}
+
+/* Offer/banner inner blocks */
+body.light-mode .offer-wrapper .offer-item .xb-inner {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(130, 17, 79, 0.15) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .offer-wrapper .offer-item .xb-location {
+  background: rgba(130, 17, 79, 0.08) !important;
+  border-color: rgba(130, 17, 79, 0.2) !important;
+}
+
+body.light-mode .offer-wrapper .offer-item .xb-location img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(2250%) hue-rotate(313deg) brightness(85%) contrast(98%) !important; /* Force brand purple color */
+}
+
+/* Hero Section overlays & style adaptations */
+body.light-mode .hero-style--two .title {
+  color: #1a0210 !important;
+}
+
+body.light-mode .hero-style--two p {
+  color: #82114F !important;
+}
+
+body.light-mode .hero-style--two div[style*="background: rgba(255,255,255,0.07)"] {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(130, 17, 79, 0.2) !important;
+}
+
+body.light-mode .hero-style--two div[style*="background: rgba(255,255,255,0.07)"] span {
+  color: #1a0210 !important;
+}
+
+/* Funfact achievements block */
+body.light-mode .funfact {
+  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('/assets/img/bg/funfact-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+body.light-mode .funfact div[style*="background: linear-gradient"] {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(130, 17, 79, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .funfact div[style*="background: linear-gradient"] span {
+  color: #1a0210 !important;
+}
+
+body.light-mode .funfact div[style*="background: linear-gradient"] h3 span {
+  background: linear-gradient(135deg, #82114F 0%, #D78633 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.light-mode .funfact-heading .sec-title .title {
+  color: #1a0210 !important;
+}
+
+/* Countdown adaptation in light-mode */
+body.light-mode .countdown-unit {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border: 1px solid rgba(130, 17, 79, 0.16) !important;
+  box-shadow: 0 8px 24px rgba(130, 17, 79, 0.05) !important;
+}
+
+body.light-mode .countdown-label {
+  color: #555555 !important;
+}
+
+/* Speakers overrides inside light-mode */
+body.light-mode .dc-team-item .xb-item--name,
+body.light-mode .dc-team-item .xb-item--name a {
+  color: #1a0210 !important;
+}
+
+body.light-mode .dc-team-item .xb-item--desig {
+  color: #82114F !important;
+}
+
+body.light-mode .dc-team-slider .swiper-slide:not(.swiper-slide-active) .dc-team-item .xb-item--avatar {
+  filter: grayscale(100%) opacity(0.55) !important;
+}
+
+/* FAQ answers */
+body.light-mode .xb-faq-item .xb-content {
+  color: #444444 !important;
+}
+
+/* ── Clean Premium Light Theme for Forms ── */
+.design-conference .contact-form-wrap.main-contact-form {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 1px solid rgba(130, 17, 79, 0.16) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16) !important;
+  color: #1a0210 !important;
+  padding: 50px 40px !important;
+}
+
+/* Reset inner form double-wrapping */
+.design-conference .contact-form-wrap.main-contact-form form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Form Titles & Paragraphs */
+.design-conference .contact-form-wrap.main-contact-form h2,
+.design-conference .contact-form-wrap.main-contact-form h3,
+.design-conference .contact-form-wrap.main-contact-form h4,
+.design-conference .contact-form-wrap.main-contact-form .title {
+  color: #1a0210 !important;
+  font-weight: 800 !important;
+}
+
+.design-conference .contact-form-wrap.main-contact-form p,
+.design-conference .contact-form-wrap.main-contact-form span,
+.design-conference .contact-form-wrap.main-contact-form .xb-content {
+  color: #555555 !important;
+  font-size: 15px !important;
+}
+
+/* Form section headings (h5 details) */
+.design-conference .contact-form-wrap.main-contact-form h5 {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  color: #82114F !important;
+  border-left: 4px solid #D78633 !important;
+  padding-left: 12px !important;
+  margin-top: 35px !important;
+  margin-bottom: 22px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Form Labels */
+.design-conference .contact-form-wrap.main-contact-form label {
+  color: #1a0210 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Form Inputs, Textarea & Dropdowns */
+.design-conference .contact-form-wrap.main-contact-form input,
+.design-conference .contact-form-wrap.main-contact-form textarea,
+.design-conference .contact-form-wrap.main-contact-form select {
+  background: #fbfbfd !important;
+  border: 1.5px solid rgba(130, 17, 79, 0.15) !important;
+  border-radius: 12px !important;
+  color: #1a0210 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  padding: 14px 18px !important;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.01) !important;
+}
+
+.design-conference .contact-form-wrap.main-contact-form input::placeholder,
+.design-conference .contact-form-wrap.main-contact-form textarea::placeholder {
+  color: #777777 !important;
+  opacity: 0.85 !important;
+}
+
+.design-conference .contact-form-wrap.main-contact-form input:focus,
+.design-conference .contact-form-wrap.main-contact-form textarea:focus,
+.design-conference .contact-form-wrap.main-contact-form select:focus {
+  background: #ffffff !important;
+  border-color: #82114F !important;
+  box-shadow: 0 0 0 4px rgba(130, 17, 79, 0.08), 0 4px 12px rgba(130, 17, 79, 0.04) !important;
+  color: #1a0210 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Premium Custom Select Arrow Icon */
+.design-conference .contact-form-wrap.main-contact-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2382114F'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 18px !important;
+  padding-right: 40px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+/* Dropdown select options */
+.design-conference .contact-form-wrap.main-contact-form select option {
+  background: #ffffff !important;
+  color: #1a0210 !important;
+  padding: 10px !important;
+}
+
+/* Product Category Checklist boxes in Exhibitors.jsx */
+.design-conference .contact-form-wrap.main-contact-form label[style*="background"] {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1.5px solid rgba(130, 17, 79, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02) !important;
+}
+.design-conference .contact-form-wrap.main-contact-form label[style*="background"]:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(130, 17, 79, 0.3) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(130, 17, 79, 0.05) !important;
+}
+.design-conference .contact-form-wrap.main-contact-form label[style*="background"] span {
+  color: #1a0210 !important;
+  font-weight: 600 !important;
+}
+
+/* Booking Payment Summary box in Delegate.jsx */
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] {
+  background: rgba(130, 17, 79, 0.04) !important;
+  border: 1px solid rgba(130, 17, 79, 0.1) !important;
+  box-shadow: none !important;
+  border-radius: 16px !important;
+  padding: 24px 30px !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] h4 {
+  color: #82114F !important;
+  border-bottom: 1px solid rgba(130, 17, 79, 0.1) !important;
+  font-size: 18px !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] div {
+  border-top-color: rgba(130, 17, 79, 0.1) !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] p {
+  color: #1a0210 !important;
+  font-weight: 500 !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] strong,
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] strong[style*="color: #fff"],
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] strong[style*="color: rgb(255, 255, 255)"] {
+  color: #82114F !important;
+  font-weight: 700 !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] span {
+  color: #1a0210 !important;
+  font-weight: 600 !important;
+}
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] span[style*="color: rgb(255, 255, 255)"],
+.design-conference .contact-form-wrap.main-contact-form div[style*="background: rgba(0, 0, 0, 0.25)"] span[style*="color: #fff"] {
+  color: #1a0210 !important;
+}
+
+/* Progress bar fill for Booking capacity stats in Exhibitors.jsx */
+.design-conference .progress-bar-track {
+  background: rgba(130, 17, 79, 0.08) !important;
+  border-radius: 10px !important;
+  height: 8px !important;
+  overflow: hidden !important;
+  margin-top: 6px !important;
+}
+.design-conference .progress-bar-fill {
+  background: linear-gradient(90deg, #82114F, #D78633) !important;
+  height: 100% !important;
+  border-radius: 10px !important;
+}
+
+/* Section overrides to let global texture gradient flow uninterrupted */
+.design-conference section:not(.breadcrumb):not(.hero),
+.design-conference div[class*="-bg"]:not(.breadcrumb) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+.design-conference .dark-bg {
+  background: transparent !important;
+}
+
+/* ── Custom Theme Enhancements & Bug Fixes for Light/Dark Modes ── */
+
+/* Circular Icon Wrapper light-mode override */
+body.light-mode .circle-icon-wrap {
+  background: rgba(130, 17, 79, 0.08) !important;
+  border-color: rgba(130, 17, 79, 0.2) !important;
+  color: #82114F !important;
+}
+body.light-mode .circle-icon-wrap:hover {
+  background: #82114F !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(130, 17, 79, 0.3) !important;
+}
+
+/* How to Reach section styling */
+.reach-icon {
+  color: #FFE04B;
+}
+.reach-title {
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 3px;
+}
+.reach-desc {
+  color: #b9b6d6;
+  font-size: 14px;
+  margin: 0;
+  line-height: 22px;
+}
+
+/* Light mode overrides for How to Reach */
+body.light-mode .reach-icon {
+  color: #82114F !important;
+}
+body.light-mode .reach-title {
+  color: #1a0210 !important;
+}
+body.light-mode .reach-desc {
+  color: #333333 !important;
+}
+
+/* Venue Highlights checkmark icon and text styling */
+.highlight-check-icon {
+  background: rgba(255, 224, 75, 0.1);
+  border: 1px solid rgba(255, 224, 75, 0.4);
+  color: #FFE04B;
+}
+.highlight-text-item {
+  color: #e2e0ff;
+}
+
+/* Light mode overrides for Venue Highlights */
+body.light-mode .highlight-check-icon {
+  background: rgba(130, 17, 79, 0.08) !important;
+  border-color: rgba(130, 17, 79, 0.2) !important;
+  color: #82114F !important;
+}
+body.light-mode .highlight-text-item {
+  color: #333333 !important;
+}
+
+/* Visual History Timeline box and card styling */
+.timeline-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.timeline-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+.timeline-card:hover {
+  border-color: rgba(255, 224, 75, 0.3);
+  background: rgba(255, 224, 75, 0.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.timeline-card-title {
+  color: #fff;
+}
+.timeline-card-desc {
+  color: #b9b6d6;
+}
+
+/* Light mode overrides for Timeline */
+body.light-mode .timeline-box {
+  background: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(130, 17, 79, 0.1) !important;
+  box-shadow: 0 20px 50px rgba(130, 17, 79, 0.05) !important;
+}
+body.light-mode .timeline-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(130, 17, 79, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(130, 17, 79, 0.06) !important;
+}
+body.light-mode .timeline-card:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(130, 17, 79, 0.3) !important;
+  box-shadow: 0 12px 40px rgba(130, 17, 79, 0.12) !important;
+}
+body.light-mode .timeline-card-title {
+  color: #1a0210 !important;
+}
+body.light-mode .timeline-card-desc {
+  color: #333333 !important;
+}
+
+/* Spiritual Attractions temple box and grid card styling */
+.temple-box {
+  background: rgba(26, 2, 16, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.temple-grid-card h4 {
+  color: #fff;
+}
+.temple-grid-card p {
+  color: #b9b6d6;
+}
+
+/* Light mode overrides for Spiritual Attractions */
+body.light-mode .temple-box {
+  background: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(130, 17, 79, 0.1) !important;
+  box-shadow: 0 20px 50px rgba(130, 17, 79, 0.05) !important;
+}
+body.light-mode .temple-grid-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(130, 17, 79, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(130, 17, 79, 0.06) !important;
+  border-top-color: #82114F !important;
+}
+body.light-mode .temple-grid-card:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(130, 17, 79, 0.3) !important;
+  box-shadow: 0 12px 40px rgba(130, 17, 79, 0.12) !important;
+}
+body.light-mode .temple-grid-card h4 {
+  color: #1a0210 !important;
+}
+body.light-mode .temple-grid-card p {
+  color: #333333 !important;
+}
+body.light-mode .temple-icon-box {
+  background: rgba(130, 17, 79, 0.08) !important;
+  border-color: rgba(130, 17, 79, 0.2) !important;
+  color: #82114F !important;
+}
+body.light-mode .temple-grid-card:hover .temple-icon-box {
+  background: #82114F !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(130, 17, 79, 0.4) !important;
+}
+body.light-mode .temple-dist-badge {
+  background: rgba(130, 17, 79, 0.08) !important;
+  color: #82114F !important;
+  border: 1px solid rgba(130, 17, 79, 0.12) !important;
+}
+
+/* --- Premium Button Styling --- */
+.design-conference .thm-btn.design-btn {
+  background: linear-gradient(135deg, #82114F 0%, #D78633 100%) !important;
+  border: 2px solid #FFE04B !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(130, 17, 79, 0.4) !important;
+  border-radius: 50px !important;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 14px 32px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.design-conference .thm-btn.design-btn:hover {
+  background: linear-gradient(135deg, #D78633 0%, #82114F 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(215, 134, 51, 0.5) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+.design-conference .thm-btn.design-btn::before {
+  background: linear-gradient(135deg, #D78633 0%, #82114F 100%) !important;
+}
+
+.design-conference .thm-btn.design-btn img {
+  transition: transform 0.3s ease !important;
+}
+
+.design-conference .thm-btn.design-btn:hover img {
+  transform: translateX(4px) !important;
+}
+
+/* Light mode specific button overrides to keep them highly visible */
+body.light-mode .thm-btn.design-btn {
+  box-shadow: 0 6px 20px rgba(130, 17, 79, 0.2) !important;
+}
+
+/* Light mode overrides for form inputs, textareas, and select dropdowns globally */
+body.light-mode .design-conference input,
+body.light-mode .design-conference textarea,
+body.light-mode .design-conference select,
+body.light-mode .xb-contact-input-form .xb-input-field input,
+body.light-mode .xb-contact-input-form .xb-input-field textarea {
+  background-color: rgba(130, 17, 79, 0.04) !important;
+  color: #1a0210 !important;
+  border-color: rgba(130, 17, 79, 0.15) !important;
+}
+
+body.light-mode .design-conference input::placeholder,
+body.light-mode .design-conference textarea::placeholder {
+  color: rgba(26, 2, 16, 0.5) !important;
+}
+
+body.light-mode .design-conference input:focus,
+body.light-mode .design-conference textarea:focus,
+body.light-mode .design-conference select:focus {
+  border-color: #82114F !important;
+  background-color: rgba(130, 17, 79, 0.08) !important;
+  box-shadow: 0 0 10px rgba(130, 17, 79, 0.15) !important;
+}
+
+/* Light mode icon color overrides for yellow/gold icons globally */
+body.light-mode .design-conference i {
+  color: #82114F !important;
+}

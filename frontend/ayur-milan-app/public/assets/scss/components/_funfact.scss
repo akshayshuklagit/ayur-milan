@@ -1,0 +1,195 @@
+.xb-funfact-item {
+    z-index: 1;
+    text-align: center;
+    padding: 50px 50px 43px;
+    background: var(--color-white);
+    @include border-radius(10px);
+    @include transition(.3s);
+    box-shadow: 0 6px 55px 0 rgba(82, 71, 175, 0.15);
+    &:hover {
+        box-shadow: 0 23px 45px 0 rgba(113, 110, 141, 0.31);
+    }
+    @include respond(lg) {
+        padding: 50px 25px 43px;
+    }
+    .xb-item {
+        &--icon {
+            height: 62px; 
+        }
+        &--number {
+            font-size: 46px;
+            font-weight: 900;
+            margin: 30px 0 0;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 38px;
+            }
+            .xbo.xbo-auto-theme .xbo-digit .xbo-value, .xbo.xbo-theme-default .xbo-digit .xbo-value {
+                transform: translateZ(0) translateY(-8px);
+                -webkit-transform: translateZ(0) translateY(-8px);
+            }
+        }
+        &--text {
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: -3px;
+            display: block;
+            text-transform: uppercase;
+            color: var(--color-heading);
+        }
+    }
+}
+.xb-funfact-shape {
+    .img {
+        z-index: -1;
+        position: absolute;
+        &--1 {
+            left: 29px;
+            bottom: 0;
+            @include respond(lg) {
+                left: 0;
+            }
+        }
+        &--2 {
+            left: -278px;
+            right: -400px;
+            bottom: 60px;
+            @include respond(lg) {
+                left: -120px;
+                right: -120px;
+            }
+            @include respond(md) {
+                left: -80px;
+                right: -80px;
+            }
+            @include respond(xs) {
+                left: -50px;
+                right: -20px;
+            }
+            @include respond(sm) {
+                left: -60px;
+                right: -40px;
+            }
+        }
+    }
+}
+.dc-funfact-wrap {
+    padding: 70px 50px 60px;
+    overflow: hidden;
+    @include border-radius(10px);
+    @include respond(xs) {
+        padding: 70px 25px 60px;
+    }
+}
+.xb-funfact-image {
+    float: right;
+    @include respond(md) {
+        float: left;
+    }
+}
+.dc-funfact-inner {
+    padding: 34px 50px 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include border-radius(10px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(29.899999618530273px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    @include respond(lg) {
+        padding: 34px 30px 43px;
+    }
+    @include respond(xs) {
+        padding: 0;
+        flex-direction: column;
+    }
+}
+.dc-funfact-item {
+    margin-right: 60px;
+    text-align: center;
+    min-width: 178px;
+    position: relative;
+    display: inline-block;
+    @include respond(lg) {
+        min-width: 110px;
+    }
+    @include respond(md) {
+        min-width: 80px;
+        margin-right: 30px;
+    }
+    @include respond(xs) {
+        margin: 0;
+        width: 100%;
+        padding: 40px 0 45px;
+    }
+    &:last-child {
+        margin-right: 0;
+        &::before {
+            display: none;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        right: -60px;
+        top: 15px;
+        height: 75%;
+        width: 1px;
+        background: #d9d9d9;
+        @include respond(md) {
+            right: -30px;
+        }
+        @include respond(xs) {
+            right: 0;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+    }
+    .xb-item {
+        &--number {
+            font-size: 44px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            @include respond(md) {
+                font-size: 38px;
+            }
+            .xbo.xbo-auto-theme .xbo-digit .xbo-value, .xbo.xbo-theme-default .xbo-digit .xbo-value {
+                transform: translateZ(0) translateY(-4px);
+                -webkit-transform: translateZ(0) translateY(-4px);
+            }
+        }
+        &--text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-white);
+            @include respond(md) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.funfact-heading {
+    margin-top: -10px;
+}
+#wave {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 120px;
+    @include respond(lg) {
+        bottom: 50px;
+    }
+    @include respond(xs) {
+        bottom: 0px;
+        height: 150px;
+        color: #5afaff;
+    }
+}

@@ -1,0 +1,24 @@
+.xb-cta-title {
+    margin-right: -50px;
+    @include respond(xs) {
+        margin-right: 0;
+    }
+}
+.cta-marquee {
+    margin-bottom: -8px;
+    display: inline-block; 
+    .cta-shape {
+        @include respond(lg) {
+            max-width: 50%;
+            justify-content: start;
+        }
+        @include respond(xs) {
+            max-width: 40%;
+        }
+        .shape {
+           &--3 {
+               animation: spin 50s linear infinite;
+           }
+       }
+    }
+}

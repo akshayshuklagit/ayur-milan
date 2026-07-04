@@ -1,0 +1,453 @@
+.hero-style {
+    z-index: 1;
+    min-height: 920px;
+    padding-top: 242px;
+    padding-bottom: 120px;
+    overflow: hidden;
+    @include respond(xs) {
+        padding-top: 190px;
+    }
+    .hero-content-img {
+        .img {
+            z-index: -1;
+            position: absolute;
+            @include respond(laptop) {
+                max-width: 20%;
+            }
+            @include respond(lg) {
+                max-width: 20%;
+            }
+            @include respond(md) {
+                display: none;
+            }
+            &--1 {
+                left: 0;
+                top: 0;
+                @include respond(laptop) {
+                    top: 27%;
+                }
+                @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                    top: 30%;
+                }
+                @include respond(lg) {
+                    top: 31%;
+                }
+                @media only screen and (max-width: 1023px) {
+                    top: 33%;
+                }
+            }
+            &--2 {
+                top: 0;
+                right: 0;
+                @include respond(laptop) {
+                    top: 27%;
+                }
+                @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                    top: 30%;
+                }
+                @include respond(lg) {
+                    top: 31%;
+                }
+                @media only screen and (max-width: 1023px) {
+                    top: 33%;
+                }
+            }
+        }
+    }
+    .xb-hero_content {
+        padding-right: 20px;
+        @include respond(lg) {
+            padding-right: 0;
+        }
+    }
+    .xb-hero-heading {
+        margin-bottom: 60px;
+        @include respond(xs) {
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 90px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--color-white);
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 70px;
+            }
+            @include respond(xs) {
+                font-size: 36px;
+                text-align: center;
+            }
+            @include respond(sm) {
+                font-size: 55px;
+            }
+        }
+        .sub-heading {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-top: 8px;
+            gap: 30px;
+            justify-content: space-between;
+            @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                margin-top: 40px;
+                justify-content: center;
+            }
+            @include respond(lg) {
+                margin-top: 16px;
+                flex-wrap: nowrap;
+            }
+            @include respond(md) {
+                gap: 64px;
+                margin-top: 18px;
+                justify-content: start;
+            }
+            @include respond(xs) {
+                gap: 20px;
+                margin-top: 43px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @include respond(sm) {
+                margin-top: 30px;
+            }
+        }
+        .sub-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-white);
+            text-transform: uppercase;
+            display: inline-block;
+            position: relative;
+            @include respond(lg) {
+                font-size: 35px;
+                white-space: nowrap;
+            }
+            @include respond(md) {
+                font-size: 33px;
+            }
+            @include respond(xs) {
+                font-size: 24px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: -25px;
+                height: 2px;
+                width: 100%;
+                background: var(--color-white);
+                @include respond(xs) {
+                    top: -20px;
+                }
+            }
+        }
+        .number {
+            font-size: 70px;
+            font-weight: 900;
+            display: inline-block;
+            color: var(--color-primary);
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 55px;
+            }
+            @include respond(md) {
+                font-size: 50px;
+            }
+            @include respond(xs) {
+                font-size: 45px;
+            }
+        }
+    }
+    .xb-hero-bottom {
+        @include respond(lg) {
+            align-items: center !important;
+        }
+        @include respond(xs) {
+            gap: 40px;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+    }
+    .xb-hero-location-item {
+        .xb-location {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+            margin-top: 10px;
+            color: var(--color-white);
+            @include respond(lg) {
+                font-size: 25px;
+            }
+            @include respond(xs) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+            span {
+                font-weight: 400;
+                color: var(--color-primary);
+            }
+        }
+    }
+    .xb-hero-location-wrap {
+        gap: 42px;
+        display: flex;
+        flex-direction: column;
+        @include respond(xs) {
+            gap: 70px;
+            flex-direction: row;
+        }
+        @include respond(sm) {
+            gap: 50px;
+        }
+    }
+    &--two {
+        padding-top: 220px;
+        padding-bottom: 120px;
+        min-height: 920px;
+        @include respond(lg) {
+            min-height: 870px;
+        }
+        @include respond(md) {
+            min-height: 800px;
+        }
+        @include respond(xs) {
+            min-height: 590px;
+            padding-top: 160px;
+        }
+        @include respond(sm) {
+            min-height: 650px;
+        }
+        .xb-hero_content {
+            .title {
+                font-size: 160px;
+                font-weight: 400;
+                line-height: 1;
+                color: var(--color-white);
+                @include respond(lg) {
+                    font-size: 120px;
+                }
+                @include respond(md) {
+                    font-size: 100px;
+                }
+                @include respond(xs) {
+                    font-size: 50px;
+                }
+                 @include respond(sm) {
+                    font-size: 70px;
+                }
+            }
+        }
+        .hero-content-img {
+            .img {
+                position: absolute;
+                transition: transform 0.1s linear;
+                @include respond(laptop) {
+                    max-width: 14%;
+                }
+                &--1 {
+                    top: 18%;
+                    left: 15%;
+                    @include respond(laptop) {
+                        top: 14%;
+                        left: 0;
+                    }
+                    @include respond(lg) {
+                        top: 21%;
+                        left: 3%;
+                        max-width: 14%;
+                    }
+                    @include respond(md) {
+                        left: 0%; 
+                        top: 22%;
+                    }
+                    @include respond(xs) {
+                        top: 20%;
+                        left: -3%;
+                        max-width: 20%;
+                    }
+                    @include respond(sm) {
+                        left: 2%;
+                        top: 24%;
+                    }
+                }
+                &--2 {
+                    left: 8%;
+                    bottom: 36%;
+                    @include respond(laptop) {
+                        left: 4%;
+                        bottom: 30%;
+                    }
+                    @include respond(lg) {
+                        max-width: 7%;
+                        bottom: 40%;
+                        left: 4%;
+                    }
+                    @include respond(xs) {
+                        left: 2%;
+                        bottom: 50%;
+                        max-width: 9%;
+                    }
+                    @include respond(sm) {
+                        bottom: 44%;
+                    }
+                }
+                &--3 {
+                    top: 17%;
+                    right: 13%;
+                    @include respond(laptop) {
+                        right: 2%;
+                    }
+                    @include respond(lg) {
+                        top: 17%;
+                        right: 1%;
+                        max-width: 12%;
+                    }
+                    @include respond(md) {
+                        top: 20%;
+                    }
+                    @include respond(xs) {
+                        top: 21%;
+                        right: -1%;
+                        max-width: 16%;
+                    }
+                    @include respond(sm) {
+                        top: 20%;
+                    }
+                }
+                &--4 {
+                    right: 20%;
+                    bottom: 33%;
+                    @include respond(laptop) {
+                        right: 8%;
+                        bottom: 34%;
+                    }
+                    @include respond(lg) {
+                        right: 10%;
+                        bottom: 43%;
+                        max-width: 8%;
+                    }
+                    @include respond(md) {
+                        right: 6%;
+                        bottom: 44%;
+                    }
+                    @include respond(xs) {
+                        bottom: 51%;
+                        right: 0%;
+                        max-width: 13%;
+                    }
+                    @include respond(sm) {
+                        right: 9%;
+                        bottom: 48%;
+                    }
+                }
+            }
+        }
+    }
+    &--three {
+        min-height: 1062px;
+        padding-top: 220px;
+        padding-bottom: 120px;
+        overflow: hidden;
+        @include respond(lg) {
+            min-height: 945px;
+        }
+        @include respond(md) {
+            padding-top: 180px;
+        }
+        @include respond(xs) {
+            min-height: 920px;
+            padding-top: 160px;
+            padding-bottom: 100px;
+        }
+        @include respond(sm) {
+            min-height: 775px;
+        }
+        
+        .xb-hero_content {
+            .hero-btn {
+                gap: 30px;
+            }
+            .title {
+                font-size: 117px;
+                font-weight: 400;
+                max-width: 720px;
+                line-height: 1.03;
+                text-transform: uppercase;
+                @include respond(lg) {
+                    font-size: 90px;
+                    max-width: 850px;
+                }
+                @include respond(md) {
+                    max-width: none;
+                    font-size: 80px;
+                }
+                @include respond(xs) {
+                   font-size: 50px;
+                }
+            }
+            .content {
+                max-width: 430px;
+                margin-top: 33px;
+            }
+        }
+        .xb-hero-location-item {
+            .xb-holder {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                span {
+                    font-size: 26px;
+                    font-weight: 400;
+                    display: inline-flex;
+                    color: var(--color-primary);
+                }
+            }
+            .xb-location {
+                font-size: 26px;
+                font-weight: 600;
+                @include respond(xs) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .xb-hero-location-wrap {
+            gap: 87px;
+            margin-top: 67px;
+            @include respond(lg) {
+                flex-direction: column;
+                align-content: start;
+                align-items: start;
+                gap: 50px;
+            }
+            @include respond(xs) {
+                gap: 40px;
+            }
+            @include respond(sm) {
+                gap: 50px;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        
+        .hero-content-img .img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include respond(laptop) {
+                max-width: 42%;
+            }
+            @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                max-width: 34%;
+            }
+            @include respond(lg) {
+                max-width: 35%;
+            }
+            @include respond(xs) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/*----------------------------------------*/
+/*  22. breadcrumb
+/*----------------------------------------*/
+.breadcrumb {
+    min-height: 500px;
+    padding: 140px 0 100px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+    @include respond(lg) {
+        padding: 180px 0 100px;
+    }
+    @include respond(xs) {
+        min-height: 360px;
+        
+    }
+    &__content {
+        text-align: center;
+    }
+    &__title {
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: var(--color-white);
+        font-family: var(--font-heading);
+        @include respond(lg) {
+            font-size: 35px;
+        }
+        @include respond(md) {
+            font-size: 25px;
+        }
+        @include respond(xs) {
+            font-size: 22px;
+        }
+    }
+    &__sub-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 21px;
+        padding: 0 20px;
+        display: inline-block;
+        position: relative;
+        color: var(--color-white);
+        text-transform: capitalize;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            height: 10px;
+            width: 10px;
+            transform: translateY(-50%);
+            background: var(--color-primary);
+            @include border-radius(100%);
+        }
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+}

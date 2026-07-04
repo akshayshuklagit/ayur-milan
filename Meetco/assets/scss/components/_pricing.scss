@@ -1,0 +1,346 @@
+.xb-pricing-table {
+    padding: 48px 40px;
+    margin-bottom: 22px;
+    background: #fff2fe;
+    border: 1px solid #fff;
+    @include border-radius(16px);
+    @include respond(lg) {
+        padding: 48px 10px;
+    }
+    @include respond(xs) {
+        padding: 48px 20px;
+    }
+}
+.xb-pricing-item {
+    padding: 22px 24px 60px;
+    min-height: 569px;
+    position: relative;
+    @include border-radius(12px);
+    @include transition(.3s);
+    @include respond(lg) {
+        padding: 22px 10px 60px;
+    }
+    &.active {
+        background: var(--color-white);
+        .xb-item--icon {
+            opacity: 1;
+        }
+    }
+    .xb-item {
+        &--icon {
+            opacity: 0.3;
+            @include transition(.3s);
+        }
+        &--title {
+            font-size: 24px;
+            font-weight: 500;
+            color: #1e2022;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        &--content {
+            color: #6b7280;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 15px;
+        }
+        &--dollar {
+            font-size: 50px;
+            color: #1e2022;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px dashed #CFD2D6;
+        }
+        &--list {
+            margin-top: 35px;
+            li {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                color: var(--color-black);
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &--popular-item {
+            gap: 5px;
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: var(--color-white);
+            border: 4px solid #fff;
+            @include border-radius(99px);
+            box-shadow: 0 2px 4px 0 rgba(108, 113, 128, 0.08), 0 7px 7px 0 rgba(108, 113, 128, 0.07), 0 17px 10px 0 rgba(108, 113, 128, 0.04), 0 29px 12px 0 rgba(108, 113, 128, 0.01);
+            background: linear-gradient(270deg, #f3977b 0%, #ff9791 24.48%, #eb5fe2 60.09%, #988cfe 100%);
+        }
+    }
+}
+.xb-ticket-item {
+    padding: 40px 20px 20px;
+    @include border-radius(10px);
+    background: var(--color-white);
+    .xb-item {
+        &--holder {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        &--title {
+            display: block;
+            font-weight: 500;
+            margin: 20px 0 10px;
+            text-transform: uppercase;
+            color: var(--color-heading);
+        }
+        &--dollar {
+            font-size: 34px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        &--list {
+            margin-top: 20px;
+            padding: 30px 20px;
+            background: #f2f2f2;
+            @include border-radius(10px);
+            li {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                color: #525257;
+                font-weight: 500;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+                i {
+                    color: var(--color-heading);
+                }
+            }
+        }
+    }
+}
+.xb-ticket-btn {
+    font-size: 16px;
+    font-weight: 600;
+    
+    padding: 15px 50px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(.3s);
+    color: var(--color-white);
+    text-transform: uppercase;
+    @include border-radius(7px);
+    background: var(--color-secondary);
+    .xb-icon {
+        height: 30px;
+        width: 30px;
+        margin-left: -10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include transition(.3s);
+        @include border-radius(100%);
+        img {
+            position: absolute;
+            left: 8px;
+            top: 9px;
+            @include transition(.3s);
+            filter: brightness(100);
+            &:nth-child(1) {
+                transform: translate(0);
+            }
+            &:nth-child(2) {
+                transform: translate(-30px, 30px);
+            }
+        }
+    }
+    &:hover {
+        color: var(--color-black);
+        background: var(--color-primary);
+        .xb-icon {
+            img {
+                filter: brightness(0);
+                &:nth-child(1) {
+                    transform: translate(30px, -30px);
+                }
+                &:nth-child(2) {
+                    transition-delay: .1s;
+                    transform: translate(0, 0);
+                }
+            }
+        }
+    }
+}
+.xb-pricing-nav {
+    @include respond(lg) {
+        flex-wrap: nowrap;
+    }
+    @include respond(xs) {
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        &:first-child {
+            .nav-link {
+                border-radius: 7px 0 0 7px;
+                @include respond(xs) {
+                    @include border-radius(7px);
+                }
+            }
+        }
+        &:last-child {
+            .nav-link {
+                border-radius: 0 7px 7px 0;
+                @include respond(xs) {
+                    @include border-radius(7px);
+                }
+            }
+        }
+        .nav-link {
+            padding: 20px 36px;
+            @include respond(lg) {
+                font-size: 16px;
+            }
+            @include respond(md) {
+                font-size: 14px;
+                padding: 15px 15px;
+            }
+            @include respond(xs) {
+                padding: 20px 36px;
+                @include border-radius(7px);
+            }
+            &.active {
+               color: var(--color-heading);
+               border: 1px solid #d3e2f0;
+               @include respond(xs) {
+                    @include border-radius(7px);
+               }
+               &::before {
+                   border-bottom: none;
+                   border-left: none;
+               }
+               .arrow svg path {
+                  fill: var(--color-primary);
+               }
+            }
+       } 
+    }
+}
+.ticket-details {
+    margin-left: 16px;
+    @include respond(md) {
+        margin-left: 0;
+    }
+}
+.xb-item-ticket {
+    margin-right: 70px;
+    padding: 35px 0 30px;
+    @include border-radius(10px);
+    background: var(--color-white);
+    @include respond(lg) {
+        margin-right: 0;
+    }
+    .xb-item {
+        &--title {
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 20px;
+            }
+        }
+        &--holder {
+            padding: 0 30px;
+        }
+        &--list {
+            li {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                color: #525257;
+                font-weight: 500;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+                i {
+                    color: var(--color-heading);
+                }
+            }
+        }
+        &--price-wrap {
+            display: flex;
+            margin: 35px 0 25px;
+            border-top: 1px solid #cbcad3;
+            border-bottom: 1px solid #cbcad3;
+        }
+        &--inner {
+            padding: 30px;
+            &:last-child {
+                margin-left: 24px;
+                border-left: 1px solid #cbcad3;
+            }
+        } 
+        &--text {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-heading);
+        }
+        &--dollar {
+            font-size: 22px;
+            font-weight: 900;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 18px;
+            }
+        }
+        &--line {
+            position: relative;
+            display: block;
+            margin: 40px 0 59px;
+            border: 2px dashed #131053;
+            &::after,
+            &::before {
+                position: absolute;
+                content: '';
+                height: 38px;
+                width: 38px;
+                top: 50%;
+                left: -24px;
+                transform: translateY(-50%);
+                background: #f2f2f2;
+                @include border-radius(100px);
+            }
+            &::before {
+                left: auto;
+                right: -24px;
+            }
+        }
+    }
+    .xb-ticket-btn {
+        padding: 22px 20px;
+        color: var(--color-heading);
+        background: var(--color-primary);
+        .xb-icon img {
+            filter: brightness(0);
+        }
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-secondary);
+            .xb-icon img {
+                filter: brightness(100);
+            }
+        }
+    }
+}
+
+
