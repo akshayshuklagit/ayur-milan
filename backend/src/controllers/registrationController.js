@@ -1,6 +1,7 @@
 const prisma = require('../config/db');
 const crypto = require('crypto');
 const emailService = require('../services/emailService');
+const googleSheetsService = require('../services/googleSheetsService');
 
 // Price mappings matching registration options
 const PARTICIPANT_PRICES = {
@@ -155,6 +156,11 @@ const registerParticipant = async (req, res, next) => {
       console.error('Failed to send registration pending email:', err);
     });
 
+    // Sync to Google Sheets asynchronously (non-blocking)
+    googleSheetsService.syncRegistration(registration).catch(err => {
+      console.error('Failed to sync registration to Google Sheets:', err);
+    });
+
     return res.status(201).json({
       status: 201,
       message: 'Registration created successfully. Please submit payment UTR to confirm.',
@@ -198,6 +204,11 @@ const submitPaymentUTR = async (req, res, next) => {
       }
     });
 
+    // Sync to Google Sheets asynchronously (non-blocking)
+    googleSheetsService.syncRegistration(updatedRegistration).catch(err => {
+      console.error('Failed to sync updated registration to Google Sheets:', err);
+    });
+
     return res.status(200).json({
       status: 200,
       message: 'UTR payment reference code submitted successfully. Admin will verify it soon.',
@@ -228,8 +239,14 @@ const getPaymentConfig = async (req, res, next) => {
         id: 'default',
         upiId: 'agniveshevents@upi',
         qrCodeUrl: '/assets/img/qr-code.png',
-        qrCodeBase64: null
+        qrCodeBase64: null,
+        upiId2: 'agniveshevents2@upi',
+        qrCodeUrl2: '/assets/img/qr-code2.png',
+        qrCodeBase64_2: null
       };
+    } else {
+      if (!config.upiId2) config.upiId2 = 'agniveshevents2@upi';
+      if (!config.qrCodeUrl2) config.qrCodeUrl2 = '/assets/img/qr-code2.png';
     }
     
     return res.status(200).json({

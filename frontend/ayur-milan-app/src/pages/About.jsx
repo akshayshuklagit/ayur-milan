@@ -732,6 +732,7 @@ export default function About() {
                     ].map((stat, idx) => (
                       <div key={idx} className="col-sm-6">
                         <div
+                          className="about-stat-card"
                           style={{
                             background: "rgba(255, 255, 255, 0.04)",
                             border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -770,6 +771,7 @@ export default function About() {
                               style={{ color: stat.color, fontSize: "16px" }}
                             ></i>
                             <span
+                              className="about-stat-value"
                               style={{
                                 fontSize: "24px",
                                 fontWeight: "800",
@@ -780,6 +782,7 @@ export default function About() {
                             </span>
                           </div>
                           <div
+                            className="about-stat-label"
                             style={{
                               fontSize: "13px",
                               fontWeight: "700",
@@ -788,7 +791,10 @@ export default function About() {
                           >
                             {stat.label}
                           </div>
-                          <div style={{ fontSize: "11px", color: "#b9b6d6" }}>
+                          <div 
+                            className="about-stat-desc"
+                            style={{ fontSize: "11px", color: "#b9b6d6" }}
+                          >
                             {stat.desc}
                           </div>
                         </div>

@@ -48,7 +48,7 @@ export default function Countdown() {
   ];
 
   return (
-    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center', margin: '0 auto' }}>
+    <div className="countdown-container" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center', margin: '0 auto' }}>
       {units.map((unit, i) => (
         <div key={i} className="countdown-unit" style={{
           background: 'rgba(20, 2, 12, 0.65)',
@@ -81,7 +81,7 @@ export default function Countdown() {
             height: '3px',
             background: 'linear-gradient(90deg, #FFE04B 0%, #D78633 100%)',
           }} />
-          <div style={{
+          <div className="countdown-number" style={{
             fontSize: '52px', fontWeight: '900', lineHeight: 1.1,
             background: 'linear-gradient(135deg, #FFE04B 0%, #D78633 100%)',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',

@@ -38,6 +38,76 @@ async function startServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
+  // Temporary Database Migration Debug Endpoint
+  app.get('/debug-db', (req, res) => {
+    const fs = require('fs');
+    const path = require('path');
+    
+    // Set executable permissions for Linux engine files (fixes EACCES)
+    try {
+      const pathsToSearch = [
+        path.join(__dirname, '../node_modules/@prisma/engines'),
+        path.join(__dirname, '../node_modules/.prisma/client'),
+        path.join(process.cwd(), 'node_modules/@prisma/engines'),
+        path.join(process.cwd(), 'node_modules/.prisma/client')
+      ];
+      pathsToSearch.forEach(dir => {
+        if (fs.existsSync(dir)) {
+          fs.readdirSync(dir).forEach(file => {
+            if (file.includes('debian') || file.includes('query-engine') || file.includes('schema-engine')) {
+              const filePath = path.join(dir, file);
+              if (fs.statSync(filePath).isFile()) {
+                fs.chmodSync(filePath, 0o755);
+                console.log(`🔓 [Debug Endpoint] Set 755 for: ${file}`);
+              }
+            }
+          });
+        }
+      });
+    } catch (e) {
+      console.warn('Failed to chmod inside endpoint:', e.message);
+    }
+
+    const { exec } = require('child_process');
+    console.log('⚡ Running prisma generate via endpoint...');
+    const genCmd = `"${process.execPath}" node_modules/prisma/build/index.js generate`;
+    exec(genCmd, (genErr, genStdout, genStderr) => {
+      if (genErr) {
+        return res.status(500).json({
+          success: false,
+          error: 'Prisma generate failed: ' + genErr.message,
+          stdout: genStdout,
+          stderr: genStderr
+        });
+      }
+      
+      console.log('⚡ Running prisma db push via endpoint...');
+      const cmd = `"${process.execPath}" node_modules/prisma/build/index.js db push`;
+      exec(cmd, (error, stdout, stderr) => {
+        if (!error) {
+          console.log('🌱 Running database seeding via endpoint...');
+          const seedCmd = `"${process.execPath}" prisma/seed.js`;
+          exec(seedCmd, (seedErr, seedStdout, seedStderr) => {
+            res.status(200).json({
+              success: true,
+              message: 'Prisma Client Generated, Database synchronized and seeded completed!',
+              generate: { stdout: genStdout, stderr: genStderr },
+              migration: { stdout, stderr },
+              seeding: { error: seedErr ? seedErr.message : null, stdout: seedStdout, stderr: seedStderr }
+            });
+          });
+        } else {
+          res.status(500).json({
+            success: false,
+            error: error.message,
+            stdout,
+            stderr
+          });
+        }
+      });
+    });
+  });
+
   // Default API Health Check Endpoint
   app.get('/', (req, res) => {
     res.status(200).json({

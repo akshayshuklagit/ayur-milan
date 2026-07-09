@@ -1,5 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubscribed(true);
+  };
+
+  if (subscribed)
+    return (
+      <p style={{ color: "#FFE04B", fontWeight: 600, marginTop: "12px", textAlign: "center" }}>
+        🎉 Thank you for subscribing!<br />
+        <span style={{ fontWeight: 400, fontSize: "13px", color: "rgba(255,255,255,0.8)" }}>
+          You're now part of the AyurMilan community.
+        </span>
+      </p>
+    );
+
+  return (
+    <form className="xb-item--newsletter_form" onSubmit={handleSubmit}>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button className="submit_btn" type="submit">Submit</button>
+    </form>
+  );
+}
 
 export default function Footer() {
   return (
@@ -82,15 +115,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="xb-item--title">Subscribe to our newsletter</p>
-            <form
-              className="xb-item--newsletter_form"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input type="email" placeholder="Enter your email" required />
-              <button className="submit_btn" type="submit">
-                Submit
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
           <div className="xb-footer_info mt-30">
             <h3 className="xb-widget-title">Get in touch</h3>
@@ -123,6 +148,66 @@ export default function Footer() {
               Copyright © 2026 <Link to="/">AYURMILAN,</Link> All rights
               reserved.
             </p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                fontSize: "14px",
+                fontWeight: "500",
+                color: "rgba(255, 255, 255, 0.8)",
+              }}
+              className="footer-dev-credits"
+            >
+              <span>Developed by</span>
+              <a
+                href="https://1techveda.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  textDecoration: "none",
+                  transition: "opacity 0.2s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "#ffffff",
+                    borderRadius: "50%",
+                    width: "36px",
+                    height: "36px",
+                    border: "2px solid #ffffff",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                    overflow: "hidden",
+                    padding: "4px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src="https://1techveda.com/1techveda-logo.webp"
+                    alt="1TechVeda Logo"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+                <span
+                  style={{ fontWeight: "700", color: "#FFE04B" }}
+                  className="dev-name"
+                >
+                  1TechVeda
+                </span>
+              </a>
+            </div>
             <div className="xb-social_media">
               <ul className="social-link list-unstyled ul_li">
                 <li>Follow us :</li>

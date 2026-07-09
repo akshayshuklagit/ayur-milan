@@ -13,112 +13,113 @@ export default function Team() {
       name: "Vd. Nishant Kumar Mishra",
       desig: "Co-Organizer",
       icon: "fa-user-doctor",
-      img: "/assets/img/team/nishant_kumar.jpg",
+      img: "/TEAM/dr-nishant.png",
     },
     {
       name: "Dr. Aditi Jain",
       desig: "Co-Organizer",
       icon: "fa-user-doctor",
-      img: "/assets/img/team/aditi_jain.jpg",
+      img: "/TEAM/dr-aditi.png",
     },
     {
       name: "Vd. Mehul",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/vd_mehul.jpg",
+      img: "/TEAM/dr-mehul.png",
     },
     {
       name: "Vd. Vaishnavi",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/vaishnavi.jpg",
+      img: "/TEAM/dr-vaishnavi.png",
     },
     {
       name: "Vd. Ashutosh Soni",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/ashutosh_soni.jpg",
+      img: "/TEAM/dr-ashutosh.png",
     },
     {
       name: "Dr. Anusha Gupta",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/anusha_gupta.jpg",
+      img: "/TEAM/dr-anusha.png",
     },
     {
       name: "Vd. Pooja",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/vd_pooja.jpg",
+      img: "/TEAM/dr-pooja.png",
     },
     {
       name: "Vd. Priyansh",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/priyansh.jpg",
+      img: "/TEAM/dr-priyansh.png",
     },
     {
       name: "Vd. Chirag Singla",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/chirag_singla.jpg",
+      img: "/TEAM/dr-chirag.png",
     },
     {
       name: "Vd. Raman",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/vd_raman.jpg",
+      img: "/TEAM/dr-raman.png",
     },
     {
       name: "Vd. Tanvi Arora",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/tanvi_arora.jpg",
+      img: "/TEAM/dr-tanvi.png",
     },
     {
       name: "Vd. Arrush",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/arrush.jpg",
+      img: "/TEAM/dr-arrush.png",
     },
     {
       name: "Vd. Harshita Gupta",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/harshita_gupta.jpg",
+      img: "/TEAM/dr-harshita.png",
     },
     {
       name: "Vd. Shikha Malik",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/shikha_malik.jpg",
+      img: "/TEAM/dr-sikha.png",
     },
     {
       name: "Vd. Sakshi Saini",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/sakshi_saini.jpg",
+      img: "/TEAM/dr-sakshi.png",
     },
     {
-      name: "Vd. Amit Biswas",
+      name: "Dr. Anjali",
       desig: "Core Team",
       icon: "fa-user",
-      img: "/assets/img/team/amit_biswas.jpg",
+      img: "/TEAM/dr-anjali.png",
     },
   ];
 
   const supportingHands = [
     {
-      name: "Vd. Balwinder Thakur",
-      desig: "Supporting Hand",
-      icon: "fa-handshake-angle",
-      img: "/assets/img/team/balwinder_thakur.jpg",
-    },
-    {
       name: "Vd. Laxmikant Mishra",
       desig: "Supporting Hand",
       icon: "fa-handshake-angle",
       img: "/assets/img/team/laxmikant_mishra.jpg",
+      isFeatured: true,
+    },
+    {
+      name: "Vd. Balwinder Thakur",
+      desig: "Supporting Hand",
+      icon: "fa-handshake-angle",
+      img: "/assets/img/team/balwinder_thakur.jpg",
     },
     {
       name: "Vd. Jaskeerat",
@@ -303,221 +304,39 @@ export default function Team() {
                 </p>
               </div>
 
-              {/* Featured organizer — Vd. Lovem Singla (Chairman) */}
-              <div className="row align-items-center g-5 mb-80">
-                <div className="col-lg-5">
-                  <div
-                    style={{
-                      position: "relative",
-                      display: "inline-block",
-                      width: "100%",
-                    }}
-                  >
-                    {/* dot grid */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "-15px",
-                        left: "-15px",
-                        width: "90px",
-                        height: "90px",
-                        backgroundImage:
-                          "radial-gradient(rgba(255,224,75,0.35) 20%, transparent 20%)",
-                        backgroundSize: "14px 14px",
-                        zIndex: 0,
-                        pointerEvents: "none",
-                      }}
-                    />
-                    {/* gold ring */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "-12px",
-                        right: "-12px",
-                        width: "120px",
-                        height: "120px",
-                        borderRadius: "50%",
-                        border: "2px dashed rgba(255,224,75,0.3)",
-                        zIndex: 0,
-                      }}
-                    />
-                    <div
-                      style={{
-                        borderRadius: "24px",
-                        overflow: "hidden",
-                        position: "relative",
-                        zIndex: 1,
-                        border: "2px solid rgba(255,224,75,0.4)",
-                        boxShadow:
-                          "0 25px 60px rgba(0,0,0,0.45), 0 0 40px rgba(255,224,75,0.08)",
-                      }}
-                    >
-                      <img
-                        src="./dr-lovem.png"
-                        alt="Vd. Lovem Singla"
-                        style={{
-                          width: "100%",
-                          height: "420px",
-                          objectFit: "cover",
-                          objectPosition: "top",
-                          display: "block",
-                        }}
-                      />
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          background:
-                            "linear-gradient(to top, rgba(20,0,15,0.8) 0%, transparent 55%)",
-                        }}
-                      />
-                      <div
-                        style={{
-                          position: "absolute",
-                          bottom: "20px",
-                          left: "20px",
-                        }}
-                      >
-                        <span
-                          style={{
-                            background: "#FFE04B",
-                            color: "#82114f",
-                            fontSize: "11px",
-                            fontWeight: "800",
-                            padding: "4px 14px",
-                            borderRadius: "20px",
-                            textTransform: "uppercase",
-                            letterSpacing: "1px",
-                          }}
-                        >
-                          Organizing Chairman
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-7">
-                  <div style={{ paddingLeft: "20px" }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "14px",
-                        marginBottom: "20px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: "50px",
-                          height: "3px",
-                          background:
-                            "linear-gradient(90deg, #FFE04B, #D78633)",
-                          borderRadius: "2px",
-                        }}
-                      />
-                      <span
-                        style={{
-                          color: "#FFE04B",
-                          fontSize: "13px",
-                          fontWeight: "700",
-                          letterSpacing: "2px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        Organizing Chairman
-                      </span>
-                    </div>
-                    <h2
-                      style={{
-                        color: "#fff",
-                        fontSize: "42px",
-                        fontWeight: "800",
-                        lineHeight: 1.15,
-                        marginBottom: "20px",
-                      }}
-                    >
-                      Vd. Lovem Singla
-                    </h2>
-                    <p
-                      style={{
-                        color: "#e2e0ff",
-                        fontSize: "17px",
-                        lineHeight: "30px",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      The driving force behind AyurMilan, Vd. Lovem Singla
-                      brings a rare combination of clinical expertise and
-                      organizational vision. His leadership has shaped the
-                      academic framework of the event from the ground up.
-                    </p>
-                    <p
-                      style={{
-                        color: "#b9b6d6",
-                        fontSize: "15px",
-                        lineHeight: "27px",
-                        marginBottom: "30px",
-                      }}
-                    >
-                      With a deep commitment to elevating Ayurveda education in
-                      India, he has personally curated the speaker lineup,
-                      workshop modules, and the overall delegate experience for
-                      AyurMilan 2026.
-                    </p>
-                    <div
-                      style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}
-                    >
-                      {[
-                        "Clinical Leadership",
-                        "Academic Curation",
-                        "Event Strategy",
-                      ].map((tag, i) => (
-                        <span
-                          key={i}
-                          style={{
-                            background: "rgba(255,224,75,0.08)",
-                            border: "1px solid rgba(255,224,75,0.25)",
-                            color: "#FFE04B",
-                            fontSize: "12px",
-                            fontWeight: "700",
-                            padding: "6px 16px",
-                            borderRadius: "30px",
-                            letterSpacing: "0.5px",
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Directors — Vd. Vansh & Vd. Yadwinder side by side */}
+
+              {/* Three Leaders - Yadvinder (left), Lovem (center), Vansh (right) side by side */}
               <div className="row g-4 justify-content-center">
                 {[
                   {
-                    name: "Vd. Vansh Chhabra",
-                    role: "Director & Co-Founder",
-                    img: "./vd-vansh.jpeg",
-                    bio: "Leading digital strategy and delegate outreach for India's BAMS community.",
-                    tags: [
-                      "Digital Strategy",
-                      "Community Building",
-                      "Brand Outreach",
-                    ],
-                    accent: "#7afcff",
-                  },
-                  {
                     name: "Vd. Yadwinder Joshi",
                     role: "Director & Co-Founder",
-                    img: "./vd-yadvinder.jpeg",
+                    img: "/vd-yadvinder.jpeg",
                     bio: "Managing on-ground summit operations, exhibitor relations, and logistics.",
                     tags: ["Operations", "Exhibitor Relations", "Logistics"],
                     accent: "#ff7eb9",
                   },
-                ].map((person, idx) => (
-                  <div className="col-lg-5 col-md-6" key={idx}>
+                  {
+                    name: "Vd. Lovem Singla",
+                    role: "Organizing Chairman",
+                    img: "/dr-lovem.png",
+                    bio: "Curating academic framework, speaker lineups, and overall delegate experience.",
+                    tags: ["Clinical Leadership", "Academic Curation", "Event Strategy"],
+                    accent: "#FFE04B",
+                  },
+                  {
+                    name: "Vd. Vansh Chhabra",
+                    role: "Director & Co-Founder",
+                    img: "/vd-vansh.jpeg",
+                    bio: "Leading digital strategy, community building, and delegate outreach for India's BAMS community.",
+                    tags: ["Digital Strategy", "Community Building", "Brand Outreach"],
+                    accent: "#7afcff",
+                  },
+                ].map((person, idx) => {
+                  const orderClass = idx === 0 ? "order-2 order-lg-1" : idx === 1 ? "order-1 order-lg-2" : "order-3 order-lg-3";
+                  return (
+                    <div className={`col-lg-4 col-md-6 ${orderClass}`} key={idx}>
                     <div
                       style={{
                         borderRadius: "24px",
@@ -649,7 +468,8 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </section>
@@ -794,94 +614,105 @@ export default function Team() {
               </div>
 
               <div className="row g-4 justify-content-center">
-                {supportingHands.map((sup, idx) => (
-                  <div
-                    className="col-xl-3 col-lg-4 col-md-6 col-sm-12"
-                    key={idx}
-                  >
+                {supportingHands.map((sup, idx) => {
+                  const isFeatured = sup.isFeatured;
+                  return (
                     <div
-                      style={{
-                        height: "100%",
-                        border: "1px solid rgba(255, 255, 255, 0.12)",
-                        borderRadius: "20px",
-                        background: "rgba(255, 255, 255, 0.03)",
-                        boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
-                        transition: "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
-                        overflow: "hidden",
-                        display: "flex",
-                        flexDirection: "column"
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = "rgba(255, 224, 75, 0.45)";
-                        e.currentTarget.style.transform = "translateY(-6px)";
-                        e.currentTarget.style.boxShadow = "0 18px 40px rgba(255, 224, 75, 0.12)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.12)";
-                        e.currentTarget.style.transform = "none";
-                        e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
-                      }}
+                      className={isFeatured ? "col-xl-4 col-lg-5 col-md-6 col-sm-12" : "col-xl-3 col-lg-4 col-md-6 col-sm-12"}
+                      key={idx}
                     >
-                      {/* Image container with fixed height & cover fit */}
-                      <div style={{ height: "240px", width: "100%", overflow: "hidden", position: "relative", background: "rgba(0,0,0,0.2)" }}>
-                        {sup.img ? (
-                          <img
-                            src={sup.img}
-                            alt={sup.name}
-                            style={{
+                      <div
+                        style={{
+                          height: "100%",
+                          border: isFeatured 
+                            ? "2px solid rgba(255, 224, 75, 0.45)" 
+                            : "1px solid rgba(255, 255, 255, 0.12)",
+                          borderRadius: "20px",
+                          background: "rgba(255, 255, 255, 0.03)",
+                          boxShadow: isFeatured
+                            ? "0 12px 35px rgba(0,0,0,0.3), 0 0 25px rgba(255,224,75,0.06)"
+                            : "0 10px 30px rgba(0,0,0,0.25)",
+                          transition: "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                          overflow: "hidden",
+                          display: "flex",
+                          flexDirection: "column"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = "rgba(255, 224, 75, 0.45)";
+                          e.currentTarget.style.transform = "translateY(-6px)";
+                          e.currentTarget.style.boxShadow = "0 18px 40px rgba(255, 224, 75, 0.12)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = isFeatured 
+                            ? "rgba(255, 224, 75, 0.45)" 
+                            : "rgba(255, 255, 255, 0.12)";
+                          e.currentTarget.style.transform = "none";
+                          e.currentTarget.style.boxShadow = isFeatured
+                            ? "0 12px 35px rgba(0,0,0,0.3), 0 0 25px rgba(255,224,75,0.06)"
+                            : "0 10px 30px rgba(0,0,0,0.25)";
+                        }}
+                      >
+                        {/* Image container with fixed height & cover fit */}
+                        <div style={{ height: isFeatured ? "280px" : "240px", width: "100%", overflow: "hidden", position: "relative", background: "rgba(0,0,0,0.2)" }}>
+                          {sup.img ? (
+                            <img
+                              src={sup.img}
+                              alt={sup.name}
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                objectPosition: "top",
+                                transition: "transform 0.5s ease"
+                              }}
+                              onMouseEnter={(e) => e.target.style.transform = "scale(1.08)"}
+                              onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+                            />
+                          ) : (
+                            <div style={{
                               width: "100%",
                               height: "100%",
-                              objectFit: "cover",
-                              objectPosition: "top",
-                              transition: "transform 0.5s ease"
-                            }}
-                            onMouseEnter={(e) => e.target.style.transform = "scale(1.08)"}
-                            onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
-                          />
-                        ) : (
-                          <div style={{
-                            width: "100%",
-                            height: "100%",
-                            background: "linear-gradient(135deg, rgba(165,7,102,0.3) 0%, rgba(26,2,16,0.6) 100%)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            color: "rgba(255, 224, 75, 0.6)"
-                          }}>
-                            <i className={`fa-solid ${sup.icon}`} style={{ fontSize: "44px" }}></i>
-                          </div>
-                        )}
-                      </div>
+                              background: "linear-gradient(135deg, rgba(165,7,102,0.3) 0%, rgba(26,2,16,0.6) 100%)",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              color: "rgba(255, 224, 75, 0.6)"
+                            }}>
+                              <i className={`fa-solid ${sup.icon}`} style={{ fontSize: "44px" }}></i>
+                            </div>
+                          )}
+                        </div>
 
-                      {/* Content block */}
-                      <div style={{ padding: "20px 15px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-                        <h3
-                          style={{
-                            color: "#fff",
-                            fontSize: "16px",
-                            marginBottom: "6px",
-                            fontWeight: "800",
-                            lineHeight: "1.3"
-                          }}
-                        >
-                          {sup.name}
-                        </h3>
-                        <p
-                          style={{
-                            color: "#FFE04B",
-                            fontSize: "11px",
-                            fontWeight: "800",
-                            textTransform: "uppercase",
-                            letterSpacing: "1.5px",
-                            margin: 0
-                          }}
-                        >
-                          {sup.desig}
-                        </p>
+                        {/* Content block */}
+                        <div style={{ padding: "20px 15px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
+                          <h3
+                            style={{
+                              color: "#fff",
+                              fontSize: isFeatured ? "18px" : "16px",
+                              marginBottom: "6px",
+                              fontWeight: "800",
+                              lineHeight: "1.3"
+                            }}
+                          >
+                            {sup.name}
+                          </h3>
+                          <p
+                            style={{
+                              color: "#FFE04B",
+                              fontSize: "11px",
+                              fontWeight: "800",
+                              textTransform: "uppercase",
+                              letterSpacing: "1.5px",
+                              margin: 0
+                            }}
+                          >
+                            {sup.desig}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </section>

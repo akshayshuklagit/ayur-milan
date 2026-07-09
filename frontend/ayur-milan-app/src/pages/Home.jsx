@@ -45,21 +45,17 @@ export default function Home() {
     if (window.Swiper) {
       new window.Swiper(".dc-team-slider", {
         loop: true,
-        speed: 400,
+        speed: 600,
         spaceBetween: 20,
         slidesPerView: 3,
         centeredSlides: true,
         autoplay: {
-          enabled: true,
-          delay: 5000,
+          delay: 2500,
+          disableOnInteraction: false,
         },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           1600: { slidesPerView: 3, spaceBetween: 30 },
@@ -168,9 +164,7 @@ export default function Home() {
             className="hero hero-style--two pos-rel "
             style={{
               backgroundImage:
-                "linear-gradient(rgba(20, 2, 12, 0.82), rgba(20, 2, 12, 0.88)), url('/assets/img/bg/hero_bg02.jpg')",
-
-              // "linear-gradient(rgba(20, 2, 12, 0.82), rgba(20, 2, 12, 0.88)), url('/assets/img/bg/abstract_edu_bg.png')",
+                "linear-gradient(rgba(20, 2, 12, 0.82), rgba(20, 2, 12, 0.88)), url('/home-bg.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -178,33 +172,22 @@ export default function Home() {
           >
             <div className="container">
               <div className="xb-hero_content text-center">
-                {/* Agnivesh Events branding line */}
+                {/* Conclave & Expo Headline */}
                 <div
-                  className="wow fadeInDown"
+                  className="wow fadeInDown hero-top-conclave"
                   data-wow-delay="0ms"
                   data-wow-duration="600ms"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    background: "rgba(255,255,255,0.08)",
-                    backdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,255,255,0.2)",
-                    borderRadius: "50px",
-                    padding: "6px 28px 6px 6px",
-                    marginBottom: "28px",
-                  }}
                 >
-                  <div
-                    style={{
-                      width: "54px",
-                      height: "54px",
-                      borderRadius: "50%",
-                      overflow: "hidden",
-                      border: "2.5px solid #FFE04B",
-                      flexShrink: 0,
-                    }}
-                  >
+                  National Ayurveda Conclave &amp; Expo 2026
+                </div>
+
+                {/* Agnivesh Events branding line */}
+                <div
+                  className="wow fadeInDown agnivesh-brand-badge"
+                  data-wow-delay="0ms"
+                  data-wow-duration="600ms"
+                >
+                  <div className="logo-wrap">
                     <img
                       src="./agnivesh-logo.png"
                       alt="Agnivesh Events"
@@ -215,38 +198,21 @@ export default function Home() {
                       }}
                     />
                   </div>
-                  <span
-                    style={{
-                      color: "rgba(255,255,255,0.9)",
-                      fontSize: "14px",
-                      fontWeight: "700",
-                      letterSpacing: "2.5px",
-                      textTransform: "uppercase",
-                    }}
-                  >
+                  <span>
                     Agnivesh Events Presents
                   </span>
                 </div>
 
                 <h2
-                  className="title wow fadeInUp"
+                  className="title wow fadeInUp hero-main-title"
                   data-wow-delay="0ms"
                   data-wow-duration="600ms"
-                  style={{
-                    fontSize: "clamp(42px, 8vw, 96px)",
-                    textTransform: "uppercase",
-                  }}
                 >
                   AyurMilan 2026
                 </h2>
                 <p
-                  className="wow fadeInUp"
+                  className="wow fadeInUp hero-sub-paragraph"
                   data-wow-delay="100ms"
-                  style={{
-                    color: "#FFE04B",
-                    fontSize: "24px",
-                    fontWeight: "bold",
-                  }}
                 >
                   India's Emerging Platform for Ayurveda Students, Professionals
                   & Brands
@@ -254,33 +220,11 @@ export default function Home() {
 
                 {/* date + location pill */}
                 <div
-                  className="wow fadeInUp"
+                  className="wow fadeInUp hero-details-badge"
                   data-wow-delay="120ms"
                   data-wow-duration="600ms"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "24px",
-                    background: "rgba(255,255,255,0.07)",
-                    backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                    borderRadius: "50px",
-                    padding: "10px 28px",
-                    marginTop: "20px",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                  }}
                 >
-                  <span
-                    style={{
-                      color: "#fff",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "7px",
-                    }}
-                  >
+                  <span className="hero-detail-item">
                     <i
                       className="fa-regular fa-calendar"
                       style={{ color: "#FFE04B" }}
@@ -288,24 +232,16 @@ export default function Home() {
                     1st &amp; 2nd October 2026
                   </span>
                   <span
+                    className="d-none d-md-inline-block separator-line"
                     style={{
                       width: "1px",
                       height: "16px",
                       background: "rgba(255,255,255,0.25)",
                     }}
                   />
-                  <span
-                    style={{
-                      color: "#fff",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "7px",
-                    }}
-                  >
+                  <span className="hero-detail-item">
                     <i
-                      className="fa-regular fa-location-dot"
+                      className="fa-solid fa-location-dot"
                       style={{ color: "#FFE04B" }}
                     ></i>
                     Vrindavan, Uttar Pradesh
@@ -313,7 +249,7 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="hero-btn mt-50 wow fadeInUp"
+                  className="hero-btn mt-40 mt-sm-50 mb-30 mb-sm-0 wow fadeInUp"
                   data-wow-delay="150ms"
                   data-wow-duration="600ms"
                 >
@@ -339,7 +275,7 @@ export default function Home() {
               >
                 <div className="row align-items-center g-4">
                   {/* Left Column: Event Starts Counter */}
-                  <div className="col-lg-7 text-start">
+                  <div className="col-lg-7 text-center text-lg-start">
                     <div className="sec-title sec-title--two mb-15">
                       <span
                         className="sub-title"
@@ -360,10 +296,12 @@ export default function Home() {
                         />
                       </span>
                     </div>
-                    <Countdown />
+                    <div style={{ margin: "25px 0" }}>
+                      <Countdown />
+                    </div>
                   </div>
                   {/* Right Column: Venue and Date Location Details */}
-                  <div className="col-lg-5">
+                  <div className="col-lg-5 mt-4 mt-lg-0 text-center text-lg-start">
                     <div
                       className="offer-item d-flex flex-column"
                       style={{ gap: "15px" }}
@@ -624,14 +562,6 @@ export default function Home() {
                   <div className="team-shape"></div>
                 </div>
                 <div className="swiper-pagination"></div>
-                <div className="team-slide-btn">
-                  <div className="swiper-button-next">
-                    <i className="fa-regular fa-arrow-right"></i>
-                  </div>
-                  <div className="swiper-button-prev">
-                    <i className="fa-regular fa-arrow-left"></i>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -1049,7 +979,7 @@ export default function Home() {
                       How much is the accommodation charge?
                     </span>
                     <p className="xb-content">
-                      Accommodation is available at the ashram for 1400/-. You
+                      Accommodation is available at the ashram for 1500/-. You
                       can register for accommodation along with your delegate
                       registration.
                     </p>

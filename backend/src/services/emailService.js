@@ -94,7 +94,7 @@ async function sendRegistrationPendingEmail(registration) {
           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
         .header {
-          background-color: #1b4d3e;
+          background-color: #82114F;
           padding: 30px 20px;
           text-align: center;
           color: #ffffff;
@@ -103,7 +103,7 @@ async function sendRegistrationPendingEmail(registration) {
           margin: 0;
           font-size: 26px;
           letter-spacing: 1px;
-          color: #f7e7c4;
+          color: #FFE04B;
         }
         .header p {
           margin: 5px 0 0 0;
@@ -119,15 +119,15 @@ async function sendRegistrationPendingEmail(registration) {
           margin-bottom: 20px;
         }
         .status-box {
-          background-color: #fff9e6;
-          border-left: 4px solid #c5a059;
+          background-color: #fdf2f8;
+          border-left: 4px solid #82114F;
           padding: 15px;
           margin: 20px 0;
           border-radius: 4px;
         }
         .status-box h3 {
           margin: 0 0 5px 0;
-          color: #c5a059;
+          color: #82114F;
           font-size: 16px;
         }
         .status-box p {
@@ -147,7 +147,7 @@ async function sendRegistrationPendingEmail(registration) {
         }
         .details-table th {
           font-weight: bold;
-          color: #1b4d3e;
+          color: #82114F;
           width: 40%;
         }
         .btn-container {
@@ -155,7 +155,7 @@ async function sendRegistrationPendingEmail(registration) {
           margin: 30px 0;
         }
         .btn {
-          background-color: #1b4d3e;
+          background-color: #82114F;
           color: #ffffff !important;
           padding: 12px 25px;
           text-decoration: none;
@@ -207,7 +207,7 @@ async function sendRegistrationPendingEmail(registration) {
               </tr>
               <tr>
                 <th>Total Payable Amount</th>
-                <td style="font-weight: bold; color: #1b4d3e;">₹${registration.payableAmount}</td>
+                <td style="font-weight: bold; color: #82114F;">₹${registration.payableAmount}</td>
               </tr>
             </table>
 
@@ -262,7 +262,7 @@ async function sendRegistrationConfirmedEmail(registration) {
           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
         .header {
-          background-color: #1b4d3e;
+          background-color: #82114F;
           padding: 30px 20px;
           text-align: center;
           color: #ffffff;
@@ -271,7 +271,7 @@ async function sendRegistrationConfirmedEmail(registration) {
           margin: 0;
           font-size: 26px;
           letter-spacing: 1px;
-          color: #f7e7c4;
+          color: #FFE04B;
         }
         .header p {
           margin: 5px 0 0 0;
@@ -285,19 +285,19 @@ async function sendRegistrationConfirmedEmail(registration) {
         .ticket-wrapper {
           margin: 30px 0;
           background-color: #fbfbfa;
-          border: 2px dashed #1b4d3e;
+          border: 2px dashed #82114F;
           border-radius: 8px;
           overflow: hidden;
         }
         .ticket-header {
-          background-color: #1b4d3e;
+          background-color: #82114F;
           color: #ffffff;
           padding: 15px;
           text-align: center;
           font-weight: bold;
           letter-spacing: 2px;
           font-size: 14px;
-          color: #f7e7c4;
+          color: #FFE04B;
         }
         .ticket-body {
           padding: 20px;
@@ -305,7 +305,7 @@ async function sendRegistrationConfirmedEmail(registration) {
         .ticket-title {
           font-size: 18px;
           font-weight: bold;
-          color: #1b4d3e;
+          color: #82114F;
           margin: 0 0 15px 0;
           text-align: center;
           border-bottom: 1px solid #eeeeee;
@@ -329,14 +329,14 @@ async function sendRegistrationConfirmedEmail(registration) {
           color: #2e3532;
         }
         .badge {
-          background-color: #e3f7ed;
-          color: #1b4d3e;
+          background-color: #fdf2f8;
+          color: #82114F;
           padding: 4px 8px;
           border-radius: 12px;
           font-size: 12px;
           font-weight: bold;
           display: inline-block;
-          border: 1px solid #bce4d8;
+          border: 1px solid #fbcfe8;
         }
         .event-info {
           background-color: #fcfbf7;
@@ -347,7 +347,7 @@ async function sendRegistrationConfirmedEmail(registration) {
         }
         .event-info h4 {
           margin: 0 0 10px 0;
-          color: #1b4d3e;
+          color: #82114F;
           font-size: 15px;
         }
         .event-info p {
@@ -414,13 +414,19 @@ async function sendRegistrationConfirmedEmail(registration) {
                 </table>
               </div>
             </div>
-
+ 
+            <div style="margin: 25px 0; background-color: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 6px; padding: 15px; text-align: center;">
+              <h4 style="margin: 0 0 5px 0; color: #82114F; font-size: 15px;">📢 Join the official WhatsApp Group</h4>
+              <p style="margin: 0 0 12px 0; font-size: 13px; color: #1d0314;">Get live announcements, schedules, and networking guides directly on your phone!</p>
+              <a href="https://chat.whatsapp.com/IlcrIVidT20A8Vcl6FVL6R" target="_blank" style="display: inline-block; padding: 8px 18px; background-color: #25d366; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 13px; box-shadow: 0 2px 4px rgba(37,211,102,0.2);">Join WhatsApp Group</a>
+            </div>
+ 
             <div class="event-info">
               <h4>📍 Summit Details & Venue</h4>
               <p><strong>Dates:</strong> 1 – 2 October 2026</p>
               <p><strong>Venue:</strong> Shri Krishna Janmashtami Ashram, Opp Akshay Patra, Chattikara, Mathura-Vrindavan Marg, Mathura, Uttar Pradesh - 281121</p>
             </div>
-
+ 
             <p style="font-size: 14px; color: #555555;">
               Please carry a digital or printed copy of this email to the registration counter at the venue to receive your attendee badge and summit kit.
             </p>

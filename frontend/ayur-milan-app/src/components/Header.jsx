@@ -43,10 +43,7 @@ export default function Header() {
             <div className="header__wrap ul_li_between">
               <div className="xb-header-logo">
                 <Link to="/" className="logo1">
-                  <img
-                    src="/ayurmilan-logo1.png"
-                    alt="AyurMilan Logo"
-                  />
+                  <img src="/ayurmilan-logo1.png" alt="AyurMilan Logo" />
                 </Link>
               </div>
               <div className="main-menu__wrap navbar navbar-expand-lg p-0">
@@ -80,7 +77,7 @@ export default function Header() {
                         <span>Speakers</span>
                       </Link>
                     </li>
-                    <li className="menu-item-has-children">
+                    {/* <li className="menu-item-has-children">
                       <a href="#!" onClick={(e) => e.preventDefault()}>
                         <span>Scientifics</span>
                       </a>
@@ -89,6 +86,12 @@ export default function Header() {
                           <Link to="/abstract">Abstract Submission</Link>
                         </li>
                       </ul>
+                    </li> */}
+
+                    <li className={getLinkClass("/abstract")}>
+                      <Link to="/abstract">
+                        <span>Abstract</span>
+                      </Link>
                     </li>
                     <li className={getLinkClass("/delegate")}>
                       <Link to="/delegate">
@@ -133,10 +136,29 @@ export default function Header() {
                   ></div>
                   <div className="xb-logo-mobile xb-hide-xl">
                     <Link to="/" onClick={() => setMobileActive(false)}>
-                      <img
-                        src="/assets/img/logo/logo-two.svg"
-                        alt="AyurMilan Logo"
-                      />
+                      <div
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "#ffffff",
+                          borderRadius: "50%",
+                          width: "80px",
+                          height: "80px",
+                          boxShadow: "0 4px 15px rgba(0,0,0,0.15)",
+                          padding: "10px",
+                        }}
+                      >
+                        <img
+                          src="/ayurmilan-logo1.png"
+                          alt="AyurMilan Logo"
+                          style={{
+                            width: "60px",
+                            height: "60px",
+                            objectFit: "contain",
+                          }}
+                        />
+                      </div>
                     </Link>
                   </div>
                   <nav className="xb-header-nav">

@@ -2,7 +2,7 @@ const { Prisma } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const prisma = require('./db');
 
-// Reusable hook to trigger confirmation email after registration state is changed to PAID or verified
+// Reusable hook to trigger confirmation email & Google Sheet sync after registration is created or edited
 const triggerEmailIfPaid = async (response, request, context) => {
   const { record } = context;
   // If request is a form submit and there are no validation errors
@@ -19,25 +19,31 @@ const triggerEmailIfPaid = async (response, request, context) => {
     const statusChangedToPaid = (newStatus === 'PAID' && oldStatus !== 'PAID');
     const verifiedChangedToTrue = (isNewVerified && !isOldVerified);
 
-    if (statusChangedToPaid || verifiedChangedToTrue) {
-      try {
-        const registrationId = response.record.params.id;
-        console.log(`✉️ Triggering ticket confirmation email for registration ID: ${registrationId} via AdminJS hook.`);
-        
-        // Fetch fresh copy from database to ensure accuracy
-        const dbReg = await prisma.registration.findUnique({
-          where: { id: registrationId }
+    try {
+      const registrationId = response.record.params.id;
+      
+      // Fetch fresh copy from database to ensure accuracy
+      const dbReg = await prisma.registration.findUnique({
+        where: { id: registrationId }
+      });
+      
+      if (dbReg) {
+        // Sync to Google Sheets (non-blocking)
+        const googleSheetsService = require('../services/googleSheetsService');
+        googleSheetsService.syncRegistration(dbReg).catch(err => {
+          console.error('Failed to sync registration to Google Sheets from AdminJS hook:', err);
         });
-        
-        if (dbReg) {
+
+        if (statusChangedToPaid || verifiedChangedToTrue) {
+          console.log(`✉️ Triggering ticket confirmation email for registration ID: ${registrationId} via AdminJS hook.`);
           const emailService = require('../services/emailService');
           emailService.sendRegistrationConfirmedEmail(dbReg).catch(err => {
             console.error('Failed to send verification email from AdminJS hook:', err);
           });
         }
-      } catch (err) {
-        console.error('Failed to dispatch confirmation email inside AdminJS hook:', err.message);
       }
+    } catch (err) {
+      console.error('Failed to sync or send email inside AdminJS hook:', err.message);
     }
   }
   return response;
@@ -323,6 +329,16 @@ async function initAdmin() {
                       verified: true
                     }
                   });
+
+                  // Sync to Google Sheets asynchronously (non-blocking)
+                  try {
+                    const googleSheetsService = require('../services/googleSheetsService');
+                    googleSheetsService.syncRegistration(updated).catch(err => {
+                      console.error('Failed to sync approved registration to Google Sheets:', err);
+                    });
+                  } catch (syncError) {
+                    console.error('Failed to load googleSheetsService in approve action:', syncError.message);
+                  }
                   
                   try {
                     const emailService = require('../services/emailService');
@@ -405,10 +421,16 @@ async function initAdmin() {
           navigation: { name: 'System Settings', icon: 'Settings' },
           properties: {
             id: { isId: true, isReadOnly: true },
-            upiId: { label: 'UPI ID (e.g. name@upi)' },
-            qrCodeUrl: { label: 'Custom QR Code Image URL (Optional)' },
+            upiId: { label: 'UPI ID 1 (e.g. name1@upi)' },
+            qrCodeUrl: { label: 'Custom QR Code 1 Image URL (Optional)' },
             qrCodeBase64: { 
-              label: 'Custom QR Code Image Base64 String (Optional)',
+              label: 'Custom QR Code 1 Image Base64 String (Optional)',
+              type: 'textarea'
+            },
+            upiId2: { label: 'UPI ID 2 (e.g. name2@upi)' },
+            qrCodeUrl2: { label: 'Custom QR Code 2 Image URL (Optional)' },
+            qrCodeBase64_2: { 
+              label: 'Custom QR Code 2 Image Base64 String (Optional)',
               type: 'textarea'
             }
           },

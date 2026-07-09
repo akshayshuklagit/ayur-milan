@@ -1,10 +1,12 @@
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  engineType    = "binary"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x", "rhel-openssl-1.1.x", "rhel-openssl-3.0.x"]
 }
 
 model Admin {
@@ -50,11 +52,14 @@ model Registration {
 }
 
 model PaymentConfig {
-  id           String   @id @default("default")
-  upiId        String   @default("agniveshevents@upi")
-  qrCodeUrl    String?
-  qrCodeBase64 String?  // Optional custom base64 image data
-  updatedAt    DateTime @updatedAt
+  id             String   @id @default("default")
+  upiId          String   @default("agniveshevents@upi")
+  qrCodeUrl      String?
+  qrCodeBase64   String?  @db.LongText  // Optional custom base64 image data
+  upiId2         String   @default("agniveshevents2@upi")
+  qrCodeUrl2     String?
+  qrCodeBase64_2 String?  @db.LongText  // Optional custom base64 image data for second QR
+  updatedAt      DateTime @updatedAt
 }
 
 model ContactSubmission {
@@ -100,7 +105,7 @@ model ExhibitorLogo {
   id         String   @id @default(uuid())
   name       String
   logoUrl    String?
-  logoBase64 String?  @default("")
+  logoBase64 String?  @db.LongText @default("")
   isActive   Boolean  @default(true)
   createdAt  DateTime @default(now())
 }

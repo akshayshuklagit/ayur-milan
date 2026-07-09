@@ -54,6 +54,7 @@ Warm regards,
     {
       category: "1. Kayachikitsa",
       icon: "fa-stethoscope",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
       topics: [
         "Integrative Medicine in Modern Healthcare",
         "Role of Ayurveda in Lifestyle Disorders",
@@ -64,6 +65,7 @@ Warm regards,
     {
       category: "2. Panchakarma",
       icon: "fa-spa",
+      image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&q=80",
       topics: [
         "Scientific Validation of Panchakarma Therapies",
         "Role of Basti in Neurological Disorders",
@@ -73,6 +75,7 @@ Warm regards,
     {
       category: "3. Dravyaguna Vigyana",
       icon: "fa-leaf",
+      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80",
       topics: [
         "Medicinal Plants with Antiviral Properties",
         "Herbal Immunomodulators in Ayurveda",
@@ -82,6 +85,7 @@ Warm regards,
     {
       category: "4. Rachana Sharir",
       icon: "fa-child",
+      image: "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=400&q=80",
       topics: [
         "Correlation of Marma Sharir with Modern Anatomy",
         "Concept of Srotas and Body Systems",
@@ -91,6 +95,7 @@ Warm regards,
     {
       category: "5. Kriya Sharir",
       icon: "fa-heart-pulse",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80",
       topics: [
         "Tridosha Theory and Homeostasis",
         "Physiology of Agni",
@@ -100,6 +105,7 @@ Warm regards,
     {
       category: "6. Rog Nidana & Vikriti Vigyana",
       icon: "fa-microscope",
+      image: "https://images.unsplash.com/photo-1579154204601-01588f351167?w=400&q=80",
       topics: [
         "Diagnostic Approaches in Ayurveda",
         "Nadi Pariksha and Disease Assessment",
@@ -109,6 +115,7 @@ Warm regards,
     {
       category: "7. Shalya Tantra",
       icon: "fa-kit-medical",
+      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=400&q=80",
       topics: [
         "Ksharsutra Therapy in Ano-Rectal Disorders",
         "Agnikarma in Pain Management",
@@ -118,6 +125,7 @@ Warm regards,
     {
       category: "8. Shalakya Tantra",
       icon: "fa-eye",
+      image: "https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?w=400&q=80",
       topics: [
         "Ayurvedic Eye Care in the Digital Era",
         "Ayurvedic Management of Migraine",
@@ -127,6 +135,7 @@ Warm regards,
     {
       category: "9. Prasuti Tantra & Stri Roga",
       icon: "fa-baby-carriage",
+      image: "https://images.unsplash.com/photo-1518104593124-ac2e82a5eb9d?w=400&q=80",
       topics: [
         "Infertility Management through Ayurveda",
         "Pregnancy and Postnatal Care"
@@ -135,6 +144,7 @@ Warm regards,
     {
       category: "10. Kaumarbhritya",
       icon: "fa-baby",
+      image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400&q=80",
       topics: [
         "Swarnaprashan: Clinical Perspective",
         "Child Immunity and Nutrition",
@@ -144,6 +154,7 @@ Warm regards,
     {
       category: "11. Swasthavritta & Yoga",
       icon: "fa-om",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80",
       topics: [
         "Yoga and Ayurveda for Mental Wellness",
         "Dinacharya and Preventive Healthcare",
@@ -153,6 +164,7 @@ Warm regards,
     {
       category: "12. Agad Tantra",
       icon: "fa-biohazard",
+      image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=400&q=80",
       topics: [
         "Food Toxicity and Ayurveda",
         "Environmental Toxins and Health",
@@ -162,6 +174,7 @@ Warm regards,
     {
       category: "13. Rasa Shastra & Bhaishajya Kalpana",
       icon: "fa-mortar-pestle",
+      image: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=400&q=80",
       topics: [
         "Nanotechnology in Rasashastra",
         "Safety of Herbo-Minerals Preparations",
@@ -171,6 +184,7 @@ Warm regards,
     {
       category: "14. Samhita & Siddhanta",
       icon: "fa-book-open",
+      image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&q=80",
       topics: [
         "Tridosha Siddhanta in Modern Context",
         "Relevance of Classical Ayurvedic Texts",
@@ -180,6 +194,7 @@ Warm regards,
     {
       category: "15. Research & Innovation",
       icon: "fa-lightbulb",
+      image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400&q=80",
       topics: [
         "Artificial Intelligence and Ayurveda",
         "Evidence-Based Ayurveda",
@@ -189,6 +204,7 @@ Warm regards,
     {
       category: "16. Emerging Trends in Ayurveda",
       icon: "fa-chart-line",
+      image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80",
       topics: [
         "Personalised Medicine through Prakriti Analysis",
         "Ayurveda for Fitness and Wellness",
@@ -362,6 +378,56 @@ Warm regards,
                 </p>
               </div>
 
+              {/* Promotional Banner Image (home4.png) */}
+              <div 
+                className="text-center mb-60"
+                style={{
+                  borderRadius: "24px",
+                  overflow: "hidden",
+                  boxShadow: "0 15px 40px rgba(0, 0, 0, 0.4)",
+                  border: "2px solid rgba(255, 224, 75, 0.2)",
+                  position: "relative",
+                  maxWidth: "960px",
+                  marginInline: "auto"
+                }}
+              >
+                <img 
+                  src="/home4.png" 
+                  alt="AyurMilan Event Highlight" 
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    maxHeight: "450px",
+                    objectFit: "cover",
+                    display: "block"
+                  }}
+                />
+                <div style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background: "linear-gradient(to top, rgba(26, 2, 16, 0.95), transparent)",
+                  padding: "30px 20px 20px",
+                  textAlign: "center"
+                }}>
+                  <span style={{
+                    background: "linear-gradient(135deg, #FFE04B 0%, #D78633 100%)",
+                    color: "#1a0210",
+                    fontWeight: "800",
+                    fontSize: "12px",
+                    padding: "4px 16px",
+                    borderRadius: "30px",
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                    display: "inline-block",
+                    marginBottom: "10px"
+                  }}>
+                    Featured Event Highlights
+                  </span>
+                </div>
+              </div>
+
               {/* ELIGIBILITY & GUIDELINES */}
               <div className="row">
                 {/* Eligibility Card */}
@@ -533,62 +599,89 @@ Warm regards,
                   </div>
                 </div>
                 
+              {/* Modern CSS Grid instead of Bootstrap column system */}
+              <div 
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
+                  columnGap: "40px",
+                  rowGap: "30px",
+                  marginTop: "40px",
+                  marginBottom: "40px"
+                }}
+              >
                 {abstractTopics.map((item, idx) => (
-                  <div className="col-xl-3 col-lg-4 col-md-6 mb-4" key={idx}>
-                    <div style={{
-                      background: "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid rgba(255, 255, 255, 0.08)",
-                      borderRadius: "20px",
-                      padding: "25px 20px",
-                      height: "100%",
-                      transition: "all 0.3s ease",
-                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+                  <div 
+                    key={idx}
+                    style={{
+                      borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                      paddingBottom: "25px",
                       display: "flex",
                       flexDirection: "column",
-                      gap: "15px"
+                      gap: "14px",
+                      transition: "all 0.3s ease"
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-5px)";
-                      e.currentTarget.style.borderColor = "rgba(255, 224, 75, 0.35)";
-                      e.currentTarget.style.boxShadow = "0 12px 30px rgba(255, 224, 75, 0.15)";
+                      const iconContainer = e.currentTarget.querySelector(".specialty-icon-container");
+                      if (iconContainer) {
+                        iconContainer.style.background = "#FFE04B";
+                        iconContainer.style.transform = "scale(1.1)";
+                        const icon = iconContainer.querySelector("i");
+                        if (icon) icon.style.color = "#1d0314";
+                      }
+                      const title = e.currentTarget.querySelector(".specialty-title");
+                      if (title) title.style.color = "#FFE04B";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.08)";
-                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.15)";
+                      const iconContainer = e.currentTarget.querySelector(".specialty-icon-container");
+                      if (iconContainer) {
+                        iconContainer.style.background = "rgba(255, 224, 75, 0.1)";
+                        iconContainer.style.transform = "none";
+                        const icon = iconContainer.querySelector("i");
+                        if (icon) icon.style.color = "#FFE04B";
+                      }
+                      const title = e.currentTarget.querySelector(".specialty-title");
+                      if (title) title.style.color = "#ffffff";
                     }}
-                    >
-                      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                        <div style={{
-                          width: "40px",
-                          height: "40px",
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+                      <div 
+                        className="specialty-icon-container"
+                        style={{
+                          width: "44px",
+                          height: "44px",
                           borderRadius: "50%",
                           background: "rgba(255, 224, 75, 0.1)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          border: "1px solid rgba(255, 224, 75, 0.2)",
-                          flexShrink: 0
-                        }}>
-                          <i className={`fa-solid \${item.icon}`} style={{ color: "#FFE04B", fontSize: "16px" }}></i>
-                        </div>
-                        <h4 style={{ color: "#fff", fontSize: "16px", fontWeight: "700", margin: 0, lineHeight: "1.4" }}>
-                          {item.category}
-                        </h4>
+                          border: "1.5px solid #FFE04B",
+                          flexShrink: 0,
+                          transition: "all 0.3s ease"
+                        }}
+                      >
+                        <i className={`fa-solid ${item.icon}`} style={{ color: "#FFE04B", fontSize: "16px", transition: "all 0.3s ease" }}></i>
                       </div>
-                      
-                      <ul style={{ margin: 0, padding: 0, listStyleType: "none", display: "flex", flexDirection: "column", gap: "8px", height: "100%", justifyContent: "flex-start" }}>
-                        {item.topics.map((topic, tIdx) => (
-                          <li key={tIdx} style={{ color: "#b9b6d6", fontSize: "13.5px", lineHeight: "1.5", display: "flex", gap: "8px", alignItems: "flex-start" }}>
-                            <i className="fa-solid fa-chevron-right" style={{ color: "#FFE04B", fontSize: "10px", marginTop: "5px", flexShrink: 0, opacity: 0.8 }}></i>
-                            <span>{topic}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <h4 
+                        className="specialty-title"
+                        style={{ color: "#ffffff", fontSize: "18px", fontWeight: "700", margin: 0, lineHeight: "1.4", transition: "color 0.3s ease" }}
+                      >
+                        {item.category}
+                      </h4>
                     </div>
+                    
+                    <ul style={{ margin: 0, paddingLeft: "58px", listStyleType: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
+                      {item.topics.map((topic, tIdx) => (
+                        <li key={tIdx} style={{ color: "#b9b6d6", fontSize: "14px", lineHeight: "1.5", display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                          <i className="fa-solid fa-chevron-right" style={{ color: "#FFE04B", fontSize: "10px", marginTop: "6px", flexShrink: 0, opacity: 0.8 }}></i>
+                          <span>{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
+            </div>
 
               {/* IMPORTANT DATES & HOW TO SUBMIT */}
               <div className="row mt-4">

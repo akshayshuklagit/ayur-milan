@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Countdown from "../components/Countdown";
-
-const API_BASE_URL = "http://localhost:5000/api/registrations";
+import { API_BASE_URL } from "../config";
 
 const PARTICIPANT_PRICES = {
   "UG Scholars & Interns": 1599,
@@ -112,6 +111,9 @@ export default function Delegate() {
     upiId: "agniveshevents@upi",
     qrCodeUrl: "/assets/img/qr-code.png",
     qrCodeBase64: null,
+    upiId2: "agniveshevents2@upi",
+    qrCodeUrl2: "/assets/img/qr-code2.png",
+    qrCodeBase64_2: null,
   });
 
   // Fetch payment configuration from backend
@@ -366,7 +368,7 @@ export default function Delegate() {
     {
       category: "Spot Registrations",
       early: "INR 2999/-",
-      regular: "INR 299/-",
+      regular: "INR 2999/-",
     },
   ];
 
@@ -540,7 +542,9 @@ export default function Delegate() {
                 >
                   Secure Your Ticket Before Price Increase!
                 </h3>
-                <Countdown />
+                <div style={{ margin: "30px 0 10px 0" }}>
+                  <Countdown />
+                </div>
               </div>
             </div>
           </section>
@@ -893,14 +897,13 @@ export default function Delegate() {
 
                   {/* Form Container */}
                   <div
-                    className="contact-form-wrap main-contact-form"
+                    className="contact-form-wrap main-contact-form register-form-container"
                     style={{
-                      border: "1px solid rgba(255, 224, 75, 0.2)",
+                      border: "2px solid #FFE04B",
                       padding: "50px 40px",
                       borderRadius: "24px",
-                      background: "rgba(255, 255, 255, 0.04)",
-                      backdropFilter: "blur(20px)",
-                      boxShadow: "0 20px 50px rgba(0,0,0,0.4)",
+                      background: "#ffffff",
+                      boxShadow: "0 20px 50px rgba(0,0,0,0.2)",
                       transition: "all 0.3s ease",
                     }}
                   >
@@ -910,7 +913,7 @@ export default function Delegate() {
                         <div className="text-center mb-40">
                           <h3
                             style={{
-                              color: "#fff",
+                              color: "#1d0314",
                               fontSize: "32px",
                               fontWeight: "700",
                             }}
@@ -919,13 +922,13 @@ export default function Delegate() {
                           </h3>
                           <p
                             style={{
-                              color: "#b9b6d6",
+                              color: "#555555",
                               fontSize: "15px",
                               marginTop: "8px",
                             }}
                           >
-                            Select category, enter details and proceed to
-                            secure UPI payment.
+                            Select category, enter details and proceed to secure
+                            UPI payment.
                           </p>
                         </div>
 
@@ -954,10 +957,10 @@ export default function Delegate() {
                           <div className="col-12">
                             <h5
                               style={{
-                                color: "#FFE04B",
+                                color: "#82114F",
                                 fontSize: "16px",
                                 fontWeight: "700",
-                                borderBottom: "1px solid rgba(255,255,255,0.1)",
+                                borderBottom: "1px solid rgba(0,0,0,0.1)",
                                 paddingBottom: "8px",
                                 marginBottom: "15px",
                               }}
@@ -966,7 +969,7 @@ export default function Delegate() {
                                 className="fa-solid fa-tags"
                                 style={{ marginRight: "8px" }}
                               ></i>{" "}
-                              Ticket & Category Selections
+                              Details & Category Selections
                             </h5>
                           </div>
 
@@ -974,7 +977,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -990,27 +993,36 @@ export default function Delegate() {
                               style={{
                                 width: "100%",
                                 padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
                                 borderRadius: "10px",
-                                color: "#fff",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             >
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="UG Scholars & Interns"
                               >
                                 UG Scholars & Interns (₹1599)
                               </option>
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="PG Scholars / Ph.D / Practitioner"
                               >
                                 PG Scholars / Ph.D / Practitioner (₹1999)
                               </option>
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="Other Indian Delegates"
                               >
                                 Other Indian Delegates (₹2199)
@@ -1022,7 +1034,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1038,10 +1050,10 @@ export default function Delegate() {
                               style={{
                                 width: "100%",
                                 padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
                                 borderRadius: "10px",
-                                color: "#fff",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             >
@@ -1049,8 +1061,8 @@ export default function Delegate() {
                                 <option
                                   key={des}
                                   style={{
-                                    background: "#300827",
-                                    color: "#fff",
+                                    background: "#ffffff",
+                                    color: "#1d0314",
                                   }}
                                   value={des}
                                 >
@@ -1062,12 +1074,12 @@ export default function Delegate() {
 
                           {/* SECTION: Personal Details */}
                           <div className="col-12 mt-4">
-                            <h5
+                            {/* <h5
                               style={{
-                                color: "#FFE04B",
+                                color: "#82114F",
                                 fontSize: "16px",
                                 fontWeight: "700",
-                                borderBottom: "1px solid rgba(255,255,255,0.1)",
+                                borderBottom: "1px solid rgba(0,0,0,0.1)",
                                 paddingBottom: "8px",
                                 marginBottom: "15px",
                               }}
@@ -1077,21 +1089,21 @@ export default function Delegate() {
                                 style={{ marginRight: "8px" }}
                               ></i>{" "}
                               Personal Information
-                            </h5>
+                            </h5> */}
                           </div>
 
                           {/* Name */}
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
                                 fontSize: "14px",
                               }}
                             >
-                              Full Name (As required on Certificate) *
+                              Full Name *
                             </label>
                             <input
                               type="text"
@@ -1102,11 +1114,10 @@ export default function Delegate() {
                               required
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             />
@@ -1116,7 +1127,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1134,11 +1145,10 @@ export default function Delegate() {
                               required
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             />
@@ -1148,7 +1158,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1171,7 +1181,7 @@ export default function Delegate() {
                                     display: "inline-flex",
                                     alignItems: "center",
                                     gap: "10px",
-                                    color: "#fff",
+                                    color: "#1d0314",
                                     cursor: "pointer",
                                     margin: 0,
                                   }}
@@ -1183,7 +1193,7 @@ export default function Delegate() {
                                     checked={formData.gender === gen}
                                     onChange={handleInputChange}
                                     style={{
-                                      accentColor: "#FFE04B",
+                                      accentColor: "#82114F",
                                       width: "18px",
                                       height: "18px",
                                     }}
@@ -1196,12 +1206,12 @@ export default function Delegate() {
 
                           {/* SECTION: Contact Details */}
                           <div className="col-12 mt-4">
-                            <h5
+                            {/* <h5
                               style={{
-                                color: "#FFE04B",
+                                color: "#82114F",
                                 fontSize: "16px",
                                 fontWeight: "700",
-                                borderBottom: "1px solid rgba(255,255,255,0.1)",
+                                borderBottom: "1px solid rgba(0,0,0,0.1)",
                                 paddingBottom: "8px",
                                 marginBottom: "15px",
                               }}
@@ -1211,30 +1221,40 @@ export default function Delegate() {
                                 style={{ marginRight: "8px" }}
                               ></i>{" "}
                               Contact Information
-                            </h5>
+                            </h5> */}
                           </div>
 
                           {/* Phone */}
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
                                 fontSize: "14px",
                               }}
                             >
-                              Primary Mobile Number *
+                              Mobile Number *
                             </label>
-                            <div style={{ display: "flex", gap: "8px" }}>
+                            <div
+                              style={{
+                                display: "flex",
+                                gap: "8px",
+                                alignItems: "stretch",
+                              }}
+                            >
                               <span
+                                className="brand-color-text"
                                 style={{
-                                  padding: "14px 15px",
-                                  background: "rgba(255,255,255,0.1)",
-                                  border: "1px solid rgba(255,255,255,0.15)",
-                                  borderRadius: "10px",
-                                  color: "#FFE04B",
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  padding: "0 16px",
+                                  background: "rgba(130, 17, 79, 0.06)",
+                                  border: "1.5px solid rgba(130, 17, 79, 0.15)",
+                                  borderRadius: "12px",
+                                  color: "#82114F",
                                   fontWeight: "bold",
                                 }}
                               >
@@ -1249,66 +1269,47 @@ export default function Delegate() {
                                 required
                                 style={{
                                   flexGrow: 1,
-                                  padding: "14px 18px",
-                                  background: "rgba(0,0,0,0.2)",
-                                  border: "1px solid rgba(255,255,255,0.15)",
-                                  borderRadius: "10px",
-                                  color: "#fff",
+                                  background: "#f8f9fa",
+                                  border: "1.5px solid rgba(0,0,0,0.15)",
+                                  borderRadius: "12px",
+                                  color: "#1d0314",
                                   outline: "none",
                                 }}
                               />
                             </div>
                           </div>
-
                           {/* WhatsApp */}
                           <div className="col-md-6">
+                            <label
+                              style={{
+                                color: "#1d0314",
+                                fontWeight: "600",
+                                marginBottom: "8px",
+                                display: "block",
+                                fontSize: "14px",
+                              }}
+                            >
+                              WhatsApp Number *
+                            </label>
+
                             <div
                               style={{
                                 display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                marginBottom: "8px",
+                                gap: "8px",
+                                alignItems: "stretch",
                               }}
                             >
-                              <label
-                                style={{
-                                  color: "#fff",
-                                  fontWeight: "600",
-                                  margin: 0,
-                                  fontSize: "14px",
-                                }}
-                              >
-                                WhatsApp Number *
-                              </label>
-                              <label
+                              <span
+                                className="brand-color-text"
                                 style={{
                                   display: "inline-flex",
                                   alignItems: "center",
-                                  gap: "6px",
-                                  color: "#FFE04B",
-                                  fontSize: "12px",
-                                  cursor: "pointer",
-                                  margin: 0,
-                                }}
-                              >
-                                <input
-                                  type="checkbox"
-                                  checked={sameAsPhone}
-                                  onChange={handleSamePhoneToggle}
-                                  style={{ accentColor: "#FFE04B" }}
-                                />
-                                <span>Same as mobile</span>
-                              </label>
-                            </div>
-
-                            <div style={{ display: "flex", gap: "8px" }}>
-                              <span
-                                style={{
-                                  padding: "14px 15px",
-                                  background: "rgba(255,255,255,0.1)",
-                                  border: "1px solid rgba(255,255,255,0.15)",
-                                  borderRadius: "10px",
-                                  color: "#FFE04B",
+                                  justifyContent: "center",
+                                  padding: "0 16px",
+                                  background: "rgba(130, 17, 79, 0.06)",
+                                  border: "1.5px solid rgba(130, 17, 79, 0.15)",
+                                  borderRadius: "12px",
+                                  color: "#82114F",
                                   fontWeight: "bold",
                                 }}
                               >
@@ -1324,27 +1325,53 @@ export default function Delegate() {
                                 required
                                 style={{
                                   flexGrow: 1,
-                                  padding: "14px 18px",
                                   background: sameAsPhone
-                                    ? "rgba(255,255,255,0.02)"
-                                    : "rgba(0,0,0,0.2)",
-                                  border: "1px solid rgba(255,255,255,0.15)",
-                                  borderRadius: "10px",
-                                  color: sameAsPhone ? "#aaa" : "#fff",
+                                    ? "#e9ecef"
+                                    : "#f8f9fa",
+                                  border: "1.5px solid rgba(0,0,0,0.15)",
+                                  borderRadius: "12px",
+                                  color: sameAsPhone ? "#6c757d" : "#1d0314",
                                   outline: "none",
                                 }}
                               />
+                            </div>
+
+                            {/* Checkbox same as mobile placed below the input */}
+                            <div
+                              style={{ marginTop: "6px", textAlign: "left" }}
+                            >
+                              <label
+                                style={{
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: "6px",
+                                  color: "#82114F",
+                                  fontSize: "12px",
+                                  cursor: "pointer",
+                                  margin: 0,
+                                }}
+                              >
+                                <input
+                                  type="checkbox"
+                                  checked={sameAsPhone}
+                                  onChange={handleSamePhoneToggle}
+                                  style={{ accentColor: "#82114F" }}
+                                />
+                                <span className="brand-color-text">
+                                  Same as mobile
+                                </span>
+                              </label>
                             </div>
                           </div>
 
                           {/* SECTION: Institution Details */}
                           <div className="col-12 mt-4">
-                            <h5
+                            {/* <h5
                               style={{
-                                color: "#FFE04B",
+                                color: "#82114F",
                                 fontSize: "16px",
                                 fontWeight: "700",
-                                borderBottom: "1px solid rgba(255,255,255,0.1)",
+                                borderBottom: "1px solid rgba(0,0,0,0.1)",
                                 paddingBottom: "8px",
                                 marginBottom: "15px",
                               }}
@@ -1354,14 +1381,14 @@ export default function Delegate() {
                                 style={{ marginRight: "8px" }}
                               ></i>{" "}
                               Academic / Institutional Information
-                            </h5>
+                            </h5> */}
                           </div>
 
                           {/* University */}
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1379,11 +1406,10 @@ export default function Delegate() {
                               required
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             />
@@ -1393,7 +1419,7 @@ export default function Delegate() {
                           <div className="col-md-3">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1411,11 +1437,10 @@ export default function Delegate() {
                               required
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             />
@@ -1425,7 +1450,7 @@ export default function Delegate() {
                           <div className="col-md-3">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1440,11 +1465,10 @@ export default function Delegate() {
                               onChange={handleInputChange}
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             >
@@ -1452,8 +1476,8 @@ export default function Delegate() {
                                 <option
                                   key={st}
                                   style={{
-                                    background: "#300827",
-                                    color: "#fff",
+                                    background: "#ffffff",
+                                    color: "#1d0314",
                                   }}
                                   value={st}
                                 >
@@ -1467,10 +1491,10 @@ export default function Delegate() {
                           <div className="col-12 mt-4">
                             <h5
                               style={{
-                                color: "#FFE04B",
+                                color: "#82114F",
                                 fontSize: "16px",
                                 fontWeight: "700",
-                                borderBottom: "1px solid rgba(255,255,255,0.1)",
+                                borderBottom: "1px solid rgba(0,0,0,0.1)",
                                 paddingBottom: "8px",
                                 marginBottom: "15px",
                               }}
@@ -1483,11 +1507,101 @@ export default function Delegate() {
                             </h5>
                           </div>
 
+                          {/* Accommodation Plan Cards */}
+                          <div className="col-12">
+                            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                              {[
+                                {
+                                  key: "Triple Sharing",
+                                  price: "₹1,500",
+                                  label: "Triple Sharing",
+                                  icon: "fa-solid fa-bed",
+                                  details: ["3 Days Stay", "1 Double Bed + 1 Mattress", "3 Persons Sharing"],
+                                },
+                                {
+                                  key: "Double Sharing",
+                                  price: "₹3,000",
+                                  label: "Double Sharing",
+                                  icon: "fa-solid fa-bed",
+                                  details: ["3 Days Stay", "1 Standard Room", "1 Double Bed", "2 Persons Sharing"],
+                                },
+                                {
+                                  key: "Single Room",
+                                  price: "₹4,500",
+                                  label: "Single Room",
+                                  icon: "fa-solid fa-door-open",
+                                  details: ["3 Days Stay", "1 Standard Room", "Private Occupancy"],
+                                },
+                              ].map((plan) => {
+                                const isSelected = formData.accommodationType === plan.key;
+                                return (
+                                  <div
+                                    key={plan.key}
+                                    onClick={() =>
+                                      handleInputChange({
+                                        target: { name: "accommodationType", value: isSelected ? "None" : plan.key },
+                                      })
+                                    }
+                                    style={{
+                                      flex: "1 1 160px",
+                                      border: isSelected ? "2px solid #82114F" : "1.5px solid rgba(0,0,0,0.15)",
+                                      borderRadius: "14px",
+                                      padding: "16px 14px",
+                                      background: isSelected ? "rgba(130,17,79,0.06)" : "#ffffff",
+                                      cursor: "pointer",
+                                      transition: "all 0.2s ease",
+                                      position: "relative",
+                                    }}
+                                  >
+                                    {isSelected && (
+                                      <span
+                                        style={{
+                                          position: "absolute",
+                                          top: "10px",
+                                          right: "10px",
+                                          background: "#82114F",
+                                          color: "#fff",
+                                          borderRadius: "50%",
+                                          width: "18px",
+                                          height: "18px",
+                                          display: "flex",
+                                          alignItems: "center",
+                                          justifyContent: "center",
+                                          fontSize: "10px",
+                                        }}
+                                      >
+                                        <i className="fa-solid fa-check"></i>
+                                      </span>
+                                    )}
+                                    <i
+                                      className={plan.icon}
+                                      style={{ color: "#82114F", fontSize: "20px", marginBottom: "8px", display: "block" }}
+                                    ></i>
+                                    <div style={{ fontWeight: "700", color: "#000000", fontSize: "14px", marginBottom: "4px" }}>
+                                      {plan.label}
+                                    </div>
+                                    <div style={{ color: "#82114F", fontWeight: "800", fontSize: "16px", marginBottom: "8px" }}>
+                                      {plan.price} <span style={{ fontSize: "11px", fontWeight: "500", color: "#000000" }}>per person</span>
+                                    </div>
+                                    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                                      {plan.details.map((d, i) => (
+                                        <li key={i} style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "3px" }}>
+                                          <i className="fa-solid fa-circle-dot" style={{ color: "#82114F", fontSize: "7px", flexShrink: 0 }}></i>
+                                          <span style={{ fontSize: "12px", color: "#111111", fontWeight: "600", lineHeight: "1.4" }}>{d}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+
                           {/* Accommodation Type */}
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1502,34 +1616,45 @@ export default function Delegate() {
                               onChange={handleInputChange}
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             >
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="None"
                               >
                                 No Accommodation (₹0)
                               </option>
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="Triple Sharing"
                               >
                                 Triple Sharing (₹1500 per person)
                               </option>
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="Double Sharing"
                               >
                                 Double Sharing (₹3000 per person)
                               </option>
                               <option
-                                style={{ background: "#300827", color: "#fff" }}
+                                style={{
+                                  background: "#ffffff",
+                                  color: "#1d0314",
+                                }}
                                 value="Single Room"
                               >
                                 Single Room (₹4500 per room)
@@ -1541,7 +1666,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1558,11 +1683,10 @@ export default function Delegate() {
                               placeholder="Enter reference coordinator name"
                               style={{
                                 width: "100%",
-                                padding: "14px 18px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "1px solid rgba(255,255,255,0.15)",
-                                borderRadius: "10px",
-                                color: "#fff",
+                                background: "#f8f9fa",
+                                border: "1.5px solid rgba(0,0,0,0.15)",
+                                borderRadius: "12px",
+                                color: "#1d0314",
                                 outline: "none",
                               }}
                             />
@@ -1572,7 +1696,7 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -1581,7 +1705,13 @@ export default function Delegate() {
                             >
                               Coupon Code
                             </label>
-                            <div style={{ display: "flex", gap: "8px" }}>
+                            <div
+                              style={{
+                                display: "flex",
+                                gap: "8px",
+                                alignItems: "stretch",
+                              }}
+                            >
                               <input
                                 type="text"
                                 name="couponCode"
@@ -1590,11 +1720,10 @@ export default function Delegate() {
                                 placeholder="e.g. WELCOME100, AYUR10"
                                 style={{
                                   flexGrow: 1,
-                                  padding: "14px 18px",
-                                  background: "rgba(0,0,0,0.2)",
-                                  border: "1px solid rgba(255,255,255,0.15)",
-                                  borderRadius: "10px",
-                                  color: "#fff",
+                                  background: "#f8f9fa",
+                                  border: "1.5px solid rgba(0,0,0,0.15)",
+                                  borderRadius: "12px",
+                                  color: "#1d0314",
                                   outline: "none",
                                   textTransform: "uppercase",
                                 }}
@@ -1606,16 +1735,19 @@ export default function Delegate() {
                                   verifyingCoupon || !formData.couponCode
                                 }
                                 style={{
-                                  padding: "14px 20px",
+                                  padding: "0 20px",
                                   background: couponVerified
                                     ? "#28a745"
-                                    : "rgba(255,224,75,0.15)",
-                                  border: "1px solid rgba(255,224,75,0.3)",
-                                  borderRadius: "10px",
-                                  color: "#FFE04B",
+                                    : "#82114F",
+                                  border: "none",
+                                  borderRadius: "12px",
+                                  color: "#ffffff",
                                   fontWeight: "bold",
                                   transition: "all 0.3s ease",
                                   cursor: "pointer",
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
                                 }}
                               >
                                 {verifyingCoupon
@@ -1654,21 +1786,23 @@ export default function Delegate() {
                           {/* SECTION: Payment Summary */}
                           <div className="col-12 mt-40">
                             <div
+                              className="payment-summary-box"
                               style={{
-                                background: "rgba(0, 0, 0, 0.25)",
-                                border: "1px solid rgba(255, 255, 255, 0.1)",
+                                background: "rgba(130, 17, 79, 0.05)",
+                                border: "1px solid rgba(130, 17, 79, 0.15)",
                                 borderRadius: "16px",
                                 padding: "24px 30px",
                               }}
                             >
                               <h4
+                                className="brand-color-text"
                                 style={{
-                                  color: "#FFE04B",
+                                  color: "#82114F",
                                   fontSize: "18px",
                                   fontWeight: "700",
                                   marginBottom: "15px",
                                   borderBottom:
-                                    "1px solid rgba(255, 255, 255, 0.1)",
+                                    "1px solid rgba(130, 17, 79, 0.15)",
                                   paddingBottom: "10px",
                                 }}
                               >
@@ -1683,7 +1817,7 @@ export default function Delegate() {
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
-                                  color: "#b9b6d6",
+                                  color: "#555555",
                                   fontSize: "15px",
                                   marginBottom: "10px",
                                 }}
@@ -1691,14 +1825,19 @@ export default function Delegate() {
                                 <span>
                                   Registration Pass ({formData.participantType})
                                 </span>
-                                <span style={{ color: "#fff" }}>₹{regFee}</span>
+                                <span
+                                  className="brand-color-text"
+                                  style={{ color: "#1d0314" }}
+                                >
+                                  ₹{regFee}
+                                </span>
                               </div>
 
                               <div
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
-                                  color: "#b9b6d6",
+                                  color: "#555555",
                                   fontSize: "15px",
                                   marginBottom: "10px",
                                 }}
@@ -1707,7 +1846,12 @@ export default function Delegate() {
                                   Ashram Accommodation (
                                   {formData.accommodationType})
                                 </span>
-                                <span style={{ color: "#fff" }}>₹{accFee}</span>
+                                <span
+                                  className="brand-color-text"
+                                  style={{ color: "#1d0314" }}
+                                >
+                                  ₹{accFee}
+                                </span>
                               </div>
 
                               {couponDiscount > 0 && (
@@ -1733,17 +1877,19 @@ export default function Delegate() {
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
-                                  color: "#fff",
+                                  color: "#1d0314",
                                   fontSize: "20px",
                                   fontWeight: "800",
-                                  borderTop:
-                                    "1px dashed rgba(255, 255, 255, 0.2)",
+                                  borderTop: "1px dashed rgba(0, 0, 0, 0.15)",
                                   paddingTop: "15px",
                                   marginTop: "15px",
                                 }}
                               >
                                 <span>Total Payable Amount</span>
-                                <span style={{ color: "#FFE04B" }}>
+                                <span
+                                  className="brand-color-text"
+                                  style={{ color: "#82114F" }}
+                                >
                                   ₹{payableAmount}
                                 </span>
                               </div>
@@ -1782,7 +1928,7 @@ export default function Delegate() {
                         <div className="text-center mb-40">
                           <h3
                             style={{
-                              color: "#fff",
+                              color: "#1d0314",
                               fontSize: "32px",
                               fontWeight: "700",
                             }}
@@ -1791,7 +1937,7 @@ export default function Delegate() {
                           </h3>
                           <p
                             style={{
-                              color: "#b9b6d6",
+                              color: "#555555",
                               fontSize: "15px",
                               marginTop: "8px",
                             }}
@@ -1826,8 +1972,8 @@ export default function Delegate() {
                           <div className="col-md-6">
                             <div
                               style={{
-                                background: "rgba(0, 0, 0, 0.25)",
-                                border: "1px solid rgba(255, 255, 255, 0.1)",
+                                background: "rgba(130, 17, 79, 0.05)",
+                                border: "1px solid rgba(130, 17, 79, 0.15)",
                                 borderRadius: "16px",
                                 padding: "24px",
                                 height: "100%",
@@ -1839,12 +1985,12 @@ export default function Delegate() {
                               <div>
                                 <h4
                                   style={{
-                                    color: "#FFE04B",
+                                    color: "#82114F",
                                     fontSize: "18px",
                                     fontWeight: "700",
                                     marginBottom: "15px",
                                     borderBottom:
-                                      "1px solid rgba(255,255,255,0.1)",
+                                      "1px solid rgba(130, 17, 79, 0.15)",
                                     paddingBottom: "8px",
                                   }}
                                 >
@@ -1852,49 +1998,49 @@ export default function Delegate() {
                                 </h4>
                                 <div
                                   style={{
-                                    color: "#b9b6d6",
+                                    color: "#555555",
                                     fontSize: "14px",
                                     lineHeight: "26px",
                                   }}
                                 >
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Name:
                                     </strong>{" "}
                                     {formData.name}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Email:
                                     </strong>{" "}
                                     {formData.email}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Phone:
                                     </strong>{" "}
                                     +91 {formData.phone}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       State:
                                     </strong>{" "}
                                     {formData.state}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Designation:
                                     </strong>{" "}
                                     {formData.designation}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Category:
                                     </strong>{" "}
                                     {formData.participantType}
                                   </p>
                                   <p style={{ margin: "0 0 6px 0" }}>
-                                    <strong style={{ color: "#fff" }}>
+                                    <strong style={{ color: "#1d0314" }}>
                                       Accommodation:
                                     </strong>{" "}
                                     {formData.accommodationType}
@@ -1906,21 +2052,21 @@ export default function Delegate() {
                                 style={{
                                   marginTop: "20px",
                                   paddingTop: "15px",
-                                  borderTop: "1px dashed rgba(255,255,255,0.1)",
+                                  borderTop: "1px dashed rgba(0, 0, 0, 0.15)",
                                 }}
                               >
                                 <p
                                   style={{
                                     margin: "0 0 4px 0",
                                     fontSize: "13px",
-                                    color: "#b9b6d6",
+                                    color: "#555555",
                                   }}
                                 >
                                   Booking Reference ID
                                 </p>
                                 <span
                                   style={{
-                                    color: "#FFE04B",
+                                    color: "#82114F",
                                     fontFamily: "monospace",
                                     fontWeight: "bold",
                                     fontSize: "18px",
@@ -1932,13 +2078,12 @@ export default function Delegate() {
                               </div>
                             </div>
                           </div>
-
                           {/* Payment Instructions QR / UPI */}
                           <div className="col-md-6">
                             <div
                               style={{
-                                background: "rgba(255,224,75,0.03)",
-                                border: "1px solid rgba(255,224,75,0.2)",
+                                background: "rgba(255, 224, 75, 0.08)",
+                                border: "1px solid rgba(255, 224, 75, 0.3)",
                                 borderRadius: "16px",
                                 padding: "24px",
                                 textAlign: "center",
@@ -1950,95 +2095,260 @@ export default function Delegate() {
                             >
                               <h4
                                 style={{
-                                  color: "#FFE04B",
+                                  color: "#82114F",
                                   fontSize: "18px",
                                   fontWeight: "700",
-                                  marginBottom: "15px",
+                                  marginBottom: "20px",
                                 }}
                               >
                                 Scan to Pay with Any UPI App
                               </h4>
 
-                              {/* Vector QR Code */}
-                              <div
-                                style={{
-                                  background: "#fff",
-                                  width: "150px",
-                                  height: "150px",
-                                  padding: "12px",
-                                  borderRadius: "12px",
-                                  margin: "0 auto 15px",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                  boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-                                }}
-                              >
-                                <img
-                                  src={
-                                    (couponVerified && couponDiscount > 0)
-                                      ? `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`)}`
-                                      : paymentConfig.qrCodeBase64
-                                        ? (paymentConfig.qrCodeBase64.trim().startsWith("data:image")
-                                            ? paymentConfig.qrCodeBase64.trim()
-                                            : `data:image/png;base64,${paymentConfig.qrCodeBase64.trim().replace(/\s/g, "")}`)
-                                        : paymentConfig.qrCodeUrl &&
-                                            (paymentConfig.qrCodeUrl.startsWith("http") ||
-                                              paymentConfig.qrCodeUrl.startsWith("/"))
-                                          ? paymentConfig.qrCodeUrl
-                                          : `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Registration`)}`
-                                  }
-                                  alt="Payment QR Code"
-                                  style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "contain",
-                                  }}
-                                />
+                              <div className="row g-3">
+                                {/* QR Code 1 */}
+                                <div className="col-sm-6">
+                                  <div
+                                    style={{
+                                      background: "#ffffff",
+                                      border: "1px solid rgba(0,0,0,0.06)",
+                                      borderRadius: "12px",
+                                      padding: "15px 10px",
+                                      height: "100%",
+                                      display: "flex",
+                                      flexDirection: "column",
+                                      alignItems: "center",
+                                      boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
+                                    }}
+                                  >
+                                    <span
+                                      style={{
+                                        fontSize: "11px",
+                                        fontWeight: "800",
+                                        color: "#82114F",
+                                        textTransform: "uppercase",
+                                        marginBottom: "10px",
+                                        letterSpacing: "0.5px",
+                                      }}
+                                    >
+                                      UPI Account 1
+                                    </span>
+                                    <div
+                                      style={{
+                                        background: "#fff",
+                                        width: "120px",
+                                        height: "120px",
+                                        padding: "8px",
+                                        borderRadius: "8px",
+                                        margin: "0 auto 10px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        border: "1px solid rgba(0,0,0,0.06)",
+                                      }}
+                                    >
+                                      <img
+                                        src={
+                                          couponVerified && couponDiscount > 0
+                                            ? `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`)}`
+                                            : paymentConfig.qrCodeBase64
+                                              ? paymentConfig.qrCodeBase64
+                                                  .trim()
+                                                  .startsWith("data:image")
+                                                ? paymentConfig.qrCodeBase64.trim()
+                                                : `data:image/png;base64,${paymentConfig.qrCodeBase64.trim().replace(/\s/g, "")}`
+                                              : paymentConfig.qrCodeUrl &&
+                                                  (paymentConfig.qrCodeUrl.startsWith(
+                                                    "http",
+                                                  ) ||
+                                                    paymentConfig.qrCodeUrl.startsWith(
+                                                      "/",
+                                                    ))
+                                                ? paymentConfig.qrCodeUrl
+                                                : `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Registration`)}`
+                                        }
+                                        alt="Payment QR Code 1"
+                                        style={{
+                                          width: "100%",
+                                          height: "100%",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                    <p
+                                      style={{
+                                        color: "#1d0314",
+                                        margin: "0 0 4px 0",
+                                        fontSize: "11px",
+                                        fontWeight: "700",
+                                        wordBreak: "break-all",
+                                      }}
+                                    >
+                                      UPI ID:{" "}
+                                      <span style={{ color: "#82114F" }}>
+                                        {paymentConfig.upiId}
+                                      </span>
+                                    </p>
+                                    <a
+                                      href={`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`}
+                                      style={{
+                                        padding: "6px 12px",
+                                        fontSize: "11px",
+                                        borderRadius: "8px",
+                                        marginTop: "8px",
+                                        width: "100%",
+                                        textAlign: "center",
+                                        textDecoration: "none",
+                                        color: "#ffffff",
+                                        background: "#82114F",
+                                        fontWeight: "bold",
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        gap: "4px",
+                                      }}
+                                    >
+                                      <i
+                                        className="fa-solid fa-mobile-screen-button"
+                                        style={{ fontSize: "10px" }}
+                                      ></i>
+                                      Pay via UPI
+                                    </a>
+                                  </div>
+                                </div>
+
+                                {/* QR Code 2 */}
+                                <div className="col-sm-6">
+                                  <div
+                                    style={{
+                                      background: "#ffffff",
+                                      border: "1px solid rgba(0,0,0,0.06)",
+                                      borderRadius: "12px",
+                                      padding: "15px 10px",
+                                      height: "100%",
+                                      display: "flex",
+                                      flexDirection: "column",
+                                      alignItems: "center",
+                                      boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
+                                    }}
+                                  >
+                                    <span
+                                      style={{
+                                        fontSize: "11px",
+                                        fontWeight: "800",
+                                        color: "#82114F",
+                                        textTransform: "uppercase",
+                                        marginBottom: "10px",
+                                        letterSpacing: "0.5px",
+                                      }}
+                                    >
+                                      UPI Account 2
+                                    </span>
+                                    <div
+                                      style={{
+                                        background: "#fff",
+                                        width: "120px",
+                                        height: "120px",
+                                        padding: "8px",
+                                        borderRadius: "8px",
+                                        margin: "0 auto 10px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        border: "1px solid rgba(0,0,0,0.06)",
+                                      }}
+                                    >
+                                      <img
+                                        src={
+                                          couponVerified && couponDiscount > 0
+                                            ? `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId2}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`)}`
+                                            : paymentConfig.qrCodeBase64_2
+                                              ? paymentConfig.qrCodeBase64_2
+                                                  .trim()
+                                                  .startsWith("data:image")
+                                                ? paymentConfig.qrCodeBase64_2.trim()
+                                                : `data:image/png;base64,${paymentConfig.qrCodeBase64_2.trim().replace(/\s/g, "")}`
+                                              : paymentConfig.qrCodeUrl2 &&
+                                                  (paymentConfig.qrCodeUrl2.startsWith(
+                                                    "http",
+                                                  ) ||
+                                                    paymentConfig.qrCodeUrl2.startsWith(
+                                                      "/",
+                                                    ))
+                                                ? paymentConfig.qrCodeUrl2
+                                                : `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`upi://pay?pa=${paymentConfig.upiId2 || "agniveshevents2@upi"}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Registration`)}`
+                                        }
+                                        alt="Payment QR Code 2"
+                                        style={{
+                                          width: "100%",
+                                          height: "100%",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                    <p
+                                      style={{
+                                        color: "#1d0314",
+                                        margin: "0 0 4px 0",
+                                        fontSize: "11px",
+                                        fontWeight: "700",
+                                        wordBreak: "break-all",
+                                      }}
+                                    >
+                                      UPI ID:{" "}
+                                      <span style={{ color: "#82114F" }}>
+                                        {paymentConfig.upiId2 ||
+                                          "agniveshevents2@upi"}
+                                      </span>
+                                    </p>
+                                    <a
+                                      href={`upi://pay?pa=${paymentConfig.upiId2 || "agniveshevents2@upi"}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`}
+                                      style={{
+                                        padding: "6px 12px",
+                                        fontSize: "11px",
+                                        borderRadius: "8px",
+                                        marginTop: "8px",
+                                        width: "100%",
+                                        textAlign: "center",
+                                        textDecoration: "none",
+                                        color: "#ffffff",
+                                        background: "#82114F",
+                                        fontWeight: "bold",
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        gap: "4px",
+                                      }}
+                                    >
+                                      <i
+                                        className="fa-solid fa-mobile-screen-button"
+                                        style={{ fontSize: "10px" }}
+                                      ></i>
+                                      Pay via UPI
+                                    </a>
+                                  </div>
+                                </div>
                               </div>
 
-                              <p
+                              <div
                                 style={{
-                                  color: "#fff",
-                                  margin: "0 0 5px 0",
-                                  fontSize: "15px",
-                                  fontWeight: "700",
+                                  marginTop: "18px",
+                                  borderTop: "1px dashed rgba(0,0,0,0.1)",
+                                  paddingTop: "12px",
                                 }}
                               >
-                                UPI ID:{" "}
-                                <span style={{ color: "#FFE04B" }}>
-                                  {paymentConfig.upiId}
-                                </span>
-                              </p>
-                              <span
-                                style={{ color: "#b9b6d6", fontSize: "12px" }}
-                              >
-                                Amount to Pay:{" "}
-                                <strong style={{ color: "#FFE04B" }}>
-                                  ₹{payableAmount}
-                                </strong>
-                              </span>
-                              <div style={{ marginTop: "15px" }}>
-                                <a
-                                  href={`upi://pay?pa=${paymentConfig.upiId}&pn=AyurMilan%202026&am=${payableAmount}&cu=INR&tn=AyurMilan%20Reg%20${registrationId}`}
-                                  className="thm-btn design-btn"
-                                  style={{
-                                    padding: "8px 16px",
-                                    fontSize: "13px",
-                                    borderRadius: "8px",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "8px",
-                                    textDecoration: "none",
-                                    color: "#82114F",
-                                    background: "#FFE04B",
-                                    fontWeight: "bold",
-                                    boxShadow: "0 4px 10px rgba(255,224,75,0.2)"
-                                  }}
+                                <span
+                                  style={{ color: "#555555", fontSize: "13px" }}
                                 >
-                                  <i className="fa-solid fa-mobile-screen-button"></i>
-                                  Pay via UPI App
-                                </a>
+                                  Amount to Pay:{" "}
+                                  <strong
+                                    style={{
+                                      color: "#82114F",
+                                      fontSize: "16px",
+                                    }}
+                                  >
+                                    ₹{payableAmount}
+                                  </strong>
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -2047,7 +2357,7 @@ export default function Delegate() {
                           <div className="col-12 mt-4">
                             <label
                               style={{
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "600",
                                 marginBottom: "8px",
                                 display: "block",
@@ -2073,10 +2383,10 @@ export default function Delegate() {
                               style={{
                                 width: "100%",
                                 padding: "16px 20px",
-                                background: "rgba(0,0,0,0.2)",
-                                border: "2px solid #FFE04B",
+                                background: "#f8f9fa",
+                                border: "2px solid #82114F",
                                 borderRadius: "12px",
-                                color: "#fff",
+                                color: "#1d0314",
                                 outline: "none",
                                 fontSize: "18px",
                                 letterSpacing: "4px",
@@ -2087,7 +2397,7 @@ export default function Delegate() {
                             />
                             <span
                               style={{
-                                color: "#b9b6d6",
+                                color: "#555555",
                                 fontSize: "11px",
                                 display: "block",
                                 marginTop: "6px",
@@ -2114,10 +2424,10 @@ export default function Delegate() {
                               onClick={() => setStep(1)}
                               style={{
                                 padding: "16px 30px",
-                                background: "rgba(255,255,255,0.05)",
-                                border: "1px solid rgba(255,255,255,0.15)",
+                                background: "#f8f9fa",
+                                border: "1px solid rgba(0,0,0,0.15)",
                                 borderRadius: "10px",
-                                color: "#fff",
+                                color: "#1d0314",
                                 fontWeight: "bold",
                                 cursor: "pointer",
                               }}
@@ -2181,7 +2491,7 @@ export default function Delegate() {
 
                         <h3
                           style={{
-                            color: "#fff",
+                            color: "#1d0314",
                             fontSize: "32px",
                             fontWeight: "700",
                             marginBottom: "15px",
@@ -2192,16 +2502,16 @@ export default function Delegate() {
 
                         <p
                           style={{
-                            color: "#FFE04B",
+                            color: "#82114F",
                             fontSize: "15px",
                             fontFamily: "monospace",
                             fontWeight: "bold",
-                            background: "rgba(255,224,75,0.08)",
+                            background: "rgba(130, 17, 79, 0.06)",
                             padding: "10px 20px",
                             borderRadius: "30px",
                             display: "inline-block",
                             marginBottom: "20px",
-                            border: "1px solid rgba(255,224,75,0.2)",
+                            border: "1px solid rgba(130, 17, 79, 0.15)",
                           }}
                         >
                           Booking Reference ID: {registrationId}
@@ -2209,7 +2519,7 @@ export default function Delegate() {
 
                         <p
                           style={{
-                            color: "#b9b6d6",
+                            color: "#555555",
                             fontSize: "16px",
                             lineHeight: "28px",
                             maxWidth: "600px",
@@ -2217,21 +2527,96 @@ export default function Delegate() {
                           }}
                         >
                           Thank you for registering for{" "}
-                          <strong style={{ color: "#fff" }}>
+                          <strong style={{ color: "#1d0314" }}>
                             AyurMilan 2026
                           </strong>
                           . We have verified your transaction reference (
-                          <strong style={{ color: "#fff" }}>
+                          <strong style={{ color: "#1d0314" }}>
                             {paymentReference}
                           </strong>
                           ) and confirmed your delegate booking! A confirmation
                           email containing your entry ticket and credentials has
                           been sent to{" "}
-                          <strong style={{ color: "#fff" }}>
+                          <strong style={{ color: "#1d0314" }}>
                             {formData.email}
                           </strong>
                           .
                         </p>
+
+                        {/* WhatsApp Group Invite Section */}
+                        <div
+                          style={{
+                            background: "rgba(37, 211, 102, 0.06)",
+                            border: "1px dashed rgba(37, 211, 102, 0.3)",
+                            borderRadius: "16px",
+                            padding: "20px 24px",
+                            maxWidth: "650px",
+                            margin: "0 auto 35px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              gap: "10px",
+                              marginBottom: "10px",
+                            }}
+                          >
+                            <i
+                              className="fa-brands fa-whatsapp"
+                              style={{ color: "#25D366", fontSize: "28px" }}
+                            ></i>
+                            <h4
+                              style={{
+                                color: "#1d0314",
+                                fontSize: "18px",
+                                margin: 0,
+                                fontWeight: "600",
+                              }}
+                            >
+                              Join the AyurMilan WhatsApp Group
+                            </h4>
+                          </div>
+                          <p
+                            style={{
+                              color: "#555555",
+                              fontSize: "14px",
+                              lineHeight: "22px",
+                              marginBottom: "16px",
+                            }}
+                          >
+                            Stay updated with live announcements, conference
+                            schedules, venue guides, and networking sessions!
+                          </p>
+                          <a
+                            href="https://chat.whatsapp.com/IlcrIVidT20A8Vcl6FVL6R"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "8px",
+                              padding: "12px 28px",
+                              background: "#25D366",
+                              color: "#fff",
+                              border: "none",
+                              borderRadius: "30px",
+                              fontWeight: "600",
+                              fontSize: "15px",
+                              textDecoration: "none",
+                              boxShadow: "0 4px 15px rgba(37, 211, 102, 0.25)",
+                              transition: "all 0.25s ease",
+                            }}
+                          >
+                            <i
+                              className="fa-brands fa-whatsapp"
+                              style={{ fontSize: "18px" }}
+                            ></i>{" "}
+                            Join Group Chat
+                          </a>
+                        </div>
 
                         <div
                           style={{
@@ -2271,10 +2656,10 @@ export default function Delegate() {
                             }}
                             style={{
                               padding: "12px 25px",
-                              background: "rgba(255,255,255,0.05)",
-                              border: "1px solid rgba(255,255,255,0.15)",
+                              background: "#f8f9fa",
+                              border: "1px solid rgba(0,0,0,0.15)",
                               borderRadius: "10px",
-                              color: "#fff",
+                              color: "#1d0314",
                               fontWeight: "bold",
                               cursor: "pointer",
                             }}
@@ -2782,7 +3167,7 @@ export default function Delegate() {
           <section className="pb-130">
             <div className="container">
               <div
-                className="contact-form-wrap main-contact-form"
+                className="accommodation-callout"
                 style={{ border: "2px solid #FFE04B", padding: "50px" }}
               >
                 <div className="row align-items-center">
@@ -2811,10 +3196,11 @@ export default function Delegate() {
                         margin: 0,
                       }}
                     >
-                      Comfortable and pure satvik accommodation is available
-                      directly at the ashram for only <strong>1400/-</strong>.
-                      You can easily book your rooms along with your delegate
-                      registration form.
+                      Comfortable and pure satvik accommodation is available directly at the ashram. Choose from{" "}
+                      <strong style={{ color: "#FFE04B" }}>Triple Sharing ₹1,500</strong> (1 double bed + 1 mattress, 3 persons),{" "}
+                      <strong style={{ color: "#FFE04B" }}>Double Sharing ₹3,000</strong> (1 standard room, 1 double bed, 2 persons), or{" "}
+                      <strong style={{ color: "#FFE04B" }}>Single Room ₹4,500</strong> (1 standard room, private). All plans include a 3-day stay.
+                      Book directly in the registration form above.
                     </p>
                   </div>
                   <div

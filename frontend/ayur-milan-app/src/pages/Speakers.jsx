@@ -20,7 +20,7 @@ export default function Speakers() {
       name: "Vaidya Hemkant Baviskar",
       desig: "RAV Guru (Ministry Of Ayush) & Eye Specialist",
       school: "Founder Of Netrayu Hospital, Jalgaon",
-      img: "./vd-hemkant.jpeg",
+      img: "./vd-hemant.jpeg",
       brand: "/assets/img/brand/team-logo02.png",
     },
     {
@@ -29,6 +29,13 @@ export default function Speakers() {
       school: "Founder of Dhanvantari Ayurved Sanshthan, Dhule",
       img: "./vd-pravin.jpeg",
       brand: "/assets/img/brand/team-logo03.png",
+    },
+    {
+      name: "Vaidya Narendra Gujarathi",
+      desig: "RAV Guru (Ministry Of Ayush) & Renowned Practitioner",
+      school: "Founder of Gujarathi's Ayurved Research Inst., Jalgaon",
+      img: "./vd-narendra.jpeg",
+      brand: "/assets/img/brand/team-logo08.png",
     },
     {
       name: "Vaidya Niteen Sanjay Ambatkar",
@@ -58,13 +65,7 @@ export default function Speakers() {
       img: "./vd-rohit.jpeg",
       brand: "/assets/img/brand/team-logo07.png",
     },
-    {
-      name: "Vaidya Narendra Gujarathi",
-      desig: "RAV Guru (Ministry Of Ayush) & Renowned Practitioner",
-      school: "Founder of Gujarathi's Ayurved Research Inst., Jalgaon",
-      img: "./vd-narendra.jpeg",
-      brand: "/assets/img/brand/team-logo08.png",
-    },
+
     {
       name: "Dr. Ankit Agarwal",
       desig: "MD (Ayu) & Renowned Ayurveda Practitioner",
@@ -81,9 +82,9 @@ export default function Speakers() {
       desc: "Ayurvedic management of acute medical emergencies and critical support.",
     },
     {
-      title: "Netra Roga Specialist Talks",
-      icon: "fa-eye",
-      desc: "Detailed case evaluations of complex ophthalmic conditions and Netra Tarpan.",
+      title: "Startup & Brand Building",
+      icon: "fa-chart-line",
+      desc: "Practical strategies for setting up modern clinics, scale-up models, and personal brand building for Vaidyas.",
     },
     {
       title: "Twak Vikara (Dermatology)",
@@ -91,9 +92,9 @@ export default function Speakers() {
       desc: "Therapeutic and aesthetic management of non-healing skin disorders and psoriasis.",
     },
     {
-      title: "Non-Healing Wound Healing",
-      icon: "fa-bandage",
-      desc: "Shalya Chikitsa secrets for chronic ulcers, diabetic wounds, and fistulas.",
+      title: "18+ Workshops",
+      icon: "fa-person-chalkboard",
+      desc: "Hands-on clinical training sessions covering Agnikarma, Viddhakarma, Jalaukavacharana, and Marma.",
     },
   ];
 
@@ -200,7 +201,8 @@ export default function Speakers() {
                 data-wow-delay="0ms"
                 data-wow-duration="600ms"
                 style={{
-                  background: "radial-gradient(circle at 10% 20%, rgba(130, 17, 79, 0.4) 0%, rgba(20, 2, 12, 0.7) 80%)",
+                  background:
+                    "radial-gradient(circle at 10% 20%, rgba(130, 17, 79, 0.4) 0%, rgba(20, 2, 12, 0.7) 80%)",
                   backdropFilter: "blur(20px)",
                   WebkitBackdropFilter: "blur(20px)",
                   border: "1px solid rgba(255, 224, 75, 0.3)",
@@ -208,11 +210,23 @@ export default function Speakers() {
                   borderRadius: "28px",
                   position: "relative",
                   boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
-                  overflow: "hidden"
+                  overflow: "hidden",
                 }}
               >
                 {/* Decorative background circle */}
-                <div style={{ position: "absolute", top: "-50px", right: "-50px", width: "150px", height: "150px", borderRadius: "50%", background: "rgba(255, 224, 75, 0.05)", filter: "blur(20px)", pointerEvents: "none" }} />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "-50px",
+                    right: "-50px",
+                    width: "150px",
+                    height: "150px",
+                    borderRadius: "50%",
+                    background: "rgba(255, 224, 75, 0.05)",
+                    filter: "blur(20px)",
+                    pointerEvents: "none",
+                  }}
+                />
                 <div
                   style={{
                     position: "absolute",
@@ -248,7 +262,8 @@ export default function Speakers() {
                     style={{
                       width: "60px",
                       height: "2px",
-                      background: "linear-gradient(90deg, transparent, #FFE04B, transparent)",
+                      background:
+                        "linear-gradient(90deg, transparent, #FFE04B, transparent)",
                       margin: "25px auto 15px",
                     }}
                   />
@@ -260,7 +275,7 @@ export default function Speakers() {
                       letterSpacing: "2px",
                       textTransform: "uppercase",
                       fontWeight: "700",
-                      margin: 0
+                      margin: 0,
                     }}
                   >
                     — Agnivesh Events Scientific Committee
@@ -324,10 +339,30 @@ export default function Speakers() {
                   <div className="row g-4">
                     {topics.map((t, idx) => {
                       const colors = [
-                        { border: "rgba(255, 224, 75, 0.4)", glow: "rgba(255, 224, 75, 0.15)", iconBg: "rgba(255, 224, 75, 0.1)", iconColor: "#FFE04B" },
-                        { border: "rgba(122, 252, 255, 0.4)", glow: "rgba(122, 252, 255, 0.15)", iconBg: "rgba(122, 252, 255, 0.1)", iconColor: "#7afcff" },
-                        { border: "rgba(255, 126, 185, 0.4)", glow: "rgba(255, 126, 185, 0.15)", iconBg: "rgba(255, 126, 185, 0.1)", iconColor: "#ff7eb9" },
-                        { border: "rgba(196, 255, 122, 0.4)", glow: "rgba(196, 255, 122, 0.15)", iconBg: "rgba(196, 255, 122, 0.1)", iconColor: "#c4ff7a" }
+                        {
+                          border: "rgba(255, 224, 75, 0.4)",
+                          glow: "rgba(255, 224, 75, 0.15)",
+                          iconBg: "rgba(255, 224, 75, 0.1)",
+                          iconColor: "#FFE04B",
+                        },
+                        {
+                          border: "rgba(122, 252, 255, 0.4)",
+                          glow: "rgba(122, 252, 255, 0.15)",
+                          iconBg: "rgba(122, 252, 255, 0.1)",
+                          iconColor: "#7afcff",
+                        },
+                        {
+                          border: "rgba(255, 126, 185, 0.4)",
+                          glow: "rgba(255, 126, 185, 0.15)",
+                          iconBg: "rgba(255, 126, 185, 0.1)",
+                          iconColor: "#ff7eb9",
+                        },
+                        {
+                          border: "rgba(196, 255, 122, 0.4)",
+                          glow: "rgba(196, 255, 122, 0.15)",
+                          iconBg: "rgba(196, 255, 122, 0.1)",
+                          iconColor: "#c4ff7a",
+                        },
                       ][idx % 4];
 
                       return (
@@ -340,18 +375,22 @@ export default function Speakers() {
                               background: "rgba(255, 255, 255, 0.03)",
                               borderRadius: "16px",
                               height: "100%",
-                              transition: "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                              transition:
+                                "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
                               boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
                               display: "flex",
                               flexDirection: "column",
-                              gap: "12px"
+                              gap: "12px",
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = "translateY(-5px)";
+                              e.currentTarget.style.transform =
+                                "translateY(-5px)";
                               e.currentTarget.style.borderColor = colors.border;
-                              e.currentTarget.style.borderLeftColor = colors.iconColor;
+                              e.currentTarget.style.borderLeftColor =
+                                colors.iconColor;
                               e.currentTarget.style.boxShadow = `0 12px 30px ${colors.glow}`;
-                              const iconCircle = e.currentTarget.querySelector(".icon-circle");
+                              const iconCircle =
+                                e.currentTarget.querySelector(".icon-circle");
                               if (iconCircle) {
                                 iconCircle.style.background = colors.iconColor;
                                 iconCircle.style.color = "#82114f";
@@ -360,9 +399,12 @@ export default function Speakers() {
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.transform = "none";
-                              e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)";
-                              e.currentTarget.style.boxShadow = "0 8px 30px rgba(0, 0, 0, 0.2)";
-                              const iconCircle = e.currentTarget.querySelector(".icon-circle");
+                              e.currentTarget.style.borderColor =
+                                "rgba(255,255,255,0.12)";
+                              e.currentTarget.style.boxShadow =
+                                "0 8px 30px rgba(0, 0, 0, 0.2)";
+                              const iconCircle =
+                                e.currentTarget.querySelector(".icon-circle");
                               if (iconCircle) {
                                 iconCircle.style.background = colors.iconBg;
                                 iconCircle.style.color = colors.iconColor;
@@ -382,7 +424,7 @@ export default function Speakers() {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 fontSize: "18px",
-                                transition: "all 0.3s ease"
+                                transition: "all 0.3s ease",
                               }}
                             >
                               <i className={`fa-solid ${t.icon}`}></i>
@@ -392,7 +434,7 @@ export default function Speakers() {
                                 color: "#fff",
                                 fontSize: "18px",
                                 fontWeight: "700",
-                                margin: 0
+                                margin: 0,
                               }}
                             >
                               {t.title}
@@ -403,7 +445,7 @@ export default function Speakers() {
                                 fontSize: "13.5px",
                                 lineHeight: "20px",
                                 margin: 0,
-                                flexGrow: 1
+                                flexGrow: 1,
                               }}
                             >
                               {t.desc}
@@ -430,7 +472,7 @@ export default function Speakers() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
                   <img
@@ -445,13 +487,22 @@ export default function Speakers() {
                     alt=""
                   />
                 </span>
-                <h2 className="title" style={{ color: "#fff", fontSize: "42px", fontWeight: "bold" }}>
-                  Scientific Committee Profiles
+                <h2
+                  className="title"
+                  style={{
+                    color: "#fff",
+                    fontSize: "42px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Our Honourable Speakers
                 </h2>
               </div>
               <div className="row g-4 justify-content-center">
                 {speakers.map((spk, idx) => {
-                  const isRavGuru = spk.desig.toLowerCase().includes("rav guru");
+                  const isRavGuru = spk.desig
+                    .toLowerCase()
+                    .includes("rav guru");
                   return (
                     <div className="col-xl-4 col-lg-4 col-md-6" key={idx}>
                       <div
@@ -463,21 +514,26 @@ export default function Speakers() {
                           backdropFilter: "blur(12px)",
                           WebkitBackdropFilter: "blur(12px)",
                           boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
-                          transition: "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                          transition:
+                            "all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)",
                           overflow: "hidden",
                           display: "flex",
                           flexDirection: "column",
                           position: "relative",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = "rgba(255, 224, 75, 0.45)";
+                          e.currentTarget.style.borderColor =
+                            "rgba(255, 224, 75, 0.45)";
                           e.currentTarget.style.transform = "translateY(-6px)";
-                          e.currentTarget.style.boxShadow = "0 18px 40px rgba(255, 224, 75, 0.15)";
+                          e.currentTarget.style.boxShadow =
+                            "0 18px 40px rgba(255, 224, 75, 0.15)";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.12)";
+                          e.currentTarget.style.borderColor =
+                            "rgba(255, 255, 255, 0.12)";
                           e.currentTarget.style.transform = "none";
-                          e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
+                          e.currentTarget.style.boxShadow =
+                            "0 10px 30px rgba(0,0,0,0.25)";
                         }}
                       >
                         {/* Floating RAV Guru Badge */}
@@ -487,7 +543,8 @@ export default function Speakers() {
                               position: "absolute",
                               top: "16px",
                               left: "16px",
-                              background: "linear-gradient(135deg, #FFE04B 0%, #D78633 100%)",
+                              background:
+                                "linear-gradient(135deg, #FFE04B 0%, #D78633 100%)",
                               color: "#1a0210",
                               fontWeight: "800",
                               fontSize: "11px",
@@ -499,7 +556,10 @@ export default function Speakers() {
                               textTransform: "uppercase",
                             }}
                           >
-                            <i className="fa-solid fa-award" style={{ marginRight: "6px" }}></i>
+                            <i
+                              className="fa-solid fa-award"
+                              style={{ marginRight: "6px" }}
+                            ></i>
                             RAV GURU
                           </div>
                         )}
@@ -522,7 +582,8 @@ export default function Speakers() {
                               height: "100%",
                               objectFit: "cover",
                               objectPosition: "top",
-                              transition: "transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                              transition:
+                                "transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
                             }}
                             onMouseEnter={(e) => {
                               e.target.style.transform = "scale(1.08)";
@@ -582,7 +643,10 @@ export default function Speakers() {
                               gap: "8px",
                             }}
                           >
-                            <i className="fa-solid fa-hospital-user" style={{ color: "#FFE04B" }}></i>
+                            <i
+                              className="fa-solid fa-hospital-user"
+                              style={{ color: "#FFE04B" }}
+                            ></i>
                             <span>{spk.school}</span>
                           </div>
                         </div>
