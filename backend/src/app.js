@@ -16,17 +16,6 @@ async function startServer() {
   const { initAdmin } = require('./config/adminjs');
   const { adminJS, adminRouter } = await initAdmin();
 
-  // Mount AdminJS dashboard (must be placed before body parsers)
-  app.use(adminJS.options.rootPath, adminRouter);
-
-  // Serve static public assets (for logo, etc)
-  app.use('/public', express.static(path.join(__dirname, '../public')));
-
-  // Security HTTP Headers (Disable CSP so AdminJS styles render)
-  // app.use(helmet({
-  //   contentSecurityPolicy: false
-  // }));
-
   // Enable CORS (Cross-Origin Resource Sharing)
   app.use(cors({
     origin: '*',
@@ -34,9 +23,15 @@ async function startServer() {
     allowedHeaders: ['Content-Type', 'Authorization']
   }));
 
-  // Body Parsers for JSON and URL-encoded requests
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
+  // API Routes mounting (placed BEFORE AdminJS to prevent root-path wildcard redirects/CORS preflight clashes)
+  app.use('/api/registrations', express.json(), express.urlencoded({ extended: true }), registrationRoutes);
+  app.use('/api/admin', express.json(), express.urlencoded({ extended: true }), adminRoutes);
+
+  // Serve static public assets (for logo, etc)
+  app.use('/public', express.static(path.join(__dirname, '../public')));
+
+  // Mount AdminJS dashboard (must be placed before any global body parsers, but after specific API routes)
+  app.use(adminJS.options.rootPath, adminRouter);
 
   // Temporary Database Migration Debug Endpoint
   app.get('/debug-db', (req, res) => {
@@ -116,9 +111,7 @@ async function startServer() {
     });
   });
 
-  // API Routes mounting
-  app.use('/api/registrations', registrationRoutes);
-  app.use('/api/admin', adminRoutes);
+  // API Routes already mounted above
 
   // Fallback middlewares for error handling
   app.use(routeNotFound);
