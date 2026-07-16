@@ -273,7 +273,7 @@ async function initAdmin() {
               availableValues: [
                 { value: 'None', label: 'No Accommodation' },
                 { value: 'Triple Sharing', label: 'Triple Sharing (₹1500)' },
-                { value: 'Double Sharing', label: 'Double Sharing (₹3000)' },
+                { value: 'Double Sharing', label: 'Double Sharing (₹2200)' },
                 { value: 'Single Room', label: 'Single Room (₹4500)' }
               ]
             },
@@ -353,7 +353,7 @@ async function initAdmin() {
                       message: `Registration for ${updated.name} has been APPROVED and email ticket sent!`,
                       type: 'success',
                     },
-                    redirectUrl: '/admin/resources/Registration'
+                    redirectUrl: '/resources/Registration'
                   };
                 }
                 return {
@@ -492,7 +492,7 @@ async function initAdmin() {
       component: DASHBOARD_COMPONENT,
       handler: dashboardHandler
     },
-    rootPath: '/admin', // Route url path
+    rootPath: '/', // Route url path
     branding: {
       companyName: 'AyurMilan 2026 Summit',
       logo: '/public/logo.png',

@@ -12,7 +12,7 @@ const PARTICIPANT_PRICES = {
 
 const ACCOMMODATION_PRICES = {
   'Triple Sharing': 1500,
-  'Double Sharing': 3000,
+  'Double Sharing': 2200,
   'Single Room': 4500,
   'None': 0
 };

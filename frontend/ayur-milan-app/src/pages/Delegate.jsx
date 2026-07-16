@@ -11,7 +11,7 @@ const PARTICIPANT_PRICES = {
 
 const ACCOMMODATION_PRICES = {
   "Triple Sharing": 1500,
-  "Double Sharing": 3000,
+  "Double Sharing": 2200,
   "Single Room": 4500,
   None: 0,
 };
@@ -1520,7 +1520,7 @@ export default function Delegate() {
                                 },
                                 {
                                   key: "Double Sharing",
-                                  price: "₹3,000",
+                                  price: "₹2,200",
                                   label: "Double Sharing",
                                   icon: "fa-solid fa-bed",
                                   details: ["3 Days Stay", "1 Standard Room", "1 Double Bed", "2 Persons Sharing"],
@@ -1648,7 +1648,7 @@ export default function Delegate() {
                                 }}
                                 value="Double Sharing"
                               >
-                                Double Sharing (₹3000 per person)
+                                Double Sharing (₹2200 per person)
                               </option>
                               <option
                                 style={{
@@ -3198,7 +3198,7 @@ export default function Delegate() {
                     >
                       Comfortable and pure satvik accommodation is available directly at the ashram. Choose from{" "}
                       <strong style={{ color: "#FFE04B" }}>Triple Sharing ₹1,500</strong> (1 double bed + 1 mattress, 3 persons),{" "}
-                      <strong style={{ color: "#FFE04B" }}>Double Sharing ₹3,000</strong> (1 standard room, 1 double bed, 2 persons), or{" "}
+                      <strong style={{ color: "#FFE04B" }}>Double Sharing ₹2,200</strong> (1 standard room, 1 double bed, 2 persons), or{" "}
                       <strong style={{ color: "#FFE04B" }}>Single Room ₹4,500</strong> (1 standard room, private). All plans include a 3-day stay.
                       Book directly in the registration form above.
                     </p>

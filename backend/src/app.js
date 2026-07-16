@@ -109,7 +109,7 @@ async function startServer() {
   });
 
   // Default API Health Check Endpoint
-  app.get('/', (req, res) => {
+  app.get('/api/health', (req, res) => {
     res.status(200).json({
       status: 200,
       message: 'AyurMilan 2026 Summit API Server is running smoothly'

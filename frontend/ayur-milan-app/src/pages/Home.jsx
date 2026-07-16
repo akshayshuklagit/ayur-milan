@@ -198,9 +198,7 @@ export default function Home() {
                       }}
                     />
                   </div>
-                  <span>
-                    Agnivesh Events Presents
-                  </span>
+                  <span>Agnivesh Events Presents</span>
                 </div>
 
                 <h2
@@ -254,7 +252,7 @@ export default function Home() {
                   data-wow-duration="600ms"
                 >
                   <Link to="/delegate" className="thm-btn design-btn">
-                    Register Your Ticket
+                    Register Now
                     <img src="/assets/img/icon/right-arrow.svg" alt="" />
                   </Link>
                 </div>
